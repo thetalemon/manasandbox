@@ -1,0 +1,36 @@
+{
+  "name": "manasandbox",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "npm run lint:js"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.12.0",
+    "apexcharts": "^3.21.0",
+    "chart.js": "^2.9.3",
+    "nuxt": "^2.14.5",
+    "nuxt-webfontloader": "^1.1.0",
+    "pattern.css": "^1.0.0",
+    "plotly.js-basic-dist": "^1.55.2",
+    "vue-apexcharts": "^1.6.0",
+    "vue-chartjs": "^3.5.1",
+    "vue-plotly": "^1.1.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/google-fonts": "^1.0.3",
+    "@nuxtjs/vuetify": "^1.11.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.9.0",
+    "eslint-plugin-nuxt": "^1.0.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^7.3.1"
+  }
+}
