@@ -19,25 +19,25 @@ const _skills = [
     text: 'Vue.jsやFlaskを包むコンテナを作れる。composeも頑張ればできる。'
   }, {
     name: 'Firebase',
-    level: '☆☆',
+    level: '★★',
     img: 'firebase.svg',
     text: `読書進捗具合を入力/管理するアプリをVue.js + Firebaseで作れる。<br>
     GoogleMapAPIを使って簡単なGooleMapクローンとかも作れる。`,
     related: ['Firestore', 'Authentication', 'Firebase-hosting', 'GoogleMapAPI']
   }, {
     name: 'Figma',
-    level: '★',
+    level: '★★',
     img: 'figma.svg',
-    text: 'プロトタイプ作れる。'
+    text: 'プロトタイプ作れる。デザインは勉強中。'
   }, {
     name: 'Illustrator',
-    level: '☆',
+    level: '★',
     img: 'illustrator.svg',
     text: '簡単なベジェ絵くらいなら。',
     related: ['InDesign', 'CLIP STUDIO']
   }, {
     name: 'AfterEffects',
-    level: '☆',
+    level: '★',
     img: 'ae.svg',
     text: 'パペットピンツールを利用した簡単なアニメが作れる。'
   }, {
@@ -61,13 +61,15 @@ const _skills = [
   }, {
     name: 'SQL',
     level: '★',
-    text: 'hogehoge?',
+    img: 'sql.svg',
+    text: '左右にJOINができる。',
     related: ['正規化を考慮したDB設計']
   }, {
-    name: 'PlantUML',
-    level: '★',
-    text: '設計書書いたりは結構好きです',
-    related: ['フローチャート図やシーケンス図などの書き方']
+    name: '設計、文書',
+    level: '★★',
+    img: 'doc.svg',
+    text: '基本のREST APIの設計をしたり、RDB設計したり、クラス図やシーケンス図を書いたり。<br>その他、情報をわかりやすく表などにするのも得意で好きです。',
+    related: ['plant UML', 'フローチャート図やシーケンス図などの書き方']
   }
 ]
 
