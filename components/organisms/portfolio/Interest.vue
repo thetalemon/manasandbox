@@ -12,7 +12,9 @@
           @click="clickData(item)"
         >
           <v-img class="mb-1 rounded-xl" :src="convert2Path(item.img)" contain max-width="145px" />
-          <p class="mr-2 ml-2" v-html="item.name" />
+          <p class="mr-2 ml-2">
+            {{ item.name }}
+          </p>
         </v-card>
       </v-row>
 
@@ -22,10 +24,11 @@
         max-width="350"
       >
         <v-card class="text-center rounded-xl">
-          <!-- <v-card-title /> -->
           <v-img class="mb-5 rounded-xl" :src="convert2Path(selectImg)" contain width="350px" />
           <v-card-text>
-            <p v-html="dialogText" />
+            <p>
+              {{ dialogText }}
+            </p>
           </v-card-text>
           <v-card-text>
             <div @click="closeModal">

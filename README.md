@@ -1,5 +1,7 @@
 # manasandbox
 
+まなさすの砂場兼ポートフォリオ。
+
 ## Build Setup
 
 ```bash

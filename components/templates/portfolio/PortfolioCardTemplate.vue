@@ -2,7 +2,7 @@
   <v-row dense justify="center" align-content="center">
     <v-col cols="12">
       <v-card>
-        <v-card-title>
+        <v-card-title v-if="title">
           {{ title }}
         </v-card-title>
         <v-card-text>
@@ -18,7 +18,7 @@ export default {
   props: {
     title: {
       type: String,
-      required: true,
+      required: false,
       default: undefined
     }
   }

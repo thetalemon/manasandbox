@@ -30,12 +30,8 @@
   </v-layout>
 </template>
 <script>
-// import CardTemplate from '~/components/templates/CardTemplate.vue'
 
 export default {
-  // components: {
-  //   'card-template': CardTemplate
-  // },
   data () {
     return {
       bacground: 'rgba(200,255,255,1.0)',

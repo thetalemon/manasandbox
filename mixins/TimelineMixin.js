@@ -28,7 +28,7 @@ const _years = [
     title: 'Webアプリ開発',
     process: 'フロントメイン、時々バックとインフラ / 画面設計、概要設計、詳細設計、実装、テスト作成',
     text: 'AI関連のWebアプリサービスをしています。半年ほどtoCアプリを作成し、その後はtoBアプリを作成。主にフロントエンドですが、たまにバックエンドもインフラもやっています。',
-    tech: 'Vue.js / '
+    tech: 'Vue.js / Nuxt.js / Python / Flask / Figma'
   }
 ]
 

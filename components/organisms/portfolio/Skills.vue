@@ -14,7 +14,6 @@
           <v-card-text>
             <p>{{ item.name }}</p>
             <v-img class="mb-5" :src="convert2Path(item.img)" contain max-width="100px" height="80px" />
-            <!-- <p>{{ convert2Path(item.img) }}</p> -->
             <p>{{ item.level }}</p>
           </v-card-text>
         </v-card>
@@ -27,7 +26,9 @@
         <v-card>
           <v-card-title />
           <v-card-text>
-            <p v-html="dialogText" />
+            <p>
+              {{ dialogText }}
+            </p>
             <v-card-subtitle>利用可能な関連技術</v-card-subtitle>
             <v-card-text>
               <span

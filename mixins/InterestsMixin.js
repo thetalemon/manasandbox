@@ -12,7 +12,7 @@ const _interests = [
     img: 'sky.jpg',
     text: '世界の広さを感じていたい'
   }, {
-    name: 'Pinterestで<br>かわいいを集める',
+    name: 'Pinterestでかわいいを集める',
     img: '',
     text: 'かわいいを集めてるといつのまにかデザインのコツの記事にたどり着くのは運命かもしれない'
   }, {
