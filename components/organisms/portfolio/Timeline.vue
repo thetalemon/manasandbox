@@ -19,11 +19,10 @@
               {{ year.title }}
             </v-card-title>
             <v-card-text>
-              <p v-html="year.text" />
+              <p>{{ year.text }}</p>
               <p v-if="year.process">
                 工程: {{ year.process }}
-              </p>
-              <p>使用技術: {{ year.tech }}</p>
+              </p><p>使用技術: {{ year.tech }}</p>
             </v-card-text>
           </v-card>
         </v-timeline-item>

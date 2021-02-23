@@ -3,7 +3,7 @@ const _skills = [
     name: 'Nuxt.js',
     level: '★★★',
     img: 'nuxt-icon.svg',
-    text: `Vue.jsを半年くらいやって、最近Nuxt.jsに進化しました。<br>
+    text: `Vue.jsを半年くらいやって、最近Nuxt.jsに進化しました。
     webpackやCSS修行中`,
     related: ['Vue.js', 'Vuetify', 'webpack', 'HTML', 'CSS', 'scss', 'Cypress']
   }, {
@@ -21,7 +21,7 @@ const _skills = [
     name: 'Firebase',
     level: '★★',
     img: 'firebase.svg',
-    text: `読書進捗具合を入力/管理するアプリをVue.js + Firebaseで作れる。<br>
+    text: `読書進捗具合を入力/管理するアプリをVue.js + Firebaseで作れる。
     GoogleMapAPIを使って簡単なGooleMapクローンとかも作れる。`,
     related: ['Firestore', 'Authentication', 'Firebase-hosting', 'GoogleMapAPI']
   }, {
@@ -50,7 +50,7 @@ const _skills = [
     name: 'C++',
     level: '★',
     img: 'c-plusplus.svg',
-    text: '動画から楽曲を自動生成するアプリを作れる。<br>書かなくなって長いのでそろそろ怪しい。',
+    text: '動画から楽曲を自動生成するアプリを作れる。書かなくなって長いのでそろそろ怪しい。',
     related: ['C', 'Qt', 'OpenCV', 'OpenMIDI']
   }, {
     name: 'Ubuntu Server',
@@ -68,7 +68,7 @@ const _skills = [
     name: '設計、文書',
     level: '★★',
     img: 'doc.svg',
-    text: '基本のREST APIの設計をしたり、RDB設計したり、クラス図やシーケンス図を書いたり。<br>その他、情報をわかりやすく表などにするのも得意で好きです。',
+    text: '基本のREST APIの設計をしたり、RDB設計したり、クラス図やシーケンス図を書いたり。その他、情報をわかりやすく表などにするのも得意で好きです。',
     related: ['plant UML', 'フローチャート図やシーケンス図などの書き方']
   }
 ]
