@@ -1,15 +1,16 @@
-<template>
-  <div />
-</template>
-<script>
-import Plotly from 'plotly.js/dist/plotly'
+<>
+    <div />
+  </
+emplate>
+ript>
+// import Plotly from 'plotly.js/dist/plotly'
 export default {
   components: {
-    Plotly
+    // Plotly
   },
   mounted () {
     // exists only on client:
-    console.log(Plotly)
+    // console.log(Plotly)
   }
 }
 </script>

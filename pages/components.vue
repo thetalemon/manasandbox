@@ -8,30 +8,42 @@
     <v-container fluid>
       <v-row dense>
         <v-col cols="6">
-          <card-template
+          <CardTemplate
             title="pattern.css"
             url="https://bansal.io/pattern-css"
             subtitle="pattern.cssを使ってアイコンっぽい画像を生成する"
           >
             <template slot="content">
-              <div
-                class="icon pattern-diagonal-stripes-sm"
-                :style="{'background-color':bacground, color:color}"
-              >
-                <div class="inside-icon">
-                  吉
-                </div>
-              </div>
+              <CssIcon />
             </template>
-          </card-template>
+          </CardTemplate>
+        </v-col>
+        <v-col cols="6">
+          <CardTemplate
+            title="cocoda validation"
+            url="https://cocoda.design/signup"
+            subtitle="OKがわかりやすいCocoda式のバリデーション"
+          >
+            <template slot="content">
+              <CocodaValidation />
+            </template>
+          </CardTemplate>
         </v-col>
       </v-row>
     </v-container>
   </v-layout>
 </template>
 <script>
+import CardTemplate from '~/components/templates/CardTemplate'
+import CssIcon from '~/components/CssIcon/CssIcon'
+import CocodaValidation from '~/components/CocodaValidation/CocodaValidation'
 
 export default {
+  components: {
+    CardTemplate,
+    CssIcon,
+    CocodaValidation
+  },
   data () {
     return {
       bacground: 'rgba(200,255,255,1.0)',

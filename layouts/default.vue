@@ -67,19 +67,19 @@ export default {
       fixed: false,
       items: [
         {
-          icon: 'mdi-apps',
-          title: 'Welcome',
+          icon: 'mdi-human-greeting',
+          title: 'トップ',
           to: '/'
         },
         {
-          icon: 'mdi-apps',
-          title: 'Graph',
-          to: '/graph'
+          icon: 'mdi-package-variant',
+          title: 'コンポーネント',
+          to: '/components'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          icon: 'mdi-chart-line',
+          title: 'グラフ',
+          to: '/graph'
         }
       ],
       miniVariant: false,
