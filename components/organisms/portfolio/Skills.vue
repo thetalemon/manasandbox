@@ -7,7 +7,7 @@
           :key="i"
           class="ma-2 pa-2 text-center rounded-xl"
           tile
-          width="145px"
+          width="135px"
           height="200px"
           @click="clickData(item)"
         >
