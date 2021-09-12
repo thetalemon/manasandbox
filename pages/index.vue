@@ -21,7 +21,6 @@ import portTobe from '~/components/organisms/portfolio/Tobe.vue'
 import portSkill from '~/components/organisms/portfolio/Skills.vue'
 import portCert from '~/components/organisms/portfolio/Certification.vue'
 import portTimeline from '~/components/organisms/portfolio/Timeline.vue'
-// import portInterests from '~/components/organisms/portfolio/Interest.vue'
 import portBottom from '~/components/organisms/portfolio/Bottom.vue'
 
 export default {

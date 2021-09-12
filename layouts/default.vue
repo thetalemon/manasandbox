@@ -39,15 +39,16 @@
       :clipped-left="clipped"
       class="red accent-2"
       fixed
+      dense
       app
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title id="toolbar-title" v-text="title" />
     </v-app-bar>
     <v-main>
-      <v-container>
+      <div class="defaultContainer">
         <nuxt />
-      </v-container>
+      </div>
     </v-main>
     <v-footer
       :absolute="!fixed"
@@ -80,6 +81,11 @@ export default {
           icon: 'mdi-chart-line',
           title: 'グラフ',
           to: '/graph'
+        },
+        {
+          icon: 'mdi-cellphone',
+          title: 'スマホレイアウト',
+          to: '/smartPhones'
         }
       ],
       miniVariant: false,
@@ -97,5 +103,7 @@ export default {
   font-size: 1.8em;
   color:white;
 }
-
+.defaultContainer {
+  margin-top: 10px;
+}
 </style>

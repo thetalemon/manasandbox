@@ -1,24 +1,8 @@
 <template>
   <port-card-template title="技術">
     <template slot="content">
-      <v-row>
-        <v-card
-          v-for="(item, i) in skills"
-          :key="i"
-          class="ma-2 pa-2 text-center rounded-xl"
-          tile
-          width="135px"
-          height="200px"
-          @click="clickData(item)"
-        >
-          <v-card-text>
-            <p>{{ item.name }}</p>
-            <v-img class="mb-5" :src="convert2Path(item.img)" contain max-width="100px" height="80px" />
-            <p>{{ item.level }}</p>
-          </v-card-text>
-        </v-card>
-      </v-row>
-
+      <skill-card-list title="実装" :list="skills.devs" />
+      <skill-card-list title="その他開発周辺スキル" :list="skills.other" />
       <v-dialog
         v-model="isDialogOpen"
         max-width="290"
@@ -29,15 +13,18 @@
             <p>
               {{ dialogText }}
             </p>
-            <v-card-subtitle>利用可能な関連技術</v-card-subtitle>
-            <v-card-text>
+            <p class="dialogTitle">
+              利用可能な関連技術
+            </p>
+            <p>
               <span
                 v-for="(item, i) in relatedList"
                 :key="i"
               >
-                {{ item }}、
+                <span v-if="relatedList.length-1 !== i">{{ item }}、</span>
+                <span v-else>{{ item }}</span>
               </span>
-            </v-card-text>
+            </p>
           </v-card-text>
         </v-card>
       </v-dialog>
@@ -48,10 +35,12 @@
 <script>
 import skills from '@/mixins/SkillsMixin'
 import PortCardTemplate from '~/components/templates/portfolio/PortfolioCardTemplate.vue'
+import SKillCardList from '~/components/organisms/portfolio/SkillCardList.vue'
 
 export default {
   components: {
-    'port-card-template': PortCardTemplate
+    'port-card-template': PortCardTemplate,
+    'skill-card-list': SKillCardList
   },
   mixins: [skills],
   data () {
@@ -81,5 +70,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.cardsWrapper {
+  display: grid;
+  grid-row-gap: 20px;
+  grid-column-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 140px));
+  margin-top: 16px;
+  margin-bottom: 24px;
 
+  .skillCard{
+    width: 125px;
+    height: 180px;
+    border-radius: 6px;
+    border: solid 2px #fff;
+    text-align: center;
+    .img {
+      margin: 0 auto;
+    }
+    &:hover {
+      border: solid 2px #add8e6;
+    }
+  }
+}
+
+.dialogTitle {
+  margin: 0;
+}
 </style>
