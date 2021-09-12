@@ -1,19 +1,19 @@
 <template>
   <port-card-template title="資格">
     <template slot="content">
-      <v-row>
-        <v-card
-          v-for="(item, i) in certs"
-          :key="i"
-          class="ma-2 pa-2 text-center rounded-xl"
-          tile
-          width="150px"
-          height="100px"
+      <table>
+        <tr
+          v-for="(item, index) in certs"
+          :key="index"
         >
-          <v-card-text>{{ item.name }}</v-card-text>
-          <v-card-text>{{ item.year }}</v-card-text>
-        </v-card>
-      </v-row>
+          <td class="year">
+            {{ item.year }}
+          </td>
+          <td>
+            {{ item.name }}
+          </td>
+        </tr>
+      </table>
     </template>
   </port-card-template>
 </template>
@@ -29,3 +29,9 @@ export default {
   mixins: [certs]
 }
 </script>
+
+<style lang="scss" scoped>
+.year {
+  width: 60px;
+}
+</style>
