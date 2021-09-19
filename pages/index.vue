@@ -1,6 +1,6 @@
 <template>
   <v-layout column class="font">
-    <v-container fluid class="main-container">
+    <div class="main-container">
       <portTop />
       <portSocial />
       <portTobe />
@@ -10,7 +10,7 @@
       <!-- <portInterests /> -->
       <portSocial />
       <portBottom />
-    </v-container>
+    </div>
   </v-layout>
 </template>
 
@@ -41,6 +41,9 @@ export default {
   font-family: 'M PLUS Rounded 1c';
 }
 .main-container{
+  width: 100%;
   max-width: 840px;
+  padding: 0 10px 10px 10px;
+  margin: 0 auto;
 }
 </style>

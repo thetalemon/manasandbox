@@ -51,6 +51,7 @@
       </div>
     </v-main>
     <v-footer
+      class="footer"
       :absolute="!fixed"
       app
     >
