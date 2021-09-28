@@ -37,7 +37,7 @@
 
     <v-app-bar
       :clipped-left="clipped"
-      class="red accent-2"
+      color="#4682B4"
       fixed
       dense
       app

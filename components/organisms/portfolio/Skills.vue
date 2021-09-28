@@ -1,8 +1,8 @@
 <template>
   <port-card-template title="技術">
     <template slot="content">
-      <skill-card-list title="実装" :list="skills.devs" />
-      <skill-card-list title="その他開発周辺スキル" :list="skills.other" />
+      <skill-card-list title="実装" :list="skills.devs" @click="clickData" />
+      <skill-card-list title="その他開発周辺スキル" :list="skills.other" @click="clickData" />
       <v-dialog
         v-model="isDialogOpen"
         max-width="290"
@@ -51,14 +51,10 @@ export default {
     }
   },
   methods: {
-    convert2Path (filename) {
-      const prefix = '/tech-logo/'
-      return prefix + filename
-    },
-    clickData (row) {
+    clickData (payload) {
       this.isDialogOpen = true
-      this.dialogText = row.text
-      this.relatedList = row.related
+      this.dialogText = payload.text
+      this.relatedList = payload.related
     },
     closeModal () {
       this.isDialogOpen = false
