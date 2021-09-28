@@ -39,6 +39,9 @@ export default {
     convert2Path (filename) {
       const prefix = '/tech-logo/'
       return prefix + filename
+    },
+    clickData (item) {
+      this.$emit('click', item)
     }
   }
 }
