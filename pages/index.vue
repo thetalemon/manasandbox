@@ -43,6 +43,7 @@ export default {
 .main-container{
   width: 100%;
   max-width: 840px;
+  min-width: 320px;
   padding: 0 10px 10px 10px;
   margin: 0 auto;
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="topWrapper">
-    <img class="topImg" src="/aza156-2.png">
+    <img class="topImg" src="/top/aza2109.png">
     <div class="titleTextArea">
       <h1>なじませクリエイター</h1>
       <h2>まなさす</h2>
@@ -36,10 +36,10 @@
   .titleTextArea {
     word-wrap: normal;
     width: 55%;
-    color: white;
+    color: rgba(0, 0, 0, 0.6);
     position: absolute;
-    top: 50%;
-    left: 55%;
+    top: 30%;
+    left: 35%;
     transform: translate(-50%, -50%);
   }
 }
