@@ -2,16 +2,17 @@
   <port-card-template>
     <template slot="content">
       <div class="center">
-        <v-img
+        <img
           v-for="(item, i) in social"
           :key="i"
           class="ico"
           :src="convert2Path(item.img)"
           contain
-          :max-height="item.size"
-          :width="item.size"
+          :height="40"
+          :width="80"
+          :alt="item.alt"
           @click="onClick(item.url)"
-        />
+        >
       </div>
     </template>
   </port-card-template>
@@ -40,14 +41,16 @@ export default {
 
 <style lang="scss" scoped>
 .center{
+  max-width: 400px;
   display:flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
   height: 100%;
 }
 
 .ico{
-  margin: 0px 20px;
+  object-fit: fill;
   cursor: pointer;
 }
 

@@ -1,6 +1,6 @@
 <template>
   <div class="topWrapper">
-    <img class="topImg" src="/top/aza2109.png">
+    <img class="topImg" width="820" height="420" alt="トップ画像" src="/top/aza2109.png">
     <div class="titleTextArea">
       <h1>なじませクリエイター</h1>
       <h2>まなさす</h2>
@@ -30,8 +30,9 @@
   }
 
   .topImg {
-    width: 100%;
     border-radius: 5px;
+    max-width: 100%;
+    height: auto;
   }
   .titleTextArea {
     word-wrap: normal;
