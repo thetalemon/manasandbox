@@ -1,6 +1,11 @@
 // import colors from 'vuetify/es5/util/colors'
 
 export default {
+  render: {
+    static: {
+      maxAge: '1y'
+    }
+  },
   /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
@@ -29,11 +34,7 @@ export default {
       { hid: 'og:image', property: 'og:image', content: 'https://manassandboxx.web.app/aza166.png' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/mylogo.ico' },
-      // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Mplus+1p' },
-      // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c' },
-      // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Oswald|Libre+Baskerville&display=swap' },
-      { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css' }
+      { rel: 'icon', type: 'image/x-icon', href: '/mylogo.ico' }
     ]
   },
   /*
@@ -82,7 +83,7 @@ export default {
   axios: {},
   webfontloader: {
     google: {
-      families: ['Mplus 1p', 'M PLUS Rounded 1c', 'Caveat']
+      families: ['Mplus 1p', 'M PLUS Rounded 1c']
     }
   },
   /*

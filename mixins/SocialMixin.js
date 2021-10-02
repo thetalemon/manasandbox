@@ -3,13 +3,12 @@ const _social = [
   //   name: 'note',
   //   img: 'note.svg',
   //   url: 'https://note.com/thetalemon',
-  //   size: '50'
   // },
   {
     name: 'zenn',
     img: 'zenn.svg',
     url: 'https://zenn.dev/thetalemon',
-    size: '30'
+    alt: 'zenn'
   },
   // {
   //   name: 'twitter',
@@ -21,13 +20,13 @@ const _social = [
     name: 'blog',
     img: 'blog.svg',
     url: 'https://manasblog.vercel.app/',
-    size: '40'
+    alt: 'ブログ'
   },
   {
     name: 'mail',
     img: 'mail.svg',
     url: 'https://docs.google.com/forms/d/e/1FAIpQLSextWHexQaobXuDXoz-_aMgjJLEGU1QwjLVl5diIlEM4k3c9Q/viewform?usp=sf_link',
-    size: '40'
+    alt: 'メール'
   }
 ]
 

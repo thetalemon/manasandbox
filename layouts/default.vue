@@ -2,7 +2,6 @@
   <v-app>
     <v-navigation-drawer
       v-model="drawer"
-      :mini-variant="miniVariant"
       :clipped="clipped"
       fixed
       app
@@ -15,24 +14,11 @@
           router
           exact
         >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title v-text="item.title" />
           </v-list-item-content>
         </v-list-item>
       </v-list>
-      <template v-slot:append>
-        <div class="pa-2">
-          <v-btn
-            icon
-            @click.stop="miniVariant = !miniVariant"
-          >
-            <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-          </v-btn>
-        </div>
-      </template>
     </v-navigation-drawer>
 
     <v-app-bar
@@ -42,7 +28,9 @@
       dense
       app
     >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <button class="menuButton" aria-label="menu-button" @click.stop="drawer = !drawer">
+        <span class="menu-btn" />
+      </button>
       <v-toolbar-title id="toolbar-title" v-text="title" />
     </v-app-bar>
     <v-main>
@@ -69,27 +57,23 @@ export default {
       fixed: false,
       items: [
         {
-          icon: 'mdi-human-greeting',
           title: 'トップ',
           to: '/'
         },
         {
-          icon: 'mdi-package-variant',
           title: 'コンポーネント',
           to: '/components'
         },
         {
-          icon: 'mdi-chart-line',
           title: 'グラフ',
           to: '/graph'
         },
         {
-          icon: 'mdi-cellphone',
           title: 'スマホレイアウト',
           to: '/smartPhones'
         }
       ],
-      miniVariant: false,
+
       right: true,
       rightDrawer: false,
       title: "Mana's Sandbox"
@@ -100,11 +84,32 @@ export default {
 
 <style lang="scss">
 #toolbar-title{
-  font-family: 'Caveat';
-  font-size: 1.8em;
-  color:white;
+  font-size: 1.4rem;
+  color:rgba(255, 255, 255, 0.9);
 }
 .defaultContainer {
   margin-top: 10px;
+}
+.menuButton {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  .menu-btn,
+  .menu-btn:before,
+  .menu-btn:after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 24px;
+      border-radius: 5px;
+      background-color: #ffffff;
+      position: absolute;
+  }
+  .menu-btn:before {
+    bottom: 8px;
+  }
+  .menu-btn:after {
+      top: 8px;
+  }
 }
 </style>
