@@ -1,5 +1,7 @@
 <template>
-  <v-layout
+  <!-- 重いので一旦抜く -->
+  <span />
+  <!-- <v-layout
     column
     justify-center
     align-center
@@ -51,20 +53,20 @@
         </v-col>
       </v-row>
     </v-container>
-  </v-layout>
+  </v-layout> -->
 </template>
 
 <script>
-import CardTemplate from '~/components/templates/CardTemplate.vue'
-import Apexchart from '~/components/molecules/graph/Apexchart.vue'
-import Chartjs from '~/components/molecules/graph/Chartjs.vue'
+// import CardTemplate from '~/components/templates/CardTemplate.vue'
+// import Apexchart from '~/components/molecules/graph/Apexchart.vue'
+// import Chartjs from '~/components/molecules/graph/Chartjs.vue'
 // import PlotlyjsComponent from '~/components/molecules/graph/PlotlyjsComponent.vue'
 
 export default {
   components: {
-    'card-template': CardTemplate,
-    apexchart: Apexchart,
-    chartjs: Chartjs
+    // 'card-template': CardTemplate,
+    // apexchart: Apexchart,
+    // chartjs: Chartjs
     // plotlyjs: PlotlyjsComponent
   }
 }

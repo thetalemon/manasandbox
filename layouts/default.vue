@@ -64,10 +64,11 @@ export default {
           title: 'コンポーネント',
           to: '/components'
         },
-        {
-          title: 'グラフ',
-          to: '/graph'
-        },
+        // プラグインが重いのでコメントアウトしている
+        // {
+        //   title: 'グラフ',
+        //   to: '/graph'
+        // },
         {
           title: 'スマホレイアウト',
           to: '/smartPhones'

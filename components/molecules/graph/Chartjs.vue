@@ -2,7 +2,7 @@
   <div
     style="position: relative; height:350px; width:300px"
   >
-    <line-chart :chart-data="chartData" :options="chartOptions" />
+    <!-- <line-chart :chart-data="chartData" :options="chartOptions" /> -->
   </div>
 </template>
 

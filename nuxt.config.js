@@ -3,7 +3,7 @@
 export default {
   render: {
     static: {
-      maxAge: '1y'
+      maxAge: 31536000
     }
   },
   /*
@@ -15,7 +15,7 @@ export default {
   ** Nuxt target
   ** See https://nuxtjs.org/api/configuration-target
   */
-  target: 'server',
+  target: 'static',
   /*
   ** Headers of the page
   ** See https://nuxtjs.org/api/configuration-head
@@ -49,10 +49,10 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-    { src: '~/plugins/sanitize.js' },
-    { src: '~/plugins/vue-apexchart.js', ssr: false },
-    { src: '@/plugins/vue-chartjs', ssr: false },
-    { src: '~plugins/vue-plotly', mode: 'client' }
+    { src: '~/plugins/sanitize.js' }
+    // { src: '~/plugins/vue-apexchart.js', ssr: false },
+    // { src: '@/plugins/vue-chartjs', ssr: false },
+    // { src: '~plugins/vue-plotly', mode: 'client' }
   ],
   /*
   ** Auto import components
