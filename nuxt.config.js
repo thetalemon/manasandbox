@@ -6,6 +6,7 @@ export default {
       maxAge: 31536000
     }
   },
+  serverMiddleware: ['~/middleware/response-header.js'],
   /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
