@@ -1,12 +1,6 @@
 // import colors from 'vuetify/es5/util/colors'
 
 export default {
-  render: {
-    static: {
-      maxAge: 31536000
-    }
-  },
-  serverMiddleware: ['~/middleware/response-header.js'],
   /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode

@@ -1,6 +1,9 @@
 <template>
   <div class="topWrapper">
-    <img class="topImg" width="820" height="420" alt="トップ画像" src="/top/aza2109.png">
+    <picture>
+      <source type="image/webp" srcset="/top/aza2109.webp">
+      <img class="topImg" width="820" height="420" alt="トップ画像" src="/top/aza2109.png">
+    </picture>
     <div class="titleTextArea">
       <h1>なじませクリエイター</h1>
       <h2>まなさす</h2>
