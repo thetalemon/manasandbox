@@ -10,6 +10,12 @@ const _social = [
     url: 'https://zenn.dev/thetalemon',
     alt: 'zenn'
   },
+  {
+    name: 'github',
+    img: 'github.svg',
+    url: 'https://github.com/thetalemon',
+    alt: 'github'
+  },
   // {
   //   name: 'twitter',
   //   img: 'twitter.svg',
