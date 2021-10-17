@@ -4,6 +4,7 @@
       <portTop />
       <portSocial />
       <portTobe />
+      <portProd />
       <portSkill />
       <portCert />
       <portTimeline />
@@ -18,6 +19,7 @@
 import portTop from '~/components/organisms/portfolio/Top.vue'
 import portSocial from '~/components/organisms/portfolio/Social.vue'
 import portTobe from '~/components/organisms/portfolio/Tobe.vue'
+import portProd from '~/components/organisms/portfolio/Product.vue'
 import portSkill from '~/components/organisms/portfolio/Skills.vue'
 import portCert from '~/components/organisms/portfolio/Certification.vue'
 import portTimeline from '~/components/organisms/portfolio/Timeline.vue'
@@ -28,6 +30,7 @@ export default {
     portTop,
     portSocial,
     portTobe,
+    portProd,
     portSkill,
     portCert,
     portTimeline,
