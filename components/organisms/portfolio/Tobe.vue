@@ -1,9 +1,8 @@
 <template>
-  <port-card-template title="To be...">
+  <port-card-template title="to do">
     <template slot="content">
-      <p>画面をぱっと開いた時に、なんとなく使い方がわかるような、</p>
-      <p>毎日使う時に、ストレスがないような、</p>
-      <p>そんな『日々の暮らしに馴染む』を、目指して造っています。</p>
+      <p>テクノロジーで、日々をちょっぴり快適に。</p>
+      <p>『日々の暮らしのちょっとしたストレスを軽減』を目指して、色々造っています。</p>
     </template>
   </port-card-template>
 </template>

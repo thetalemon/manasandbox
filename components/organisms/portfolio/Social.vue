@@ -1,31 +1,23 @@
 <template>
-  <port-card-template>
-    <template slot="content">
-      <div class="center">
-        <img
-          v-for="(item, i) in social"
-          :key="i"
-          class="ico"
-          :src="convert2Path(item.img)"
-          contain
-          :height="40"
-          :width="80"
-          :alt="item.alt"
-          @click="onClick(item.url)"
-        >
-      </div>
-    </template>
-  </port-card-template>
+  <div class="center">
+    <img
+      v-for="(item, i) in social"
+      :key="i"
+      class="ico"
+      :src="convert2Path(item.img)"
+      contain
+      :height="40"
+      :width="80"
+      :alt="item.alt"
+      @click="onClick(item.url)"
+    >
+  </div>
 </template>
 
 <script>
 import social from '@/mixins/SocialMixin'
-import PortCardTemplate from '~/components/templates/portfolio/PortfolioCardTemplate.vue'
 
 export default {
-  components: {
-    'port-card-template': PortCardTemplate
-  },
   mixins: [social],
   methods: {
     convert2Path (filename) {
@@ -46,12 +38,11 @@ export default {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  height: 100%;
+  height: 70px;
 }
 
 .ico{
   object-fit: fill;
   cursor: pointer;
 }
-
 </style>

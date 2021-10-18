@@ -3,12 +3,13 @@
     <div class="main-container">
       <portTop />
       <portSocial />
-      <portTobe />
-      <portProd />
-      <portSkill />
-      <portCert />
-      <portTimeline />
-      <!-- <portInterests /> -->
+      <div class="mainContents">
+        <portTobe class="component" />
+        <portProd class="component" />
+        <portSkill class="component" />
+        <portCert class="component" />
+        <portTimeline class="component" />
+      </div>
       <portSocial />
       <portBottom />
     </div>
@@ -49,5 +50,16 @@ export default {
   min-width: 320px;
   padding: 0 10px 10px 10px;
   margin: 0 auto;
+  .mainContents {
+    .component{
+      padding-top: 40px;
+      border-top: 1px #add8e6 solid;
+      margin-bottom: 40px;
+
+      &:first-of-type{
+        border-top: none;
+      }
+    }
+  }
 }
 </style>

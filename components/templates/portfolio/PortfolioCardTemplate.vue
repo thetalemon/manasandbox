@@ -1,16 +1,10 @@
 <template>
-  <v-row dense justify="center" align-content="center">
-    <v-col cols="12">
-      <v-card>
-        <v-card-title v-if="title">
-          {{ title }}
-        </v-card-title>
-        <v-card-text>
-          <slot name="content" />
-        </v-card-text>
-      </v-card>
-    </v-col>
-  </v-row>
+  <div class="cardTemplate">
+    <h1 v-if="title">
+      ■ {{ title }}
+    </h1>
+    <slot name="content" />
+  </div>
 </template>
 
 <script>
@@ -25,8 +19,11 @@ export default {
 }
 </script>
 
-<style>
-.card-template{
-  min-height: 350px;
+<style lang="scss" scoped>
+.cardTemplate{
+  h1 {
+    margin-bottom: 8px;
+  }
 }
+
 </style>
