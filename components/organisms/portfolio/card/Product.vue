@@ -66,10 +66,16 @@ export default {
     line-height: 25px;
     padding-top: 2px;
     margin-left: 8px;
+    &:hover {
+      opacity: .7;
+    }
   }
 
   .imgWrapper{
     text-align: center;
+    &:hover {
+      opacity: .7;
+    }
     .img {
       margin-bottom: 8px;
       border-radius: 4px 4px 0 0;
