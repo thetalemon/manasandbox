@@ -74,9 +74,9 @@ export default {
   margin-top: 16px;
   margin-bottom: 24px;
 
-  .skillCard{
-    width: 125px;
-    height: 180px;
+  /* .skillCard{ */
+    /* width: 125px; */
+    /* height: 180px;
     border-radius: 6px;
     border: solid 2px #fff;
     text-align: center;
@@ -86,7 +86,7 @@ export default {
     &:hover {
       border: solid 2px #add8e6;
     }
-  }
+  } */
 }
 
 .dialogTitle {

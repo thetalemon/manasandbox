@@ -52,21 +52,19 @@ export default {
   display: grid;
   grid-row-gap: 20px;
   grid-column-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 140px));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   margin-top: 16px;
   margin-bottom: 24px;
 
   .skillCard{
-    width: 125px;
     height: 180px;
     border-radius: 6px;
-    border: solid 2px #fff;
     text-align: center;
     .img {
       margin: 0 auto;
     }
     &:hover {
-      border: solid 2px #add8e6;
+      background-color: #e6f9ff;
     }
   }
 }

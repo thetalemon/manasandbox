@@ -48,16 +48,18 @@ export default {
   width: 100%;
   max-width: 840px;
   min-width: 320px;
-  padding: 0 10px 10px 10px;
   margin: 0 auto;
   .mainContents {
     .component{
       padding-top: 40px;
       border-top: 1px #add8e6 solid;
       margin-bottom: 40px;
-
-      &:first-of-type{
+      &:first-child {
         border-top: none;
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 8px;
       }
     }
   }

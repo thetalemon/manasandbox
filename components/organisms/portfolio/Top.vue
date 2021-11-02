@@ -2,7 +2,7 @@
   <div class="topWrapper">
     <picture>
       <source type="image/webp" srcset="/top/aza2109.webp">
-      <img class="topImg" width="820" height="420" alt="トップ画像" src="/top/aza2109.png">
+      <img class="topImg" width="840" height="420" alt="トップ画像" src="/top/aza2109.png">
     </picture>
     <div class="titleTextArea">
       <h1>なじませクリエイター</h1>
@@ -13,6 +13,7 @@
 <style lang="scss" scoped>
 .topWrapper {
   position: relative;
+  line-height: 0;
 
   @media only screen and (max-width: 600px) {
     h1 {
@@ -33,11 +34,12 @@
   }
 
   .topImg {
-    border-radius: 5px;
     max-width: 100%;
     height: auto;
   }
   .titleTextArea {
+    line-height: 1.2;
+
     word-wrap: normal;
     width: 55%;
     color: rgba(0, 0, 0, 0.6);

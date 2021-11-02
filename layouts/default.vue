@@ -1,36 +1,11 @@
 <template>
   <v-app>
-    <v-navigation-drawer
-      v-model="drawer"
-      :clipped="clipped"
-      fixed
-      app
-    >
-      <v-list>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
-        >
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-
     <v-app-bar
-      :clipped-left="clipped"
       color="#4682B4"
       fixed
       dense
       app
     >
-      <button class="menuButton" aria-label="menu-button" @click.stop="drawer = !drawer">
-        <span class="menu-btn" />
-      </button>
       <v-toolbar-title id="toolbar-title" v-text="title" />
     </v-app-bar>
     <v-main>
@@ -40,6 +15,8 @@
     </v-main>
     <v-footer
       class="footer"
+      color="#4682B4"
+      dark
       :absolute="!fixed"
       app
     >
@@ -52,31 +29,7 @@
 export default {
   data () {
     return {
-      clipped: false,
-      drawer: false,
       fixed: false,
-      items: [
-        {
-          title: 'トップ',
-          to: '/'
-        },
-        {
-          title: 'コンポーネント',
-          to: '/components'
-        },
-        // プラグインが重いのでコメントアウトしている
-        // {
-        //   title: 'グラフ',
-        //   to: '/graph'
-        // },
-        {
-          title: 'スマホレイアウト',
-          to: '/smartPhones'
-        }
-      ],
-
-      right: true,
-      rightDrawer: false,
       title: "Mana's Sandbox"
     }
   }
@@ -87,9 +40,6 @@ export default {
 #toolbar-title{
   font-size: 1.4rem;
   color:rgba(255, 255, 255, 0.9);
-}
-.defaultContainer {
-  margin-top: 10px;
 }
 .menuButton {
   height: 30px;
@@ -112,5 +62,8 @@ export default {
   .menu-btn:after {
       top: 8px;
   }
+}
+.footer {
+  color: white;
 }
 </style>
