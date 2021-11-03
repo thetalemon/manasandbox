@@ -1,12 +1,19 @@
 <template>
-  <picture>
-    <source type="image/webp" srcset="/aza166.webp">
-    <img class="img" width="840" height="410" alt="自己紹介画像" src="/aza166.png">
-  </picture>
+  <FulWidthImg
+    src="/aza166.webp"
+    srcset="/aza166.png"
+    :width="840"
+    :height="410"
+    alt="自己紹介画像"
+  />
 </template>
-<style scoped>
-.img {
-  max-width: 100%;
-  height: auto;
+
+<script>
+import FulWidthImg from '~/components/atoms/Img/FulWidthImg.vue'
+
+export default {
+  components: {
+    FulWidthImg
+  }
 }
-</style>
+</script>

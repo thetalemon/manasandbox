@@ -73,20 +73,6 @@ export default {
   grid-template-columns: repeat(auto-fit, minmax(140px, 140px));
   margin-top: 16px;
   margin-bottom: 24px;
-
-  /* .skillCard{ */
-    /* width: 125px; */
-    /* height: 180px;
-    border-radius: 6px;
-    border: solid 2px #fff;
-    text-align: center;
-    .img {
-      margin: 0 auto;
-    }
-    &:hover {
-      border: solid 2px #add8e6;
-    }
-  } */
 }
 
 .dialogTitle {

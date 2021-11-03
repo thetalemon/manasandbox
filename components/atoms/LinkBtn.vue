@@ -24,9 +24,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.apexchart{
-  height:350px;
-}
-</style>

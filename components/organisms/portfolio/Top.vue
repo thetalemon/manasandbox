@@ -1,15 +1,29 @@
 <template>
   <div class="topWrapper">
-    <picture>
-      <source type="image/webp" srcset="/top/aza2109.webp">
-      <img class="topImg" width="840" height="420" alt="トップ画像" src="/top/aza2109.png">
-    </picture>
+    <FulWidthImg
+      src="/top/aza2109.webp"
+      srcset="/top/aza2109.png"
+      :width="840"
+      :height="420"
+      alt="トップ画像"
+    />
     <div class="titleTextArea">
       <h1>なじませクリエイター</h1>
       <h2>まなさす</h2>
     </div>
   </div>
 </template>
+
+<script>
+import FulWidthImg from '~/components/atoms/Img/FulWidthImg.vue'
+
+export default {
+  components: {
+    FulWidthImg
+  }
+}
+</script>
+
 <style lang="scss" scoped>
 .topWrapper {
   position: relative;
@@ -33,13 +47,8 @@
     }
   }
 
-  .topImg {
-    max-width: 100%;
-    height: auto;
-  }
   .titleTextArea {
     line-height: 1.2;
-
     word-wrap: normal;
     width: 55%;
     color: rgba(0, 0, 0, 0.6);
