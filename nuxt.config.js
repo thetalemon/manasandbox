@@ -44,7 +44,6 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-    { src: '~/plugins/sanitize.js' }
     // { src: '~/plugins/vue-apexchart.js', ssr: false },
     // { src: '@/plugins/vue-chartjs', ssr: false },
     // { src: '~plugins/vue-plotly', mode: 'client' }
@@ -59,7 +58,6 @@ export default {
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    // '@nuxtjs/google-fonts',
     '@nuxtjs/eslint-module',
     '@nuxtjs/vuetify'
   ],

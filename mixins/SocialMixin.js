@@ -16,24 +16,24 @@ const _social = [
     url: 'https://github.com/thetalemon',
     alt: 'github'
   },
-  // {
-  //   name: 'twitter',
-  //   img: 'twitter.svg',
-  //   url: 'https://twitter.com/thetalemon',
-  //   size: '50'
-  // },
+  {
+    name: 'twitter',
+    img: 'twitter.svg',
+    url: 'https://twitter.com/thetalemon',
+    alt: 'twitter'
+  },
   {
     name: 'blog',
     img: 'blog.svg',
     url: 'https://manasblog.vercel.app/',
     alt: 'ブログ'
-  },
-  {
-    name: 'mail',
-    img: 'mail.svg',
-    url: 'https://docs.google.com/forms/d/e/1FAIpQLSextWHexQaobXuDXoz-_aMgjJLEGU1QwjLVl5diIlEM4k3c9Q/viewform?usp=sf_link',
-    alt: 'メール'
   }
+  // {
+  //   name: 'mail',
+  //   img: 'mail.svg',
+  //   url: 'https://docs.google.com/forms/d/e/1FAIpQLSextWHexQaobXuDXoz-_aMgjJLEGU1QwjLVl5diIlEM4k3c9Q/viewform?usp=sf_link',
+  //   alt: 'メール'
+  // }
 ]
 
 export default {

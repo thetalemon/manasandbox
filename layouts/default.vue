@@ -5,8 +5,11 @@
       fixed
       dense
       app
+      dark
     >
-      <v-toolbar-title id="toolbar-title" v-text="title" />
+      <h3>
+        {{ title }}
+      </h3>
     </v-app-bar>
     <v-main>
       <div class="defaultContainer">
@@ -14,7 +17,6 @@
       </div>
     </v-main>
     <v-footer
-      class="footer"
       color="#4682B4"
       dark
       :absolute="!fixed"
@@ -36,34 +38,5 @@ export default {
 }
 </script>
 
-<style lang="scss">
-#toolbar-title{
-  font-size: 1.4rem;
-  color:rgba(255, 255, 255, 0.9);
-}
-.menuButton {
-  height: 30px;
-  width: 30px;
-  margin-right: 10px;
-  .menu-btn,
-  .menu-btn:before,
-  .menu-btn:after {
-      content: '';
-      display: block;
-      height: 2px;
-      width: 24px;
-      border-radius: 5px;
-      background-color: #ffffff;
-      position: absolute;
-  }
-  .menu-btn:before {
-    bottom: 8px;
-  }
-  .menu-btn:after {
-      top: 8px;
-  }
-}
-.footer {
-  color: white;
-}
+<style lang="scss" scoped>
 </style>
