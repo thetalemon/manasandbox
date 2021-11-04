@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h3>{{ title }}</h3>
     <div class="cardsWrapper">
       <div
         v-for="(item, i) in list"
@@ -11,12 +10,14 @@
         height="200px"
         @click="clickData(item)"
       >
+        <img
+          class="img"
+          :src="convert2Path(item.img)"
+          width="80px"
+          height="50px"
+        >
         <p>
           {{ item.name }}
-        </p>
-        <v-img class="img mb-5" :src="convert2Path(item.img)" contain max-width="100px" height="80px" />
-        <p class="centringText">
-          {{ item.level }}
         </p>
       </div>
     </div>
@@ -50,18 +51,24 @@ export default {
 <style lang="scss" scoped>
 .cardsWrapper {
   display: grid;
-  grid-row-gap: 20px;
-  grid-column-gap: 10px;
+  grid-row-gap: 16px;
+  grid-column-gap: 8px;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  margin-top: 16px;
-  margin-bottom: 24px;
 
   .skillCard{
-    height: 180px;
+    height: 100px;
+    padding: 12px;
     border-radius: 6px;
     text-align: center;
+    p {
+      font-size: 12px;
+    }
     .img {
       margin: 0 auto;
+      margin-bottom: 8px;
+      object-fit: contain;
+      max-width: 80px;
+      max-height: 50px;
     }
     &:hover {
       background-color: #e6f9ff;
