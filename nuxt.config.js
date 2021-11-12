@@ -36,7 +36,6 @@ export default {
   ** Global CSS
   */
   css: [
-    // '@assets/variables.scss',
     '@assets/pattern.min.css'
   ],
   /*
@@ -44,9 +43,6 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-    // { src: '~/plugins/vue-apexchart.js', ssr: false },
-    // { src: '@/plugins/vue-chartjs', ssr: false },
-    // { src: '~plugins/vue-plotly', mode: 'client' }
   ],
   /*
   ** Auto import components
@@ -94,26 +90,19 @@ export default {
   build: {
   },
   storybook: {
-    // 追加のアドオンなどあれば
     addons: [
       '@storybook/addon-controls',
       '@storybook/addon-notes'
     ],
-    // ポート指定
     port: 5555,
-    // ストーリーの親に要素など追加しcssなど設定できる
-    // 背景色や表示位置、デバイスの設定など
     parameters: {
-      // 背景色：デフォルトの色を使う場合
       backgrounds: {
-        default: 'dark' // light or dark
+        default: 'ligth'
       },
-      // Description, Default, Controlsカラムの表示
       controls: {
         expanded: true
       },
-      // 表示位置
-      layout: 'centered' // centered:中央表示, padded:コンポーネントに余白付与, fullscreen:幅いっぱい
+      layout: 'centered'
     }
   }
 }
