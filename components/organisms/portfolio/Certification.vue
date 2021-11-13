@@ -1,5 +1,5 @@
 <template>
-  <port-card-template title="資格">
+  <PortCardTemplate title="資格">
     <template slot="content">
       <table>
         <tr
@@ -15,7 +15,7 @@
         </tr>
       </table>
     </template>
-  </port-card-template>
+  </PortCardTemplate>
 </template>
 
 <script>
@@ -24,7 +24,7 @@ import PortCardTemplate from '~/components/templates/portfolio/PortfolioCardTemp
 
 export default {
   components: {
-    'port-card-template': PortCardTemplate
+    PortCardTemplate
   },
   mixins: [certs]
 }

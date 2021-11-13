@@ -1,5 +1,5 @@
 <template>
-  <port-card-template title="履歴">
+  <PortCardTemplate title="履歴">
     <template slot="content">
       <v-timeline>
         <v-timeline-item
@@ -28,7 +28,7 @@
         </v-timeline-item>
       </v-timeline>
     </template>
-  </port-card-template>
+  </PortCardTemplate>
 </template>
 
 <script>
@@ -37,7 +37,7 @@ import PortCardTemplate from '~/components/templates/portfolio/PortfolioCardTemp
 
 export default {
   components: {
-    'port-card-template': PortCardTemplate
+    PortCardTemplate
   },
   mixins: [years]
 }

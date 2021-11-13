@@ -28,7 +28,6 @@
     "core-js": "^3.19.1",
     "eslint": "^7.32.0",
     "eslint-plugin-nuxt": "^1.0.0",
-    "postcss": "^8.3.11",
     "sass": "^1.41.0",
     "sass-loader": "^10.1.1"
   }

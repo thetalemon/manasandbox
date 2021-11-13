@@ -1,5 +1,5 @@
 <template>
-  <port-card-template title="技術">
+  <PortCardTemplate title="技術">
     <template slot="content">
       <p class="tableYTitle">
         仕事
@@ -11,18 +11,18 @@
         <table class="skillGraph">
           <tr>
             <td>
-              <skill-cards :list="LeftUpper" @click="clickData" />
+              <SkillItems :list="LeftUpper" @click="clickData" />
             </td>
             <td>
-              <skill-cards :list="RightUpper" @click="clickData" />
+              <SkillItems :list="RightUpper" @click="clickData" />
             </td>
           </tr>
           <tr>
             <td>
-              <skill-cards :list="LeftLower" @click="clickData" />
+              <SkillItems :list="LeftLower" @click="clickData" />
             </td>
             <td>
-              <skill-cards :list="RightLower" @click="clickData" />
+              <SkillItems :list="RightLower" @click="clickData" />
             </td>
           </tr>
         </table>
@@ -59,18 +59,18 @@
         </v-card>
       </v-dialog>
     </template>
-  </port-card-template>
+  </PortCardTemplate>
 </template>
 
 <script>
 import skills from '@/mixins/SkillsMixin'
 import PortCardTemplate from '~/components/templates/portfolio/PortfolioCardTemplate.vue'
-import SKillCards from '~/components/organisms/portfolio/SkillCards.vue'
+import SkillItems from '~/components/molecules/SkillItems.vue'
 
 export default {
   components: {
-    'port-card-template': PortCardTemplate,
-    'skill-cards': SKillCards
+    PortCardTemplate,
+    SkillItems
   },
   mixins: [skills],
   data () {
