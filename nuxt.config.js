@@ -98,7 +98,7 @@ export default {
     port: 5555,
     parameters: {
       backgrounds: {
-        default: 'ligth'
+        default: 'light'
       },
       controls: {
         expanded: true

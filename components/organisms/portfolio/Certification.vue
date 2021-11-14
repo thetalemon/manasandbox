@@ -1,7 +1,7 @@
 <template>
   <PortCardTemplate title="資格">
     <template slot="content">
-      <table>
+      <table class="certificationTable">
         <tr
           v-for="(item, index) in certs"
           :key="index"
@@ -31,7 +31,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.year {
-  width: 60px;
+.certificationTable {
+  @media only screen and (min-width: 600px) {
+    margin-left: 16px;
+  }
+  .year {
+    width: 60px;
+  }
 }
 </style>
