@@ -1,34 +1,33 @@
 <template>
-  <port-card-template title="履歴">
+  <PortCardTemplate title="履歴">
     <template slot="content">
-      <v-timeline>
-        <v-timeline-item
-          v-for="(year, i) in years"
-          :key="i"
-          :color="year.color"
-          small
-        >
-          <template v-slot:opposite>
-            <span
-              :class="`headline font-weight-bold ${year.color}--text`"
-              v-text="year.year"
-            />
-          </template>
-          <v-card class="elevation-2">
-            <v-card-title class="headline">
+      <div class="timelineWrapper">
+        <div class="timeline">
+          <div
+            v-for="(year, i) in years"
+            :key="i"
+            small
+            class="timelineInner"
+          >
+            <div class="circle" :style="{ background: year.colorCode }" />
+            <h2 :style="{ color: year.colorCode }">
+              {{ year.year }}
+            </h2>
+            <h3>
               {{ year.title }}
-            </v-card-title>
-            <v-card-text>
-              <p>{{ year.text }}</p>
-              <p v-if="year.process">
-                工程: {{ year.process }}
-              </p><p>使用技術: {{ year.tech }}</p>
-            </v-card-text>
-          </v-card>
-        </v-timeline-item>
-      </v-timeline>
+            </h3>
+            <p>
+              {{ year.text }}
+            </p>
+            <p v-if="year.process">
+              工程: {{ year.process }}
+            </p>
+            <p>使用技術: {{ year.tech }}</p>
+          </div>
+        </div>
+      </div>
     </template>
-  </port-card-template>
+  </PortCardTemplate>
 </template>
 
 <script>
@@ -37,12 +36,39 @@ import PortCardTemplate from '~/components/templates/portfolio/PortfolioCardTemp
 
 export default {
   components: {
-    'port-card-template': PortCardTemplate
+    PortCardTemplate
   },
   mixins: [years]
 }
 </script>
 
 <style lang="scss" scoped>
+.timelineWrapper {
+  max-width: 700px;
 
+  @media only screen and (min-width: 600px) {
+    margin-left: 16px;
+  }
+  .timeline {
+    border-left: #c4c4c4 2px solid;
+    padding-top: 24px;
+    margin-left : 8px;
+    .timelineInner {
+      padding-left: 16px;
+      padding-bottom: 24px;
+      position: relative;
+      .circle {
+        border: #fff 1px solid;
+        position: absolute;
+        content: '';
+        height: 16px;
+        width: 16px;
+        left: -8px;
+        top: 12px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+      }
+    }
+  }
+}
 </style>

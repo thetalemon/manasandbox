@@ -1,27 +1,27 @@
 <template>
-  <port-card-template title="制作物">
+  <PortCardTemplate title="制作物">
     <template slot="content">
       個人の製作物です
       <div class="cardAreaWrapper">
-        <ProductCard
+        <ProductItem
           v-for="(item, i) in products"
           :key="i"
           :item="item"
         />
       </div>
     </template>
-  </port-card-template>
+  </PortCardTemplate>
 </template>
 
 <script>
 import products from '@/mixins/ProductsMixin'
 import PortCardTemplate from '~/components/templates/portfolio/PortfolioCardTemplate.vue'
-import ProductCard from '~/components/organisms/portfolio/card/Product.vue'
+import ProductItem from '~/components/molecules/ProductItem.vue'
 
 export default {
   components: {
-    'port-card-template': PortCardTemplate,
-    ProductCard
+    PortCardTemplate,
+    ProductItem
   },
   mixins: [products],
   data () {

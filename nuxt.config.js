@@ -36,7 +36,6 @@ export default {
   ** Global CSS
   */
   css: [
-    // '@assets/variables.scss',
     '@assets/pattern.min.css'
   ],
   /*
@@ -44,9 +43,6 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-    // { src: '~/plugins/vue-apexchart.js', ssr: false },
-    // { src: '@/plugins/vue-chartjs', ssr: false },
-    // { src: '~plugins/vue-plotly', mode: 'client' }
   ],
   /*
   ** Auto import components
@@ -59,7 +55,8 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    '@nuxt/postcss8'
   ],
   /*
   ** Nuxt.js modules
@@ -92,5 +89,21 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+  },
+  storybook: {
+    addons: [
+      '@storybook/addon-controls',
+      '@storybook/addon-notes'
+    ],
+    port: 5555,
+    parameters: {
+      backgrounds: {
+        default: 'light'
+      },
+      controls: {
+        expanded: true
+      },
+      layout: 'centered'
+    }
   }
 }
