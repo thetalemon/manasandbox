@@ -4,46 +4,34 @@
       <a :href="item.url" target="_blank">
         <img
           class="img"
-          :src="convert2Path('product', item.img)"
+          :src="img"
           width="250px"
           height="150px"
         >
       </a>
     </div>
     <div class="textArea">
-      <h3>
-        {{ item.name }}
-        <span class="githubIcon">
-          <a :href="item.github" target="_blank">
-            <img
-              class="img"
-              :src="convert2Path('social', 'github.svg')"
-              width="20px"
-              height="20px"
-            >
-          </a>
-        </span>
-      </h3>
-      <p>
-        {{ item.text }}
-      </p>
+      <TitleWithGithubIco :title="item.name" :github-url="item.github" />
+      <p v-text="item.text" />
     </div>
   </div>
 </template>
 
 <script>
+import TitleWithGithubIco from '~/components/molecules/TitleWithGithubIco.vue'
 
 export default {
+  components: {
+    TitleWithGithubIco
+  },
   props: {
     item: {
       type: Object,
       required: true
-    }
-  },
-  methods: {
-    convert2Path (imgDir, filename) {
-      const prefix = `/${imgDir}/`
-      return prefix + filename
+    },
+    img: {
+      type: String,
+      required: true
     }
   }
 }
@@ -52,26 +40,12 @@ export default {
 <style lang="scss" scoped>
 .card {
   margin: 0 4px;
-  height: auto;
   border: 1px solid #add8e6;
   border-radius: 4px;
 
-.textArea {
+  .textArea {
     margin: 0 8px;
   }
-  h3 {
-    display: inline-flex;
-  }
-
-  .githubIcon{
-    line-height: 25px;
-    padding-top: 2px;
-    margin-left: 8px;
-    &:hover {
-      opacity: .7;
-    }
-  }
-
   .imgWrapper{
     text-align: center;
     &:hover {
