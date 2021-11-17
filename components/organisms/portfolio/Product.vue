@@ -3,10 +3,11 @@
     <template slot="content">
       個人の製作物です
       <div class="cardAreaWrapper">
-        <ProductItem
+        <CardWithImage
           v-for="(item, i) in products"
           :key="i"
-          :item="item"
+          :item="item.name"
+          :img="convert2Path(item.img)"
         />
       </div>
     </template>
@@ -16,31 +17,17 @@
 <script>
 import products from '@/mixins/ProductsMixin'
 import PortCardTemplate from '~/components/templates/portfolio/PortfolioCardTemplate.vue'
-import ProductItem from '~/components/molecules/ProductItem.vue'
+import CardWithImage from '~/components/molecules/CardWithImage.vue'
 
 export default {
   components: {
     PortCardTemplate,
-    ProductItem
+    CardWithImage
   },
   mixins: [products],
-  data () {
-    return {
-      isDialogOpen: false,
-      dialogText: undefined,
-      relatedList: undefined
-    }
-  },
   methods: {
-    clickData (payload) {
-      this.isDialogOpen = true
-      this.dialogText = payload.text
-      this.relatedList = payload.related
-    },
-    closeModal () {
-      this.isDialogOpen = false
-      this.dialogText = undefined
-      this.relatedList = undefined
+    convert2Path (filename) {
+      return '/product/' + filename
     }
   }
 }
@@ -55,5 +42,4 @@ export default {
   margin-top: 16px;
   margin-bottom: 24px;
 }
-
 </style>

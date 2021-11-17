@@ -1,59 +1,28 @@
 <template>
   <PortCardTemplate title="技術">
     <template slot="content">
-      <p class="tableYTitle">
-        仕事
-      </p>
-      <div class="skillGraphCenterArea">
-        <p class="tableXTitle">
-          わかる
-        </p>
-        <table class="skillGraph">
-          <tr>
-            <td>
-              <SkillItems :list="LeftUpper" @click="clickData" />
-            </td>
-            <td>
-              <SkillItems :list="RightUpper" @click="clickData" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <SkillItems :list="LeftLower" @click="clickData" />
-            </td>
-            <td>
-              <SkillItems :list="RightLower" @click="clickData" />
-            </td>
-          </tr>
-        </table>
-        <p class="tableXTitle">
-          教えられる
-        </p>
-      </div>
-      <p class="tableYTitle">
-        趣味
-      </p>
+      <TableFourSection
+        :titles="{
+          top:'仕事',
+          bottom:'趣味',
+          left:'わかる',
+          right:'教えられる'
+        }"
+        :left-upper-item-list="LeftUpper"
+        :left-bottom-item-list="LeftBottom"
+        :right-upper-item-list="RightUpper"
+        :right-bottom-item-list="RightBottom"
+        @click="clickData"
+      />
       <v-dialog
         v-model="isDialogOpen"
         max-width="290"
       >
         <div class="dialog">
-          <p>
-            {{ dialogText }}
-          </p>
+          <p v-text="dialogText" />
           <div v-if="relatedList.length !== 0">
-            <h5>
-              利用可能な関連技術
-            </h5>
-            <p>
-              <span
-                v-for="(item, i) in relatedList"
-                :key="i"
-              >
-                <template v-if="relatedList.length-1 !== i">{{ item }}, </template>
-                <template v-else>{{ item }}</template>
-              </span>
-            </p>
+            <h5 v-text="'利用可能な関連技術'" />
+            <TextList :list="relatedList" />
           </div>
         </div>
       </v-dialog>
@@ -64,12 +33,14 @@
 <script>
 import skills from '@/mixins/SkillsMixin'
 import PortCardTemplate from '~/components/templates/portfolio/PortfolioCardTemplate.vue'
-import SkillItems from '~/components/molecules/SkillItems.vue'
+import TableFourSection from '~/components/molecules/TableFourSection.vue'
+import TextList from '~/components/molecules/TextList.vue'
 
 export default {
   components: {
     PortCardTemplate,
-    SkillItems
+    TableFourSection,
+    TextList
   },
   mixins: [skills],
   data () {
@@ -86,10 +57,10 @@ export default {
     RightUpper () {
       return this.skills.filter(skill => skill.isWork === true && skill.isAbleToTeach === true)
     },
-    LeftLower () {
+    LeftBottom () {
       return this.skills.filter(skill => skill.isWork === false && skill.isAbleToTeach === false)
     },
-    RightLower () {
+    RightBottom () {
       return this.skills.filter(skill => skill.isWork === false && skill.isAbleToTeach === true)
     }
   },
@@ -109,28 +80,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.tableYTitle {
-  text-align: center;
-  margin: 0;
-}
-.skillGraphCenterArea {
-  display: flex;
-  .tableXTitle {
-    width: 20px;
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-    text-align: center;
-  }
-  .skillGraph {
-    border: 1px solid peachpuff;
-      background: peachpuff;
-    width: calc(100% - 40px);
-    td {
-      padding: 8px;
-      background: white;
-    }
-  }
-}
 .dialog {
   background: white;
   padding: 16px 8px;
