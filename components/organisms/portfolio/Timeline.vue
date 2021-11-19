@@ -64,7 +64,7 @@ export default {
         height: 16px;
         width: 16px;
         left: -8px;
-        top: 12px;
+        top: 19px;
         transform: translateY(-50%);
         border-radius: 50%;
       }

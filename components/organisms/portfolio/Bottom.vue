@@ -1,7 +1,6 @@
 <template>
   <FulWidthImg
-    src="/aza166.webp"
-    srcset="/aza166.png"
+    image-path-with-out-ext="/aza166"
     :width="840"
     :height="410"
     alt="自己紹介画像"

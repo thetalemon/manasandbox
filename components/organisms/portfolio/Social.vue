@@ -6,6 +6,7 @@
         :key="i"
         :href="item.url"
         target="_blank"
+        rel="noreferrer"
       >
         <img
           class="ico"

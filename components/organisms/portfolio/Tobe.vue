@@ -1,5 +1,5 @@
 <template>
-  <PortCardTemplate title="to do">
+  <PortCardTemplate title="to be">
     <template slot="content">
       <p>テクノロジーで、日々をちょっぴり快適に。</p>
       <p>『日々の暮らしのちょっとしたストレスを軽減』を目指して、色々造っています。</p>

@@ -1,8 +1,7 @@
 <template>
   <div class="topWrapper">
     <FulWidthImg
-      src="/top/aza2109.webp"
-      srcset="/top/aza2109.png"
+      image-path-with-out-ext="/top/aza2109"
       :width="840"
       :height="420"
       alt="トップ画像"

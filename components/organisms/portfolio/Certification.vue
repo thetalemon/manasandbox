@@ -2,17 +2,19 @@
   <PortCardTemplate title="資格">
     <template slot="content">
       <table class="certificationTable">
-        <tr
-          v-for="(item, index) in certs"
-          :key="index"
-        >
-          <td class="year">
-            {{ item.year }}
-          </td>
-          <td>
-            {{ item.name }}
-          </td>
-        </tr>
+        <tbody>
+          <tr
+            v-for="(item, index) in certs"
+            :key="index"
+          >
+            <td class="year">
+              {{ item.year }}
+            </td>
+            <td>
+              {{ item.name }}
+            </td>
+          </tr>
+        </tbody>
       </table>
     </template>
   </PortCardTemplate>
