@@ -6,7 +6,7 @@
         <CardWithImage
           v-for="(item, i) in products"
           :key="i"
-          :item="item.name"
+          :item="item"
           :img="convert2Path(item.img)"
         />
       </div>
@@ -38,7 +38,7 @@ export default {
   display: grid;
   grid-row-gap: 20px;
   grid-column-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   margin-top: 16px;
   margin-bottom: 24px;
 }

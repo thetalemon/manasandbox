@@ -7,6 +7,7 @@
       :src="src"
       width="80px"
       height="50px"
+      :alt="text"
     >
     <p v-text="text" />
   </div>

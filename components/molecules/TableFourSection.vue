@@ -4,22 +4,24 @@
     <div class="skillGraphCenterArea">
       <Tategaki class="tableXTitle" :text="titles.left" center />
       <table class="skillGraph">
-        <tr>
-          <td>
-            <IconWithTextFlexList :list="leftUpperItemList" @click="clickData" />
-          </td>
-          <td>
-            <IconWithTextFlexList :list="rightUpperItemList" @click="clickData" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <IconWithTextFlexList :list="leftBottomItemList" @click="clickData" />
-          </td>
-          <td>
-            <IconWithTextFlexList :list="rightBottomItemList" @click="clickData" />
-          </td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>
+              <IconWithTextFlexList :list="leftUpperItemList" @click="clickData" />
+            </td>
+            <td>
+              <IconWithTextFlexList :list="rightUpperItemList" @click="clickData" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <IconWithTextFlexList :list="leftBottomItemList" @click="clickData" />
+            </td>
+            <td>
+              <IconWithTextFlexList :list="rightBottomItemList" @click="clickData" />
+            </td>
+          </tr>
+        </tbody>
       </table>
       <Tategaki class="tableXTitle" :text="titles.right" center />
     </div>

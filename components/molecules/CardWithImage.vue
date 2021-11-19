@@ -1,13 +1,13 @@
 <template>
   <div class="card">
     <div class="imgWrapper">
-      <a :href="item.url" target="_blank">
-        <img
-          class="img"
-          :src="img"
-          width="250px"
-          height="150px"
-        >
+      <a :href="item.url" rel="noreferrer" target="_blank">
+        <WebpImage
+          :image-path-with-out-ext="img"
+          :width="270"
+          :height="180"
+          :alt="item.name"
+        />
       </a>
     </div>
     <div class="textArea">
@@ -19,10 +19,12 @@
 
 <script>
 import TitleWithGithubIco from '~/components/molecules/TitleWithGithubIco.vue'
+import WebpImage from '~/components/atoms/Img/Webp.vue'
 
 export default {
   components: {
-    TitleWithGithubIco
+    TitleWithGithubIco,
+    WebpImage
   },
   props: {
     item: {
@@ -41,22 +43,15 @@ export default {
 .card {
   margin: 0 4px;
   border: 1px solid #add8e6;
-  border-radius: 4px;
 
   .textArea {
     margin: 0 8px;
   }
   .imgWrapper{
     text-align: center;
+    margin-bottom: 8px;
     &:hover {
       opacity: .7;
-    }
-    .img {
-      margin-bottom: 8px;
-      border-radius: 4px 4px 0 0;
-      object-fit: cover;
-      width: 100%;
-      height: auto;
     }
   }
 }

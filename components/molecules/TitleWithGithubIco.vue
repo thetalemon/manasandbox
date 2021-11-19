@@ -2,12 +2,13 @@
   <h3 class="titleWithGtihubIco">
     {{ title }}
     <span v-if="githubUrl" class="githubIcon">
-      <a :href="githubUrl" target="_blank">
+      <a :href="githubUrl" rel="noreferrer" target="_blank">
         <img
           class="img"
           src="/social/github.svg"
           width="20px"
           height="20px"
+          alt="github icon"
         >
       </a>
     </span>

@@ -1,20 +1,12 @@
 <template>
-  <WebpImage
-    class="fullWidthImg"
-    :image-path-with-out-ext="imagePathWithOutExt"
-    :width="width"
-    :height="height"
-    :alt="alt"
-  />
+  <picture>
+    <source type="image/webp" :srcset="webpFullPath">
+    <img :width="width" :height="height" :alt="alt" :src="pngFullPath">
+  </picture>
 </template>
 
 <script>
-import WebpImage from '~/components/atoms/Img/Webp.vue'
-
 export default {
-  components: {
-    WebpImage
-  },
   props: {
     imagePathWithOutExt: {
       type: String,
@@ -32,12 +24,20 @@ export default {
       type: String,
       required: true
     }
+  },
+  computed: {
+    webpFullPath () {
+      return this.imagePathWithOutExt + '.webp'
+    },
+    pngFullPath () {
+      return this.imagePathWithOutExt + '.png'
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.fullWidthImg {
+img {
   max-width: 100%;
   height: auto;
 }
