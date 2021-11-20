@@ -1,8 +1,8 @@
 <template>
   <PortCardTemplate title="to be">
     <template slot="content">
-      <p>テクノロジーで、日々をちょっぴり快適に。</p>
-      <p>『日々の暮らしのちょっとしたストレスを軽減』を目指して、色々造っています。</p>
+      <p>テクノロジーを使って何か作る人。</p>
+      <p>最近は動画を基にした自動作曲を作ってます。</p>
     </template>
   </PortCardTemplate>
 </template>

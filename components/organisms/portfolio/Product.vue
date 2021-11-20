@@ -1,7 +1,6 @@
 <template>
   <PortCardTemplate title="制作物">
     <template slot="content">
-      個人の製作物です
       <div class="cardAreaWrapper">
         <CardWithImage
           v-for="(item, i) in products"

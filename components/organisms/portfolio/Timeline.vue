@@ -9,20 +9,12 @@
             small
             class="timelineInner"
           >
-            <div class="circle" :style="{ background: year.colorCode }" />
-            <h2 :style="{ color: year.colorCode }">
-              {{ year.year }}
-            </h2>
-            <h3>
-              {{ year.title }}
-            </h3>
-            <p>
-              {{ year.text }}
-            </p>
-            <p v-if="year.process">
-              工程: {{ year.process }}
-            </p>
-            <p>使用技術: {{ year.tech }}</p>
+            <CircleFuti class="circle" :color="year.colorCode" />
+            <h2 :style="{ color: year.colorCode }" v-text=" year.year" />
+            <h3 v-text="year.title" />
+            <p v-text="year.text" />
+            <p v-if="year.process" v-text=" year.process " />
+            <p> 使用技術: {{ year.tech }} </p>
           </div>
         </div>
       </div>
@@ -33,10 +25,12 @@
 <script>
 import years from '@/mixins/TimelineMixin'
 import PortCardTemplate from '~/components/templates/portfolio/PortfolioCardTemplate.vue'
+import CircleFuti from '~/components/atoms/CircleFuti.vue'
 
 export default {
   components: {
-    PortCardTemplate
+    PortCardTemplate,
+    CircleFuti
   },
   mixins: [years]
 }
@@ -45,7 +39,6 @@ export default {
 <style lang="scss" scoped>
 .timelineWrapper {
   max-width: 700px;
-
   @media only screen and (min-width: 600px) {
     margin-left: 16px;
   }
@@ -58,11 +51,6 @@ export default {
       padding-bottom: 24px;
       position: relative;
       .circle {
-        border: #fff 1px solid;
-        position: absolute;
-        content: '';
-        height: 16px;
-        width: 16px;
         left: -8px;
         top: 19px;
         transform: translateY(-50%);

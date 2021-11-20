@@ -43,7 +43,6 @@ export default {
 .card {
   margin: 0 4px;
   border: 1px solid #add8e6;
-
   .textArea {
     margin: 0 8px;
   }
