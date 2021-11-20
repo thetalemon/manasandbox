@@ -7,12 +7,8 @@
             v-for="(item, index) in certs"
             :key="index"
           >
-            <td class="year">
-              {{ item.year }}
-            </td>
-            <td>
-              {{ item.name }}
-            </td>
+            <td class="year" v-text="item.year" />
+            <td v-text="item.name" />
           </tr>
         </tbody>
       </table>

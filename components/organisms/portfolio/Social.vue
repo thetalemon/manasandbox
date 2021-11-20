@@ -36,7 +36,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.social{
+.social {
   background-color: #e6f9ff;
   .socialInner {
     height: 70px;
@@ -45,7 +45,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    .ico{
+    .ico {
       object-fit: fill;
       cursor: pointer;
       &:hover {
@@ -53,6 +53,5 @@ export default {
       }
     }
   }
-
 }
 </style>

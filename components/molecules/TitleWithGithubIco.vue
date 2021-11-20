@@ -1,5 +1,5 @@
 <template>
-  <h3 class="titleWithGtihubIco">
+  <h2 class="titleWithGtihubIco">
     {{ title }}
     <span v-if="githubUrl" class="githubIcon">
       <a :href="githubUrl" rel="noreferrer" target="_blank">
@@ -12,7 +12,7 @@
         >
       </a>
     </span>
-  </h3>
+  </h2>
 </template>
 
 <script>
@@ -34,6 +34,7 @@ export default {
 <style lang="scss" scoped>
 .titleWithGtihubIco {
   display: inline-flex;
+  font-size: 18px;
 }
 
 .githubIcon{

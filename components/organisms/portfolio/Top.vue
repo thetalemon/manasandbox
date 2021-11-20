@@ -7,7 +7,7 @@
       alt="トップ画像"
     />
     <div class="titleTextArea">
-      <h1>なじませクリエイター</h1>
+      <h1>Tech Crafter</h1>
       <h2>まなさす</h2>
     </div>
   </div>
