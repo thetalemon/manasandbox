@@ -83,6 +83,7 @@ export default {
       background: peachpuff;
     width: calc(100% - 40px);
     td {
+      width: 50%;
       padding: 8px;
       background: white;
     }

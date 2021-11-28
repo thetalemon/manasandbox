@@ -4,6 +4,7 @@
       v-for="(item, i) in list"
       :key="i"
       :src="convert2Path(item.img)"
+      :color="item.color"
       :text="item.name"
       @click="clickData(item)"
     />
