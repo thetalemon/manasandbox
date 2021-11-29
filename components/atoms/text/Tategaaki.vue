@@ -25,8 +25,8 @@ export default {
     width: 20px;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
+    margin-left: 2px;
     &.center {
-
       text-align: center;
     }
   }

@@ -40,10 +40,10 @@ export default {
 .timelineWrapper {
   max-width: 700px;
   @media only screen and (min-width: 600px) {
-    margin-left: 16px;
+    margin-left: 8px;
   }
   .timeline {
-    border-left: #c4c4c4 2px solid;
+    border-left: #e6f9ff 2px solid;
     padding-top: 24px;
     margin-left : 8px;
     .timelineInner {
@@ -51,7 +51,7 @@ export default {
       padding-bottom: 24px;
       position: relative;
       .circle {
-        left: -8px;
+        left: -8.5px;
         top: 19px;
         transform: translateY(-50%);
         border-radius: 50%;
