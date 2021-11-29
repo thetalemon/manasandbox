@@ -79,8 +79,8 @@ export default {
     width: 20px;
   }
   .skillGraph {
-    border: 1px solid peachpuff;
-      background: peachpuff;
+    border: 1px solid #4682B4;
+    background: #4682B4;
     width: calc(100% - 40px);
     td {
       width: 50%;
