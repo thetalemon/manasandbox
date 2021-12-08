@@ -1,11 +1,11 @@
 
-import Tobe from '../portfolio/Tobe.vue'
+import WhoAm from '../portfolio/WhoAm.vue'
 
 export default {
-  title: 'Tobe'
+  title: 'WhoAm'
 }
 
 export const Normal = () => ({
-  components: { Tobe },
-  template: '<tobe />'
+  components: { WhoAm },
+  template: '<whoam />'
 })

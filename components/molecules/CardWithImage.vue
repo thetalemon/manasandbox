@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="imgWrapper">
-      <a :href="item.url" rel="noreferrer" target="_blank">
+      <a v-if="item.url" :href="item.url" rel="noreferrer" target="_blank">
         <WebpImage
           :image-path-with-out-ext="img"
           :width="270"
@@ -9,6 +9,14 @@
           :alt="item.name"
         />
       </a>
+      <div v-else>
+        <WebpImage
+          :image-path-with-out-ext="img"
+          :width="270"
+          :height="180"
+          :alt="item.name"
+        />
+      </div>
     </div>
     <div class="textArea">
       <TitleWithGithubIco :title="item.name" :github-url="item.github" />
@@ -49,8 +57,10 @@ export default {
   .imgWrapper{
     text-align: center;
     margin-bottom: 8px;
-    &:hover {
-      opacity: .7;
+    a{
+      &:hover {
+        opacity: .7;
+      }
     }
   }
 }

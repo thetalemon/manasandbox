@@ -14,6 +14,18 @@ const _products = [
     text: 'Next.js + microCMS。'
   },
   {
+    name: 'みゅーじっくじぇねれーた',
+    img: 'musicGenerator',
+    github: 'https://github.com/thetalemon/movie2music',
+    text: '鋭意製作中。動画の特徴情報をとりだして音楽を生成するデスクトップアプリ。Electron + Next.js + Python。'
+  },
+  {
+    name: 'taskBot',
+    img: 'taskBot',
+    github: 'https://github.com/thetalemon/todoist-line-bot',
+    text: 'TodoistのタスクをLineに毎日通知するやつ。Go製。'
+  },
+  {
     name: 'あいきゃっちじぇねれーた',
     img: 'eyecatch',
     url: 'https://eyecatch.manasas.dev/',

@@ -12,8 +12,8 @@
           class="ico"
           :src="convert2Path(item.img)"
           contain
-          :height="40"
-          :width="80"
+          :height="item.width"
+          :width="item.height"
           :alt="item.alt"
         >
       </a>
@@ -37,14 +37,19 @@ export default {
 
 <style lang="scss" scoped>
 .social {
-  background-color: #e6f9ff;
   .socialInner {
-    height: 70px;
+    height: 60px;
     max-width: 400px;
     display:flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+    a {
+      margin-right: 8px;
+      &:first-child{
+        margin-right: 0;
+      }
+    }
     .ico {
       object-fit: fill;
       cursor: pointer;
