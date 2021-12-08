@@ -4,7 +4,7 @@
       <portTop />
       <portSocial />
       <div class="mainContents">
-        <portTobe class="component" />
+        <WhoAm class="component" />
         <portProd class="component" />
         <portSkillGraph class="component" />
         <portCert class="component" />
@@ -19,7 +19,7 @@
 <script>
 import portTop from '~/components/organisms/portfolio/Top.vue'
 import portSocial from '~/components/organisms/portfolio/Social.vue'
-import portTobe from '~/components/organisms/portfolio/Tobe.vue'
+import WhoAm from '~/components/organisms/portfolio/WhoAm.vue'
 import portProd from '~/components/organisms/portfolio/Product.vue'
 import portSkillGraph from '~/components/organisms/portfolio/SkillsGraph.vue'
 import portCert from '~/components/organisms/portfolio/Certification.vue'
@@ -30,7 +30,7 @@ export default {
   components: {
     portTop,
     portSocial,
-    portTobe,
+    WhoAm,
     portProd,
     portSkillGraph,
     portCert,

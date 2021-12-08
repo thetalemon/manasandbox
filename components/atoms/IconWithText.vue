@@ -25,10 +25,6 @@ export default {
     text: {
       type: String,
       required: true
-    },
-    color: {
-      type: String,
-      required: true
     }
   },
   methods: {
