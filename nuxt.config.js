@@ -36,7 +36,6 @@ export default {
   ** Global CSS
   */
   css: [
-    '@assets/pattern.min.css'
   ],
   /*
   ** Plugins to load before mounting the App
