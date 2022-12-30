@@ -1,4 +1,14 @@
-export const SKILL_LIST = [
+export type SkillItem = {  
+  name: string
+  isWork: boolean
+  isAbleToTeach: boolean
+  text: string
+  related?: string[],
+  color: string
+  src: string
+}
+
+export const SKILL_LIST:SkillItem[] = [
   {
     name: 'Vue.js',
     isWork: true,
@@ -11,15 +21,15 @@ export const SKILL_LIST = [
   {
     name: 'Nuxt.js',
     isWork: true,
-    isAbleToTeach: true,
-    text: 'このサイトはNuxt.js製。',
+    isAbleToTeach: false,
+    text: 'このサイトはNuxt.js製でした。今はAstroにのせかえ済。',
     color: '#00DC82',
     src: 'nuxt.svg'
   },
   {
     name: 'Webpack',
     isWork: true,
-    isAbleToTeach: true,
+    isAbleToTeach: false,
     text: 'だいたいの基本的なカスタムはできる',
     color: '#8DD6F9',
     src: 'webpack.svg'
@@ -27,7 +37,7 @@ export const SKILL_LIST = [
   {
     name: 'React',
     isWork: true,
-    isAbleToTeach: false,
+    isAbleToTeach: true,
     text: '2020~。絶賛勉強中。基本的なことは書けるようになった。',
     related: ['Next.js'],
     color: '#61DAFB',
@@ -35,8 +45,8 @@ export const SKILL_LIST = [
   },
   {
     name: 'Next.js',
-    isWork: true,
-    isAbleToTeach: false,
+    isWork: false,
+    isAbleToTeach: true,
     text: '2020~。絶賛勉強中。基本的なことは書けるようになった。ブログと開発中のアプリがNext.js製。',
     color: '#00DC82',
     src: 'nextjs.svg'
@@ -70,7 +80,7 @@ export const SKILL_LIST = [
   {
     name: 'Spring',
     isWork: true,
-    isAbleToTeach: true,
+    isAbleToTeach: false,
     text: '2018~2019。昔のメイン。Springを使ったREST APIが作れる。',
     related: ['Spring Framework', 'junit'],
     color: '#6DB33F',
@@ -104,7 +114,7 @@ export const SKILL_LIST = [
   {
     name: 'Illustrator',
     isWork: false,
-    isAbleToTeach: true,
+    isAbleToTeach: false,
     text: '2014~。faviconアザラシはイラレ製。',
     related: ['InDesign', 'CLIP STUDIO'],
     color: '#FF9A00',
@@ -129,22 +139,22 @@ export const SKILL_LIST = [
   {
     name: 'Docker',
     isWork: true,
-    isAbleToTeach: true,
+    isAbleToTeach: false,
     text: '2018~。断続的に。docker-composeを利用することが多い。FlaskとVue.jsを繋ぐとかFEとBEを繋ぐ系はわりとできる。',
     color: '#2496ED',
     src: 'docker.svg'
   },
   {
     name: 'Figma',
-    isWork: true,
-    isAbleToTeach: false,
+    isWork: false,
+    isAbleToTeach: true,
     text: '2020~。1ヶ月くらいメインだった。プロトタイプ作れる。デザインは勉強中。',
     color: '#F24E1E',
     src: 'figma.svg'
   },
   {
     name: 'Ubuntu Server',
-    isWork: true,
+    isWork: false,
     isAbleToTeach: false,
     text: '2018~。定時でサーバ内の状況を見て色々起動するシェルとか、出力ファイルの突合するシェルとかを作成。',
     related: ['vim', 'Shell Script'],

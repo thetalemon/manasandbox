@@ -37,23 +37,29 @@ const { title } = Astro.props;
 <style>
   header {
     background: #315098;
-    height: 48px;
     color: #fff;
     vertical-align: baseline;
-    padding-left: 8px;
+    padding: 4px 8px;
+  }
+  header > h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 300;
   }
   footer {
     background: #315098;
     color: #fff;
     vertical-align: baseline;
-    padding: 4px 0 4px 8px;
-  }
-  h1 {
-    margin: 0;
+    padding: 4px 8px;
   }
   main {
     max-width: 800px;
     margin: 0 auto;
+  }
+  @media only screen and (max-width: 500px) {
+    header > h1 {
+      font-size: 18px;
+    }
   }
 </style>
 <style is:global>
@@ -70,5 +76,11 @@ const { title } = Astro.props;
   }
   body {
     margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    opacity: 0.5;
   }
 </style>

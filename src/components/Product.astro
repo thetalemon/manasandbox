@@ -3,7 +3,7 @@ import {PRODUCT_LIST} from '../data/product';
 import Section from './Section.astro'
 import Webp from './WebpImage.astro'
 
-const convert2Path = (filename) => {
+const convert2Path = (filename:string) => {
   return '/product/' + filename
 }
 ---
@@ -20,7 +20,6 @@ const convert2Path = (filename) => {
           />
         </div>
         <div class="cardContentArea">
-          
           <p class="titleWithGtihubIco">
             {item.name}
             <span  class="githubIcon">
@@ -66,7 +65,7 @@ const convert2Path = (filename) => {
     display: grid;
     grid-row-gap: 24px;
     grid-column-gap: 16px;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     margin-top: 16px;
     margin-bottom: 24px;
   }
@@ -93,10 +92,6 @@ const convert2Path = (filename) => {
   }
   .linkIco {
     margin-left: 8px;
-    text-decoration: none;
-  }
-  .linkIco:hover {
-    opacity: 0.5;
   }
   p {
     margin: 0;

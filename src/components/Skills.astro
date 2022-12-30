@@ -6,10 +6,6 @@ const LEFT_UPPER_SKILL_LIST = SKILL_LIST.filter(skill => skill.isWork === true &
 const RIGHT_UPPER_SKILL_LIST = SKILL_LIST.filter(skill => skill.isWork === true && skill.isAbleToTeach === true)
 const LEFT_BOTTOM_SKILL_LIST = SKILL_LIST.filter(skill => skill.isWork === false && skill.isAbleToTeach === false)
 const RIGHT_BOTTOM_SKILL_LIST = SKILL_LIST.filter(skill => skill.isWork === false && skill.isAbleToTeach === true)
-const convert2Path = (filename: string) => {
-    const prefix = '/tech-logo/'
-    return prefix + filename
-}
 ---
 <Section title="技術">
   <div class="wrapper">

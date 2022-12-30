@@ -8,9 +8,9 @@ import Webp from './WebpImage.astro'
     height={420}
     alt="遠くを見つめるアザラシのトップ画像"
   />
-  <div class="titleTextArea">
-    <h1>Tech Crafter</h1>
-    <h2>まなさす</h2>
+  <div class="textArea">
+    <p class="title">Tech Crafter</p>
+    <p class="name">まなさす</p>
   </div>
 </div>
 
@@ -19,30 +19,27 @@ import Webp from './WebpImage.astro'
     position: relative;
     line-height: 0;
   }
-  
-  @media only screen and (max-width: 600px) {
-    h1 {
-      font-size: 30px;
-    }
-    h2 {
-      font-size: 26px;
-    }
+  .title {
+    font-size: 20px;
+    margin: 0;
   }
-
-  @media only screen and (max-width: 500px) {
-    h1 {
-      font-size: 26px;
-    }
-    h2 {
-      font-size: 18px;
-    }
+  .name {
+    margin-top: 16px;
+    font-size: 32px;
   }
-  
-  .titleTextArea {
+  .textArea {
     line-height: 1.0;
     color: rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 20%;
     left: 10%;
+  }
+  @media only screen and (max-width: 500px) {
+    .title {
+      font-size: 20px;
+    }
+    .name {
+      font-size: 26px;
+    }
   }
 </style>

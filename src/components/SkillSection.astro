@@ -1,6 +1,8 @@
 ---
+import type {SkillItem} from '../data/skill'
+
 export interface Props {
-	list: array;
+	list: SkillItem[]
 }
 
 const { list } = Astro.props;
@@ -10,7 +12,7 @@ const convert2Path = (filename: string) => {
 }
 ---
 <ul class="iconWithTextFlexList">
-  {list.map((item) => (
+  {list.map((item:SkillItem) => (
     <li class="iconWithText">
       <img src={convert2Path(item.src)} width="80" height="50"/>
       <p>{item.name}</p>
@@ -24,6 +26,7 @@ const convert2Path = (filename: string) => {
     padding: 8px;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     background: #fff;
+    height: calc(100% - 17px);
   }
   .iconWithText{
     padding: 4px;
