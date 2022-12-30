@@ -1,6 +1,6 @@
 ---
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -8,28 +8,61 @@ const { title } = Astro.props;
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/myico.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="WEBエンジニア まなさすのポートフォリオ。" />
+    <meta property="og:site_name" content="manasandbox" />
+    <meta property="og:title" content={title} />
+    <meta property="og:url" content="https://manasas.dev" />
+    <meta property="og:description" content="WEBエンジニア まなさすのポートフォリオ。" />
+    <meta property="og:image" content="https://manasas.dev/aza166.png" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header>
+      <h1>Mana's sandbox</h1>
+    </header>
+    <slot />
+    <footer>
+      © 2022 Manami SASAKI
+    </footer>
+  </body>
 </html>
+
+<style>
+  header {
+    background: #315098;
+    height: 48px;
+    color: #fff;
+    vertical-align: baseline;
+    padding-left: 8px;
+  }
+  footer {
+    background: #315098;
+    color: #fff;
+    vertical-align: baseline;
+    padding: 4px 0 4px 8px;
+  }
+  h1 {
+    margin: 0;
+  }
+</style>
 <style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style: none;
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background-color: #fff;
+  }
+  body {
+    margin: 0;
+  }
 </style>

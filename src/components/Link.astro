@@ -1,0 +1,37 @@
+---
+import {LINK_LIST} from '../data/link';
+
+const convert2Path = (filename: string) => {
+    const prefix = '/social/'
+    return prefix + filename
+}
+---
+<ul>
+  {LINK_LIST.map((item) => (
+    <li>
+      <a
+        href={item.url}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          class="ico"
+          src={convert2Path(item.img)}
+          height={item.width}
+          width={item.height}
+          alt={item.alt}
+        />
+      </a>
+    </li>
+  ))}
+</ul>
+<style>
+  ul {
+    height: 60px;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+</style>

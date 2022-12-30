@@ -1,0 +1,32 @@
+---
+export interface Props {
+	width: number;
+	height: number;
+	alt: string;
+  imagePathWithOutExt: string;
+}
+
+const { width, height, alt, imagePathWithOutExt } = Astro.props;
+
+const webpFullPath = (imagePathWithOutExt:string) => {
+  return imagePathWithOutExt + '.webp'
+}
+const pngFullPath = (imagePathWithOutExt:string) => {
+  return imagePathWithOutExt + '.png'
+}
+
+---
+
+<picture>
+  <source type="image/webp" srcset={webpFullPath(imagePathWithOutExt)}>
+  <img width={width} height={height} alt={alt} src={pngFullPath(imagePathWithOutExt)}>
+</picture>
+
+<style>
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+</style>
+  
