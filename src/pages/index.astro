@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Card from '../components/Card.astro'
 import Link from '../components/Link.astro'
 import TopImage from '../components/TopImage.astro'
 import BottomImage from '../components/BottomImage.astro'
@@ -12,24 +11,19 @@ import Product from '../components/Product.astro'
 ---
 
 <Layout title="Welcome to Astro.">
-  <main>
-    <TopImage/>
-    <section class="mainSection">
-      <Link/>
-      <Abstract/>
-      <Skills/>
-      <Product/>
-      <Certification/>
-      <Timeline/>
-    </section>
-    <BottomImage/>
-  </main>
+  <TopImage/>
+  <section class="mainSection">
+    <Link/>
+    <Abstract/>
+    <Skills/>
+    <Product/>
+    <Certification/>
+    <Timeline/>
+  </section>
+  <BottomImage/>
 </Layout>
 
 <style>
-  main {
-    margin: 0;
-  }
   .mainSection {
     padding: 0 16px;
   }
