@@ -1,0 +1,58 @@
+---
+import {TIMELINE_LIST} from '../data/timeline';
+import Section from './Section.astro'
+---
+<Section title="履歴">
+  <ul>
+    {TIMELINE_LIST.map((item) => (
+      <li>
+        <h3 style={`color: ${item.colorCode}`}>
+          <span style={`background: ${item.colorCode}`} class="circle"/>
+          {item.title}
+        </h3>
+        <div class="text">
+          <p class="main">{item.text}</p>
+          {item.process && <p>担当フェーズ: {item.process}</p> }
+          <p>使用技術: {item.tech}</p>
+        </div>
+      </li>
+    ))}
+  </ul>
+</Section>
+<style>
+  li { 
+    position: relative;
+    left: -6.5px;
+  }
+  li:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  p {
+    margin: 0;
+  }
+  ul {
+    line-height: 1.5;
+    border-left: #8CA8BE 1px solid;
+  }
+  .main {
+    line-height: 1.5;
+    margin-bottom: 4px;
+  }
+  h3{
+    margin: 0;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+  }
+  .text {
+    margin-left: 20px;
+  }
+  .circle {
+    flex-shrink: 0;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+</style>

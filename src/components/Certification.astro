@@ -1,0 +1,18 @@
+---
+import {CERT_LIST} from '../data/certification';
+import Section from './Section.astro'
+---
+<Section title="資格">
+  <ul>
+    {CERT_LIST.map((item) => (
+      <li>
+        {item.year} {item.name}
+      </li>
+    ))}
+  </ul>
+</Section>
+<style>
+  ul {
+    line-height: 1.5;
+  }
+</style>

@@ -1,0 +1,86 @@
+---
+import {SKILL_LIST} from '../data/skill';
+import Section from './Section.astro'
+import SkillSection from './SkillSection.astro'
+const LEFT_UPPER_SKILL_LIST = SKILL_LIST.filter(skill => skill.isWork === true && skill.isAbleToTeach === false)
+const RIGHT_UPPER_SKILL_LIST = SKILL_LIST.filter(skill => skill.isWork === true && skill.isAbleToTeach === true)
+const LEFT_BOTTOM_SKILL_LIST = SKILL_LIST.filter(skill => skill.isWork === false && skill.isAbleToTeach === false)
+const RIGHT_BOTTOM_SKILL_LIST = SKILL_LIST.filter(skill => skill.isWork === false && skill.isAbleToTeach === true)
+const convert2Path = (filename: string) => {
+    const prefix = '/tech-logo/'
+    return prefix + filename
+}
+---
+<Section title="技術">
+  <div class="wrapper">
+    <div class="label left tategaki">わかる</div>
+    <div class="label right tategaki">教えられる</div>
+    <div class="label top center">業務</div>
+    <div class="label bottom center">趣味</div>
+    <div class="innerWrapper">
+      <div class="box box3">
+        <SkillSection list={LEFT_UPPER_SKILL_LIST}/>
+      </div>
+      <div class="box box4">
+        <SkillSection list={RIGHT_UPPER_SKILL_LIST}/>
+      </div>
+      <div class="box box5">
+        <SkillSection list={LEFT_BOTTOM_SKILL_LIST}/>
+      </div>
+      <div class="box box5">
+        <SkillSection list={RIGHT_BOTTOM_SKILL_LIST}/>
+      </div>
+    </div>
+  </div>
+</Section>
+<style>
+  ul {
+    line-height: 1.5;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 22px 1fr 22px;
+    grid-column-gap: 8px;
+    grid-auto-rows: min-content;
+  }
+  .innerWrapper {
+    border: 2px #315098 solid;
+    background: #315098;
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .tategaki {
+    width: 20px;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    text-align: center;
+  }
+  .center {
+    text-align: center;
+  }
+  .label.left {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+  .label.right {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+  .label.top {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .label.bottom {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+</style>
