@@ -7,10 +7,15 @@ const { title } = Astro.props;
 ---
 <section>
   <h2>{title}</h2>
-  <slot />
+  <div class="sectionWrapper">
+    <slot />
+  </div>
 </section>
 <style>
-  h2{
+  h2 {
     margin-bottom: 0.5rem;
+  }
+  .sectionWrapper {
+    padding-left: 8px;
   }
 </style>

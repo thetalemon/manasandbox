@@ -39,14 +39,6 @@ export const LINK_LIST:LinkItem[] = [
     alt: 'mastodon',
     width: 50,
     height: 30
-  },
-  {
-    name: 'twitter',
-    img: 'twitter.svg',
-    url: 'https://twitter.com/thetalemon',
-    alt: 'twitter',
-    width: 50,
-    height: 35
-  },
+  }
 ]
   
