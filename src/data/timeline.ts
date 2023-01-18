@@ -38,7 +38,7 @@ export const TIMELINE_LIST = [
     tech: 'Vue.js / jQuery / React / GraphQL'
   },
   {
-    colorCode: '#FF66FF',
+    colorCode: '#aa4f37',
     year: 'WEBアプリ開発',
     title: '医療系サービスの画面設計 + フロントエンド実装 & 社内ツール実装',
     process: 'フロントエンド / 画面設計、概要設計、詳細設計、実装、テスト作成',
