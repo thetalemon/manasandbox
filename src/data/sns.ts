@@ -9,8 +9,8 @@ export const SNS_LIST:SnsItem[] = [
     url: 'https://photodn.net/@thetalemon',
   },
   {
-    name: 'Mastodon(創作アカウント）',
-    url: 'https://gamelinks007.net/@thetalemon',
+    name: 'Mastodon(制作全般アカウント）',
+    url: 'https://otadon.com/@thetalemon',
   },
   {
     name: 'stand.fm',
