@@ -9,6 +9,7 @@ import Timeline from '../components/Timeline.astro'
 import Skills from '../components/Skills.astro'
 import Transmit from '../components/Transmit.astro'
 import Product from '../components/Product.astro'
+import RssPosts from '../components/RssPosts.astro'
 ---
 
 <Layout title="manasandbox">
@@ -19,6 +20,8 @@ import Product from '../components/Product.astro'
     <Transmit/>
     <Skills/>
     <Product/>
+    <RssPosts title="最近のZennの投稿" url="https://zenn.dev/thetalemon/feed"/>
+    <RssPosts title="最近のnoteの投稿" url="https://note.com/thetalemon/rss"/>
     <Certification/>
     <Timeline/>
     <Link/>

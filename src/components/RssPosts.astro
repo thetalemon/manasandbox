@@ -1,0 +1,39 @@
+---
+export interface Props {
+  url: string;
+  title: string;
+}
+
+const { title, url } = Astro.props;
+
+import Section from './Section.astro'
+import {parse} from 'rss-to-json'
+
+const data = await parse(url)
+const recentData = data.items.splice(0,5)
+
+type RssItem = {
+  title: string
+  link: string
+}
+---
+<Section title={title}>
+  <ul>
+    {recentData.map((item:RssItem) => (
+      <li>
+        ・ <a 
+          href={item.link}
+          target="_blank"
+          rel="noreferrer noopener me">
+            {item.title}
+          </a>
+      </li>
+    ))}
+  </ul>
+</Section>
+<style>
+  li {
+    line-height: 1.5;
+    margin: 0;
+  }
+</style>
