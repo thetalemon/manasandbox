@@ -7,15 +7,19 @@ export interface Props {
 const { title, url } = Astro.props;
 
 import Section from "./Section.astro";
-import { parse } from "rss-to-json";
 
-const data = await parse(url);
-const recentData = data.items.splice(0, 5);
+type RssResponse = {
+  items: RssItem[];
+};
 
 type RssItem = {
   title: string;
   link: string;
 };
+
+const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${url}`);
+const data: RssResponse = await res.json();
+const recentData = data.items.splice(0, 5);
 ---
 
 <Section title={title}>
