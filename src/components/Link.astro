@@ -1,29 +1,28 @@
 ---
-import {LINK_LIST} from '../data/link';
+import { LINK_LIST } from "../data/link";
 
 const convert2Path = (filename: string) => {
-    const prefix = '/social/'
-    return prefix + filename
-}
+  const prefix = "/social/";
+  return prefix + filename;
+};
 ---
+
 <ul>
-  {LINK_LIST.map((item) => (
-    <li>
-      <a
-        href={item.url}
-        target="_blank"
-        rel="noreferrer noopener me"
-      >
-        <img
-          class="ico"
-          src={convert2Path(item.img)}
-          height={item.width}
-          width={item.height}
-          alt={item.alt}
-        />
-      </a>
-    </li>
-  ))}
+  {
+    LINK_LIST.map((item) => (
+      <li>
+        <a href={item.url} target="_blank" rel="noreferrer noopener me">
+          <img
+            class="ico"
+            src={convert2Path(item.img)}
+            height={item.width}
+            width={item.height}
+            alt={item.alt}
+          />
+        </a>
+      </li>
+    ))
+  }
 </ul>
 <style>
   ul {

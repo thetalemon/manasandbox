@@ -1,63 +1,65 @@
 ---
-import {PRODUCT_LIST} from '../data/product';
-import Section from './Section.astro'
-import Webp from './WebpImage.astro'
+import { PRODUCT_LIST } from "../data/product";
+import Section from "./Section.astro";
+import Webp from "./WebpImage.astro";
 
-const convert2Path = (filename:string) => {
-  return '/product/' + filename
-}
+const convert2Path = (filename: string) => {
+  return "/product/" + filename;
+};
 ---
+
 <Section title="制作物">
   <ul class="cardAreaWrapper">
-    {PRODUCT_LIST.map((item) => (
-      <li class="productCard">
-        <div class="imageWrapper">
-          <Webp
-            imagePathWithOutExt={convert2Path(item.img)}
-            width={280}
-            height={200}
-            alt={item.name}
-          />
-        </div>
-        <div class="cardContentArea">
-          <p class="titleWithGtihubIco">
-            {item.name}
-            <span  class="githubIcon">
-              <a 
-                class="linkIco"
-                href={item.github} 
-                rel="noreferrer" 
-                target="_blank"
-              >
-                <img
-                  src="/social/github.svg"
-                  width="20px"
-                  height="20px"
-                  alt={`${item.name}のgithubへのリンク`}
-                />
-              </a>
-              {
-                item.url && 
-                <a 
+    {
+      PRODUCT_LIST.map((item) => (
+        <li class="productCard">
+          <div class="imageWrapper">
+            <Webp
+              imagePathWithOutExt={convert2Path(item.img)}
+              width={280}
+              height={200}
+              alt={item.name}
+            />
+          </div>
+          <div class="cardContentArea">
+            <p class="titleWithGtihubIco">
+              {item.name}
+              <span class="githubIcon">
+                <a
                   class="linkIco"
-                  href={item.url} 
-                  rel="noreferrer" 
+                  href={item.github}
+                  rel="noreferrer"
                   target="_blank"
                 >
                   <img
-                    src="/general/link.svg"
+                    src="/social/github.svg"
                     width="20px"
                     height="20px"
                     alt={`${item.name}のgithubへのリンク`}
                   />
                 </a>
-              }
-            </span>
-          </p>
-          <p>{item.text}</p>
-        </div>
-      </li>
-    ))}
+                {item.url && (
+                  <a
+                    class="linkIco"
+                    href={item.url}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <img
+                      src="/general/link.svg"
+                      width="20px"
+                      height="20px"
+                      alt={`${item.name}のgithubへのリンク`}
+                    />
+                  </a>
+                )}
+              </span>
+            </p>
+            <p>{item.text}</p>
+          </div>
+        </li>
+      ))
+    }
   </ul>
 </Section>
 <style>
@@ -69,7 +71,7 @@ const convert2Path = (filename:string) => {
     margin-top: 16px;
     margin-bottom: 24px;
   }
-  .imageWrapper { 
+  .imageWrapper {
     margin-bottom: 8px;
     text-align: center;
     width: 100%;

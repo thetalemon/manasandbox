@@ -1,20 +1,19 @@
 ---
-import {SNS_LIST} from '../data/sns';
-import Section from './Section.astro'
+import { SNS_LIST } from "../data/sns";
+import Section from "./Section.astro";
 ---
+
 <Section title="発信">
   <ul>
-    {SNS_LIST.map((item) => (
-      <li>
-        <a
-          href={item.url}
-          target="_blank"
-          rel="noreferrer noopener me"
-        >
-          {item.name}
-        </a>
-      </li>
-    ))}
+    {
+      SNS_LIST.map((item) => (
+        <li>
+          <a href={item.url} target="_blank" rel="noreferrer noopener me">
+            {item.name}
+          </a>
+        </li>
+      ))
+    }
   </ul>
 </Section>
 <style>

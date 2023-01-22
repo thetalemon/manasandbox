@@ -1,23 +1,31 @@
 ---
-import type {SkillItem} from '../data/skill'
+import type { SkillItem } from "../data/skill";
 
 export interface Props {
-	list: SkillItem[]
+  list: SkillItem[];
 }
 
 const { list } = Astro.props;
 const convert2Path = (filename: string) => {
-    const prefix = '/tech-logo/'
-    return prefix + filename
-}
+  const prefix = "/tech-logo/";
+  return prefix + filename;
+};
 ---
+
 <ul class="iconWithTextFlexList">
-  {list.map((item:SkillItem) => (
-    <li class="iconWithText">
-      <img src={convert2Path(item.src)} alt={item.name} width="80" height="50"/>
-      <p>{item.name}</p>
-    </li>
-  ))}
+  {
+    list.map((item: SkillItem) => (
+      <li class="iconWithText">
+        <img
+          src={convert2Path(item.src)}
+          alt={item.name}
+          width="80"
+          height="50"
+        />
+        <p>{item.name}</p>
+      </li>
+    ))
+  }
 </ul>
 <style>
   .iconWithTextFlexList {
@@ -28,7 +36,7 @@ const convert2Path = (filename: string) => {
     background: #fff;
     height: calc(100% - 17px);
   }
-  .iconWithText{
+  .iconWithText {
     padding: 4px;
     text-align: center;
   }

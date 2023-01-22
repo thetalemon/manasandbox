@@ -13,11 +13,17 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/mylogo.ico" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content="WEBエンジニア まなさすのポートフォリオ。" />
+    <meta
+      name="description"
+      content="WEBエンジニア まなさすのポートフォリオ。"
+    />
     <meta property="og:site_name" content="manasandbox" />
     <meta property="og:title" content={title} />
     <meta property="og:url" content="https://manasas.dev" />
-    <meta property="og:description" content="WEBエンジニア まなさすのポートフォリオ。" />
+    <meta
+      property="og:description"
+      content="WEBエンジニア まなさすのポートフォリオ。"
+    />
     <meta property="og:image" content="https://manasas.dev/aza166.png" />
     <title>{title}</title>
   </head>
@@ -28,9 +34,7 @@ const { title } = Astro.props;
     <main>
       <slot />
     </main>
-    <footer>
-      © 2022 Manami SASAKI
-    </footer>
+    <footer>© 2022 Manami SASAKI</footer>
   </body>
 </html>
 
