@@ -35,7 +35,7 @@ export const LINK_LIST: LinkItem[] = [
   {
     name: "mastodon",
     img: "mastodon.svg",
-    url: "https://fedibird.com/@thetalemon",
+    url: "https://mastodon-japan.net/@thetalemon",
     alt: "mastodon",
     width: 50,
     height: 30,
