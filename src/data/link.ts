@@ -30,7 +30,7 @@ export const LINK_LIST: LinkItem[] = [
     url: "https://github.com/thetalemon",
     alt: "github",
     width: 50,
-    height: 30,
+    height: 40,
   },
   {
     name: "twitter",
@@ -38,6 +38,14 @@ export const LINK_LIST: LinkItem[] = [
     url: "https://twitter.com/thetalemon",
     alt: "twitter",
     width: 50,
-    height: 30,
+    height: 40,
+  },
+  {
+    name: "mastodon",
+    img: "mastodon.svg",
+    url: "https://fedibird.com/@thetalemon",
+    alt: "mastodon",
+    width: 50,
+    height: 40,
   },
 ];

@@ -5,16 +5,32 @@ type SnsItem = {
 
 export const SNS_LIST: SnsItem[] = [
   {
+    name: "note",
+    url: "https://note.com/thetalemon",
+  },
+  {
+    name: "Zenn",
+    url: "https://zenn.dev/thetalemon",
+  },
+  {
+    name: "GitHub",
+    url: "https://twitter.com/thetalemon",
+  },
+  {
+    name: "Twitter",
+    url: "https://twitter.com/thetalemon",
+  },
+  {
+    name: "Mastodon(汎用）",
+    url: "https://fedibird.com/@thetalemon",
+  },
+  {
     name: "Mastodon(写真アカウント）",
     url: "https://photodn.net/@thetalemon",
   },
   {
     name: "Mastodon(制作全般アカウント）",
     url: "https://otadon.com/@thetalemon",
-  },
-  {
-    name: "Mastodon(汎用）",
-    url: "https://fedibird.com/@thetalemon",
   },
   {
     name: "stand.fm",
