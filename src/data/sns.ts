@@ -25,12 +25,8 @@ export const SNS_LIST: SnsItem[] = [
     url: "https://fedibird.com/@thetalemon",
   },
   {
-    name: "Mastodon(写真アカウント）",
-    url: "https://photodn.net/@thetalemon",
-  },
-  {
-    name: "Mastodon(制作全般アカウント）",
-    url: "https://otadon.com/@thetalemon",
+    name: "Misskey(趣味）",
+    url: "https://misskey.soda-net.com/@thetalemon",
   },
   {
     name: "stand.fm",
