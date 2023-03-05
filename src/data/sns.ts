@@ -42,6 +42,10 @@ export const SNS_LIST: SnsItem[] = [
   },
   {
     name: "ブログ（雑記用）",
-    url: "https://manasas.hatenablog.jp/",
+    url: "https://diary.manasas.dev/",
+  },
+  {
+    name: "ブログ（読書・映画等の記録用）",
+    url: "https://read.manasas.dev/",
   },
 ];

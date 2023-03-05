@@ -1,36 +1,10 @@
 ---
-import { LINK_LIST } from "../data/link";
+export interface Props {
+  text: string;
+  url: string;
+}
 
-const convert2Path = (filename: string) => {
-  const prefix = "/social/";
-  return prefix + filename;
-};
+const { text, url } = Astro.props;
 ---
 
-<ul>
-  {
-    LINK_LIST.map((item) => (
-      <li>
-        <a href={item.url} target="_blank" rel="noreferrer noopener me">
-          <img
-            class="ico"
-            src={convert2Path(item.img)}
-            height={item.width}
-            width={item.height}
-            alt={item.alt}
-          />
-        </a>
-      </li>
-    ))
-  }
-</ul>
-<style>
-  ul {
-    height: 60px;
-    max-width: 500px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 16px auto;
-  }
-</style>
+<a href={url}> {text}</a>

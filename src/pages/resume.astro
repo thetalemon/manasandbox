@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Timeline from "../components/Timeline.astro";
+import BackLink from "../components/BackLink.astro";
+import Certification from "../components/Certification.astro";
+import Skills from "../components/Skills.astro";
+---
+
+<Layout title="manasandbox">
+  <section class="mainSection">
+    <BackLink />
+    <Skills />
+    <Certification />
+    <Timeline />
+    <BackLink />
+  </section>
+</Layout>
+
+<style>
+  .mainSection {
+    padding: 8px 8px;
+  }
+</style>
