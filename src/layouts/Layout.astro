@@ -38,17 +38,17 @@ const { title } = Astro.props;
   </body>
 </html>
 
-<style>
+<style lang="scss">
   header {
     background: #44617b;
     color: #fff;
     vertical-align: baseline;
     padding: 4px 8px;
-  }
-  header > h1 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 300;
+    & > h1 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 300;
+    }
   }
   footer {
     background: #44617b;
