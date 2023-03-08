@@ -12,7 +12,8 @@
     "format": "prettier -w ."
   },
   "dependencies": {
-    "astro": "1.8.0"
+    "@astrojs/image": "0.16.0",
+    "astro": "2.1.0"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "5.48.2",

@@ -1,30 +1,28 @@
 ---
+import { Picture } from "@astrojs/image/components";
+
 export interface Props {
   width: number;
-  height: number;
   alt: string;
   imagePathWithOutExt: string;
+  aspectRatio: number | `${number}:${number}` | undefined;
 }
 
-const { width, height, alt, imagePathWithOutExt } = Astro.props;
+const { width, alt, imagePathWithOutExt, aspectRatio } = Astro.props;
 
 const webpFullPath = (imagePathWithOutExt: string) => {
   return imagePathWithOutExt + ".webp";
 };
-const pngFullPath = (imagePathWithOutExt: string) => {
-  return imagePathWithOutExt + ".png";
-};
 ---
 
-<picture>
-  <source type="image/webp" srcset={webpFullPath(imagePathWithOutExt)} />
-  <img
-    width={width}
-    height={height}
-    alt={alt}
-    src={pngFullPath(imagePathWithOutExt)}
-  />
-</picture>
+<Picture
+  src={webpFullPath(imagePathWithOutExt)}
+  widths={[width]}
+  sizes="(max-width: 800px) 100vw, 800px"
+  formats={["webp"]}
+  alt={alt}
+  aspectRatio={aspectRatio}
+/>
 
 <style>
   img {
