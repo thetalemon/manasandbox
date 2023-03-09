@@ -2,6 +2,7 @@
 import { PRODUCT_LIST } from "../../data/product";
 import Section from "../Section.astro";
 import Image from "../Image.astro";
+import IconLink from "../IconLink.astro";
 
 const convert2Path = (filename: string) => {
   return "/product/" + filename;
@@ -24,34 +25,18 @@ const convert2Path = (filename: string) => {
           <div class="cardContentArea">
             <p class="titleWithGtihubIco">
               {item.name}
-              <span class="githubIcon">
-                <a
-                  class="linkIco"
+              <span>
+                <IconLink
                   href={item.github}
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <img
-                    src="/social/github.svg"
-                    width="20px"
-                    height="20px"
-                    alt={`${item.name}のgithubへのリンク`}
-                  />
-                </a>
+                  src="/social/github.svg"
+                  alt={`${item.name}のgithubへのリンク`}
+                />
                 {item.url && (
-                  <a
-                    class="linkIco"
+                  <IconLink
                     href={item.url}
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    <img
-                      src="/general/link.svg"
-                      width="20px"
-                      height="20px"
-                      alt={`${item.name}のサイトへのリンク`}
-                    />
-                  </a>
+                    src="/general/link.svg"
+                    alt={`${item.name}のサイトへのリンク`}
+                  />
                 )}
               </span>
             </p>
@@ -62,6 +47,7 @@ const convert2Path = (filename: string) => {
     }
   </ul>
 </Section>
+
 <style>
   .cardAreaWrapper {
     display: grid;

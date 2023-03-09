@@ -1,0 +1,19 @@
+---
+export interface Props {
+  href: string;
+  src: string;
+  alt: string;
+}
+
+const { href, src, alt } = Astro.props;
+---
+
+<a class="linkIco" href={href} rel="noreferrer" target="_blank">
+  <img src={src} width="20px" height="20px" alt={alt} />
+</a>
+
+<style>
+  .linkIco {
+    margin-left: 8px;
+  }
+</style>
