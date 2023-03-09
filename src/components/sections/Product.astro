@@ -1,7 +1,7 @@
 ---
 import { PRODUCT_LIST } from "../../data/product";
 import Section from "../Section.astro";
-import Webp from "../WebpImage.astro";
+import Image from "../Image.astro";
 
 const convert2Path = (filename: string) => {
   return "/product/" + filename;
@@ -14,7 +14,7 @@ const convert2Path = (filename: string) => {
       PRODUCT_LIST.map((item) => (
         <li class="productCard">
           <div class="imageWrapper">
-            <Webp
+            <Image
               imagePathWithOutExt={convert2Path(item.img)}
               width={280}
               alt={item.name}
@@ -49,7 +49,7 @@ const convert2Path = (filename: string) => {
                       src="/general/link.svg"
                       width="20px"
                       height="20px"
-                      alt={`${item.name}のgithubへのリンク`}
+                      alt={`${item.name}のサイトへのリンク`}
                     />
                   </a>
                 )}
