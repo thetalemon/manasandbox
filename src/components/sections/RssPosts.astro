@@ -1,12 +1,11 @@
 ---
+import CenterSection from "../CenterSection.astro";
+
 export interface Props {
   url: string;
+  titleSrc?: string;
   title: string;
 }
-
-const { title, url } = Astro.props;
-
-import Section from "../Section.astro";
 
 type RssResponse = {
   items: RssItem[];
@@ -17,17 +16,18 @@ type RssItem = {
   link: string;
 };
 
+const { title, url, titleSrc } = Astro.props;
+
 const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${url}`);
 const data: RssResponse = await res.json();
-const recentData = data.items.splice(0, 5);
+const recentData = data.items.splice(0, 3);
 ---
 
-<Section title={title}>
+<CenterSection title={title} titleSrc={titleSrc}>
   <ul>
     {
       recentData.map((item: RssItem) => (
         <li>
-          ・{" "}
           <a href={item.link} target="_blank" rel="noreferrer noopener me">
             {item.title}
           </a>
@@ -35,7 +35,7 @@ const recentData = data.items.splice(0, 5);
       ))
     }
   </ul>
-</Section>
+</CenterSection>
 <style>
   li {
     line-height: 1.5;

@@ -15,8 +15,24 @@ import RssPosts from "../components/sections/RssPosts.astro";
   <section class="mainSection">
     <Links />
     <Abstract />
-    <RssPosts title="最近のZennの投稿" url="https://zenn.dev/thetalemon/feed" />
-    <RssPosts title="最近のnoteの投稿" url="https://note.com/thetalemon/rss" />
+    <RssPosts
+      titleSrc="/social/zenn.png"
+      title="最近のZennの投稿"
+      url="https://zenn.dev/thetalemon/feed"
+    />
+    <RssPosts
+      titleSrc="/social/note.webp"
+      title="最近のnoteの投稿"
+      url="https://note.com/thetalemon/rss"
+    />
+    <RssPosts
+      title="最近の読書・映画感想ブログの投稿"
+      url="https://read.manasas.dev/rss"
+    />
+    <RssPosts
+      title="最近の雑記ブログの登校"
+      url="https://diary.manasas.dev/feed"
+    />
     <Transmit />
     <Product />
     <Other />
