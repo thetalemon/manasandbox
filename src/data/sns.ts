@@ -5,14 +5,6 @@ type SnsItem = {
 
 export const SNS_LIST: SnsItem[] = [
   {
-    name: "note",
-    url: "https://note.com/thetalemon",
-  },
-  {
-    name: "Zenn",
-    url: "https://zenn.dev/thetalemon",
-  },
-  {
     name: "GitHub",
     url: "https://twitter.com/thetalemon",
   },
@@ -39,13 +31,5 @@ export const SNS_LIST: SnsItem[] = [
   {
     name: "Intagram(イラスト)",
     url: "https://www.instagram.com/manasas.draw/",
-  },
-  {
-    name: "ブログ（雑記用）",
-    url: "https://diary.manasas.dev/",
-  },
-  {
-    name: "ブログ（読書・映画等の記録用）",
-    url: "https://read.manasas.dev/",
   },
 ];

@@ -5,6 +5,8 @@ export interface Props {
   url: string;
   titleSrc?: string;
   title: string;
+  iconSrc?: string;
+  link: string;
 }
 
 type RssResponse = {
@@ -16,14 +18,14 @@ type RssItem = {
   link: string;
 };
 
-const { title, url, titleSrc } = Astro.props;
+const { title, url, titleSrc, iconSrc, link } = Astro.props;
 
 const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${url}`);
 const data: RssResponse = await res.json();
 const recentData = data.items.splice(0, 3);
 ---
 
-<CenterSection title={title} titleSrc={titleSrc}>
+<CenterSection title={title} titleSrc={titleSrc} iconSrc={iconSrc} link={link}>
   <ul>
     {
       recentData.map((item: RssItem) => (
