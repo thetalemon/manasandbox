@@ -8,30 +8,6 @@ type LinkItem = {
 };
 
 export const LINK_LIST: LinkItem[] = [
-  // {
-  //   name: "note",
-  //   img: "note.svg",
-  //   url: "https://note.com/thetalemon",
-  //   alt: "note",
-  //   width: 50,
-  //   height: 60,
-  // },
-  // {
-  //   name: "zenn",
-  //   img: "zenn.svg",
-  //   url: "https://zenn.dev/thetalemon",
-  //   alt: "zenn",
-  //   width: 80,
-  //   height: 65,
-  // },
-  // {
-  //   name: "github",
-  //   img: "github.svg",
-  //   url: "https://github.com/thetalemon",
-  //   alt: "github",
-  //   width: 50,
-  //   height: 40,
-  // },
   {
     name: "twitter",
     img: "twitter.svg",
