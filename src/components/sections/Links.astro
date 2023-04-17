@@ -5,6 +5,8 @@ const convert2Path = (filename: string) => {
   const prefix = "/social/";
   return prefix + filename;
 };
+
+const ICON_SIZE = 38;
 ---
 
 <ul>
@@ -15,8 +17,8 @@ const convert2Path = (filename: string) => {
           <img
             class="ico"
             src={convert2Path(item.img)}
-            height={item.width}
-            width={item.height}
+            height={ICON_SIZE}
+            width={ICON_SIZE}
             alt={item.alt}
           />
         </a>
@@ -26,11 +28,10 @@ const convert2Path = (filename: string) => {
 </ul>
 <style>
   ul {
-    height: 60px;
-    max-width: 500px;
+    max-width: 400px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 16px auto;
+    padding: 32px 8px;
   }
 </style>

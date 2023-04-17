@@ -3,8 +3,6 @@ type LinkItem = {
   img: string;
   url: string;
   alt: string;
-  width: number;
-  height: number;
 };
 
 export const LINK_LIST: LinkItem[] = [
@@ -13,39 +11,29 @@ export const LINK_LIST: LinkItem[] = [
     img: "twitter.svg",
     url: "https://twitter.com/thetalemon",
     alt: "twitter",
-    width: 48,
-    height: 48,
   },
   {
     name: "twitch",
     img: "twitch.svg",
     url: "https://www.twitch.tv/thetalemon",
     alt: "twitch",
-    width: 48,
-    height: 48,
   },
   {
     name: "mastodon",
     img: "mastodon.svg",
     url: "https://fedibird.com/@thetalemon",
     alt: "mastodon",
-    width: 48,
-    height: 48,
   },
   {
     name: "Instagram",
     img: "instagram.svg",
     url: "https://www.instagram.com/manasas.photo/",
     alt: "instragram",
-    width: 48,
-    height: 48,
   },
   {
     name: "YouTube",
     img: "youtube.svg",
     url: "https://www.youtube.com/channel/UCPjQVzBicTV8TuTruWUBUvQ",
     alt: "YouTube",
-    width: 48,
-    height: 48,
   },
 ];
