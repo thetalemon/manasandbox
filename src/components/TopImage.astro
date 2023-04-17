@@ -1,46 +1,48 @@
----
-import Image from "./Image.astro";
----
-
 <div class="topWrapper">
-  <Image
-    imagePathWithOutExt="/top/aza2109"
-    width={840}
-    alt="遠くを見つめるアザラシのトップ画像"
-    aspectRatio="2:1"
+  <img
+    class="myIcon"
+    src={"/myicon.jpg"}
+    alt={"遠くを見つめるアザラシのトップ画像"}
   />
   <div class="textArea">
-    <p class="title">Tech Crafter</p>
+    <p class="title">作るの大好き</p>
     <p class="name">まなさす</p>
+    <p class="ruby">mansas</p>
   </div>
 </div>
 
-<style>
+<style lang="scss">
   .topWrapper {
+    margin: 24px 40px;
     position: relative;
     line-height: 0;
-  }
-  .title {
-    font-size: 20px;
-    margin: 0;
-  }
-  .name {
-    margin-top: 16px;
-    font-size: 32px;
-  }
-  .textArea {
-    line-height: 1;
-    color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    top: 20%;
-    left: 10%;
-  }
-  @media only screen and (max-width: 500px) {
-    .title {
-      font-size: 20px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+
+    .myIcon {
+      width: 100px;
+      border-radius: 50%;
     }
-    .name {
-      font-size: 26px;
+    .textArea {
+      line-height: 1;
+      color: rgba(0, 0, 0, 0.7);
+      top: 20%;
+      left: 10%;
+      p {
+        margin: 4px;
+      }
+      .title {
+        font-size: 20px;
+      }
+      .name {
+        margin-top: 16px;
+        font-size: 28px;
+      }
+      .ruby {
+        font-size: 20px;
+      }
     }
   }
 </style>
