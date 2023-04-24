@@ -6,9 +6,10 @@ export interface Props {
   alt: string;
   imagePathWithOutExt: string;
   aspectRatio: number | `${number}:${number}` | undefined;
+  radius?: boolean;
 }
 
-const { width, alt, imagePathWithOutExt, aspectRatio } = Astro.props;
+const { width, alt, imagePathWithOutExt, aspectRatio, radius } = Astro.props;
 
 const webpFullPath = (imagePathWithOutExt: string) => {
   return imagePathWithOutExt + ".webp";
@@ -22,12 +23,16 @@ const webpFullPath = (imagePathWithOutExt: string) => {
   formats={["webp"]}
   alt={alt}
   aspectRatio={aspectRatio}
+  class={`${radius && "radius"}`}
 />
 
-<style>
+<style lang="scss">
   img {
     max-width: 100%;
     width: 100%;
     height: auto;
+    &.radius {
+      border-radius: 12px 12px 0 0;
+    }
   }
 </style>
