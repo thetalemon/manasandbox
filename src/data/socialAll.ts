@@ -26,7 +26,7 @@ export const SNS_LIST: SocialItem[] = [
   },
   {
     title: "sealdolphin(めいどるふぃん・自鯖）",
-    url: "https://sealdolphin.manasas.dev",
+    url: "https://sealdolphin.manasas.dev/@manasas",
     icon: "/social/dolphin.svg",
     comment: "Fediverse界の自鯖、たまにブログの更新通知をしたりする。",
   },
