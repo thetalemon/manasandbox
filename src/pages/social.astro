@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TopSocial from "../components/TopSocial.astro";
+import SocialLinkList from "../components/SocialLinkList.astro";
+---
+
+<Layout title="manasandbox">
+  <TopSocial />
+  <SocialLinkList />
+  <p class="text">
+    ブログの新着などは<a href="https://manasas.dev">こちら</a>
+  </p>
+</Layout>
+
+<style>
+  .text {
+    text-align: center;
+    margin: 16px 8px;
+  }
+</style>

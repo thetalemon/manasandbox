@@ -1,0 +1,52 @@
+<div class="root">
+  <div class="topWrapper">
+    <img class="myIcon" src={"/myicon.jpg"} alt={"あざらしアイコン"} />
+    <div class="textArea">
+      <p class="name">まなさす</p>
+      <p class="ruby">@mansas</p>
+      <p class="ruby">@thetalemon</p>
+    </div>
+  </div>
+  <div>
+    <p>サイト制作 / 読書 / 映画 / 写真撮影 / 散歩 etc...</p>
+    <p>創作全般、作る書く描く読む見る全部大好き</p>
+  </div>
+</div>
+
+<style lang="scss">
+  .root {
+    margin: 0 auto;
+    padding: 0 16px;
+    text-align: center;
+  }
+  .topWrapper {
+    padding: 32px;
+    position: relative;
+    line-height: 0;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+
+    .myIcon {
+      width: 120px;
+      border-radius: 50%;
+    }
+    .textArea {
+      line-height: 1;
+      color: rgba(0, 0, 0, 0.7);
+      top: 20%;
+      left: 10%;
+      p {
+        margin: 0.5rem 0;
+      }
+      .name {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .ruby {
+        font-size: 0.9rem;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,44 @@
+---
+import { SNS_LIST } from "../data/socialAll";
+---
+
+<ul class="root">
+  {
+    SNS_LIST.map((item) => (
+      <li class="item">
+        <div class="imgWrapper">
+          <img src={item.icon} />
+        </div>
+        <div>
+          <p>{item.title}</p>
+          <p>{item.comment}</p>
+        </div>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .root {
+    margin: 16px 0;
+  }
+  .item {
+    display: flex;
+    border-radius: 8px;
+    margin: 8px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    align-items: center;
+  }
+  .imgWrapper {
+    border-right: 1px solid #ccc;
+    width: fit-content;
+    padding-right: 8px;
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
+  img {
+    width: 32px;
+    height: 32px;
+  }
+</style>
