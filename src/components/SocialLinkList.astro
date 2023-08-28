@@ -5,14 +5,16 @@ import { SNS_LIST } from "../data/socialAll";
 <ul class="root">
   {
     SNS_LIST.map((item) => (
-      <li class="item">
-        <div class="imgWrapper">
-          <img src={item.icon} />
-        </div>
-        <div>
-          <p>{item.title}</p>
-          <p>{item.comment}</p>
-        </div>
+      <li>
+        <a class="item" href={item.url} target="_blank">
+          <div class="imgWrapper">
+            <img src={item.icon} />
+          </div>
+          <div>
+            <p>{item.title}</p>
+            <p>{item.comment}</p>
+          </div>
+        </a>
       </li>
     ))
   }
@@ -29,6 +31,7 @@ import { SNS_LIST } from "../data/socialAll";
     padding: 8px;
     border: 1px solid #ccc;
     align-items: center;
+    color: #44617b !important;
   }
   .imgWrapper {
     border-right: 1px solid #ccc;
