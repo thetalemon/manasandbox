@@ -12,12 +12,12 @@ export const LINK_LIST: LinkItem[] = [
     url: "https://twitter.com/thetalemon",
     alt: "twitter",
   },
-  {
-    name: "twitch",
-    img: "twitch.svg",
-    url: "https://www.twitch.tv/thetalemon",
-    alt: "twitch",
-  },
+  // {
+  //   name: "twitch",
+  //   img: "twitch.svg",
+  //   url: "https://www.twitch.tv/thetalemon",
+  //   alt: "twitch",
+  // },
   {
     name: "mastodon",
     img: "mastodon.svg",

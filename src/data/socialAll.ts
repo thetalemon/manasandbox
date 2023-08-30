@@ -34,6 +34,7 @@ export const SNS_LIST: SocialItem[] = [
     title: "Twitter",
     url: "https://twitter.com/thetalemon",
     icon: "/social/twitter.svg",
-    comment: "利用してません。跡地です。",
+    comment:
+      "あまり見てない。エンジニア向け。たまにエンジニアっぽい発言をする。",
   },
 ];

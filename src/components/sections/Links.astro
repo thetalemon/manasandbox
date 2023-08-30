@@ -9,7 +9,7 @@ const convert2Path = (filename: string) => {
 const ICON_SIZE = 38;
 ---
 
-<ul>
+<ul class="root">
   {
     LINK_LIST.map((item) => (
       <li>
@@ -27,7 +27,7 @@ const ICON_SIZE = 38;
   }
 </ul>
 <style>
-  ul {
+  .root {
     max-width: 400px;
     display: flex;
     justify-content: space-between;
