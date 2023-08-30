@@ -6,17 +6,20 @@ export interface Props {
 const { title } = Astro.props;
 ---
 
-<section>
+<section class="root">
   <h2>{title}</h2>
   <div class="sectionWrapper">
     <slot />
   </div>
 </section>
 <style>
+  .root {
+    margin: 1rem 1rem;
+  }
   h2 {
     margin-bottom: 0.5rem;
   }
   .sectionWrapper {
-    padding-left: 8px;
+    padding: 0.5rem 0 0 0.5rem;
   }
 </style>

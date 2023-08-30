@@ -9,7 +9,7 @@ export interface Props {
 const { title, titleSrc, iconSrc, link } = Astro.props;
 ---
 
-<section>
+<section class="root">
   <h2>
     <a href={link} target="_blank" rel="noreferrer noopener me">
       {
@@ -29,6 +29,9 @@ const { title, titleSrc, iconSrc, link } = Astro.props;
   </div>
 </section>
 <style lang="scss">
+  .root {
+    margin: 2rem 1rem;
+  }
   h2 {
     /* width: fit-content; */
     margin: 1rem auto 0.5rem auto;
@@ -52,6 +55,6 @@ const { title, titleSrc, iconSrc, link } = Astro.props;
   }
 
   .sectionWrapper {
-    padding-left: 8px;
+    padding: 0.5rem 0 0 0.5rem;
   }
 </style>

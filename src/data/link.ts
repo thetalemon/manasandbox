@@ -25,15 +25,15 @@ export const LINK_LIST: LinkItem[] = [
     alt: "mastodon",
   },
   {
-    name: "Instagram",
-    img: "instagram.svg",
-    url: "https://www.instagram.com/manasas.photo/",
-    alt: "instragram",
+    name: "threads",
+    img: "threads.svg",
+    url: "https://www.threads.net/@manasas.photo",
+    alt: "threads",
   },
-  {
-    name: "YouTube",
-    img: "youtube.svg",
-    url: "https://www.youtube.com/channel/UCPjQVzBicTV8TuTruWUBUvQ",
-    alt: "YouTube",
-  },
+  // {
+  //   name: "YouTube",
+  //   img: "youtube.svg",
+  //   url: "https://www.youtube.com/channel/UCPjQVzBicTV8TuTruWUBUvQ",
+  //   alt: "YouTube",
+  // },
 ];

@@ -37,4 +37,10 @@ export const SNS_LIST: SocialItem[] = [
     comment:
       "あまり見てない。エンジニア向け。たまにエンジニアっぽい発言をする。",
   },
+  {
+    title: "Bluesky",
+    url: "https://bsky.app/profile/manasas.dev",
+    icon: "/social/bluesky.png",
+    comment: "あまり見てない。期待はしてる。",
+  },
 ];
