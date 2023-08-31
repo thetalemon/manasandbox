@@ -12,6 +12,12 @@ export const LINK_LIST: LinkItem[] = [
     url: "https://twitter.com/thetalemon",
     alt: "twitter",
   },
+  {
+    name: "github",
+    img: "github.svg",
+    url: "https://twitter.com/thetalemon",
+    alt: "github",
+  },
   // {
   //   name: "twitch",
   //   img: "twitch.svg",
