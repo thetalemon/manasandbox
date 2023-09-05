@@ -1,7 +1,7 @@
 ---
 import { PRODUCT_LIST } from "../../data/product";
 import Section from "../Section.astro";
-import Image from "../Image.astro";
+import ImageWrap from "../ImageWrap.astro";
 
 const convert2Path = (filename: string) => {
   return "/product/" + filename;
@@ -14,11 +14,11 @@ const convert2Path = (filename: string) => {
       PRODUCT_LIST.map((item) => (
         <li class="productCard">
           <div class="imageWrapper">
-            <Image
+            <ImageWrap
               imagePathWithOutExt={convert2Path(item.img)}
               width={280}
+              height={200}
               alt={item.name}
-              aspectRatio="7:5"
               radius
             />
           </div>

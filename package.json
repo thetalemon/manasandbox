@@ -12,9 +12,8 @@
     "format": "prettier -w ."
   },
   "dependencies": {
-    "@astrojs/image": "0.17.1",
-    "@fontsource/zen-kaku-gothic-antique": "^5.0.7",
-    "astro": "2.8.2"
+    "@fontsource/zen-kaku-gothic-antique": "5.0.7",
+    "astro": "3.0.8"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "6.00.0",
