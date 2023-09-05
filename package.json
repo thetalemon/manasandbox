@@ -1,5 +1,5 @@
 {
-  "name": "@example/basics",
+  "name": "manasandbox",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -12,11 +12,8 @@
     "format": "prettier -w ."
   },
   "dependencies": {
-    "@astrojs/image": "0.17.1",
-    "@astrojs/tailwind": "4.0.0",
-    "@fontsource/zen-kaku-gothic-antique": "^5.0.7",
-    "astro": "2.8.2",
-    "tailwindcss": "3.3.2"
+    "@fontsource/zen-kaku-gothic-antique": "5.0.7",
+    "astro": "3.0.8"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "6.00.0",
