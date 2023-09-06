@@ -7,6 +7,7 @@ import Abstract from "../components/sections/Abstract.astro";
 import Other from "../components/sections/Other.astro";
 import Product from "../components/sections/Product.astro";
 import RssPosts from "../components/sections/RssPosts.astro";
+import Separate from "../components/Separate.astro";
 ---
 
 <Layout title="manasandbox">
@@ -14,39 +15,37 @@ import RssPosts from "../components/sections/RssPosts.astro";
   <section class="mainSection">
     <Links />
     <Abstract />
+    <Separate />
     <RssPosts
-      titleSrc="/social/zenn.png"
       title="Zenn"
       url="https://zenn.dev/thetalemon/feed"
       link="https://zenn.dev/thetalemon"
     />
+    <Separate />
     <RssPosts
-      titleSrc="/social/note.webp"
       title="note"
       url="https://note.com/thetalemon/rss"
       link="https://note.com/thetalemon"
     />
+    <Separate />
     <RssPosts
       title="読書・映画感想ブログ"
       url="https://read.manasas.dev/rss"
-      iconSrc="/general/book.svg"
       link="https://read.manasas.dev/"
     />
+    <Separate />
     <RssPosts
       title="雑記ブログ"
       url="https://diary.manasas.dev/feed"
-      iconSrc="/general/memo.svg"
       link="https://diary.manasas.dev/"
     />
+    <Separate />
     <Product />
+    <Separate />
     <Other />
     <Links />
   </section>
   <BottomImage />
 </Layout>
 
-<style>
-  .mainSection {
-    padding: 0 8px;
-  }
-</style>
+<style></style>
