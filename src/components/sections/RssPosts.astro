@@ -1,11 +1,11 @@
 ---
-import CenterSection from "../CenterSection.astro";
+import Section from "../Section.astro";
+import { format } from "date-fns";
+import ja from "date-fns/locale/ja/index.js";
 
 export interface Props {
   url: string;
-  titleSrc?: string;
   title: string;
-  iconSrc?: string;
   link: string;
 }
 
@@ -16,31 +16,37 @@ type RssResponse = {
 type RssItem = {
   title: string;
   link: string;
+  pubDate: string;
 };
 
-const { title, url, titleSrc, iconSrc, link } = Astro.props;
+const { title, url, link } = Astro.props;
 
 const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${url}`);
 const data: RssResponse = await res.json();
-const recentData = data.items.splice(0, 3);
+const recentData = data.items.splice(0, 5);
+const formattedRecentData = recentData.map((item: RssItem) => ({
+  ...item,
+  pubDate: format(new Date(`${item.pubDate}.000+0000`), "yyyy-MM-dd HH:mm:dd", {
+    locale: ja,
+  }),
+}));
 ---
 
-<CenterSection title={title} titleSrc={titleSrc} iconSrc={iconSrc} link={link}>
+<Section title={title} link={link}>
   <ul>
     {
-      recentData.map((item: RssItem) => (
+      formattedRecentData.map((item: RssItem) => (
         <li>
           <a href={item.link} target="_blank" rel="noreferrer noopener me">
-            {item.title}
+            - {item.title}({item.pubDate})
           </a>
         </li>
       ))
     }
   </ul>
-</CenterSection>
+</Section>
 <style>
   li {
-    line-height: 1.5;
-    margin: 0;
+    margin: 0.3rem 0;
   }
 </style>
