@@ -1,47 +1,55 @@
+import AiRuin from "./images/product/aiRuin.webp";
+import CreativeCoding from "./images/product/creativeCoding.webp";
+import Diary from "./images/product/diary.png";
+import Eyecatch from "./images/product/eyecatch.webp";
+import MusicGenerator from "./images/product/musicGenerator.webp";
+import Portfolio from "./images/product/portfolio.webp";
+import TaskBot from "./images/product/taskBot.webp";
+
 export const PRODUCT_LIST = [
   {
     name: "ポートフォリオ",
-    img: "portfolio.webp",
+    img: Portfolio,
     url: "https://manasas.dev",
     github: "https://github.com/thetalemon/manasandbox",
     text: "このサイト。Astro製になりました(元はNuxt.js製)。",
   },
   {
     name: "creative coding gallery",
-    img: "creativeCoding.webp",
+    img: CreativeCoding,
     url: "https://creative-gallery.manasas.dev",
     github: "https://github.com/thetalemon/creative-gallery",
     text: "クリエイティブコーディング練習用の砂場",
   },
   {
     name: "AI Ruin",
-    img: "aiRuin.webp",
+    img: AiRuin,
     url: "https://ruin.manasas.dev",
     github: "https://github.com/thetalemon/web-zine",
     text: "WEBでZINEを作る試みとして作成。stableDiffusionで画像生成して加筆し、横スクロールで閲覧できるサイトにしました。",
   },
   {
     name: "日記",
-    img: "diary.png",
+    img: Diary,
     url: "https://diary.manasas.dev",
     github: "https://github.com/thetalemon/manasblog",
     text: "たまに書く。Next.js(App Router) + Newt。",
   },
   {
     name: "みゅーじっくじぇねれーた",
-    img: "musicGenerator.webp",
+    img: MusicGenerator,
     github: "https://github.com/thetalemon/movie2music",
     text: "永遠の製作中。動画の特徴情報をとりだして音楽を生成するデスクトップアプリ。Electron + Next.js + Python。",
   },
   {
     name: "taskBot",
-    img: "taskBot.webp",
+    img: TaskBot,
     github: "https://github.com/thetalemon/todoist-line-bot",
     text: "TodoistのタスクをLineに毎日通知するやつ。Go製。停止しました。",
   },
   {
     name: "あいきゃっちじぇねれーた",
-    img: "eyecatch.webp",
+    img: Eyecatch,
     url: "https://eyecatch.manasas.dev/",
     github: "https://github.com/thetalemon/eye-catch-creator",
     text: "記事投稿する時のアイキャッチ作るやつ。Next.js + HTML5のcanvas機能。",

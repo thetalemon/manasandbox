@@ -1,12 +1,7 @@
 ---
 import { PRODUCT_LIST } from "../../data/product";
 import Section from "../Section.astro";
-import ImageWrap from "../ImageWrap.astro";
 import { Image } from "astro:assets";
-
-const convert2Path = (filename: string) => {
-  return "/product/" + filename;
-};
 ---
 
 <Section title="制作物">
@@ -16,9 +11,7 @@ const convert2Path = (filename: string) => {
         <li class="productCard">
           <div class="imageWrapper">
             <Image
-              src={convert2Path(item.img)}
-              width={280}
-              height={200}
+              src={item.img}
               sizes="(max-width: 800px) 100vw, 800px"
               alt={item.name}
             />
@@ -58,12 +51,14 @@ const convert2Path = (filename: string) => {
       text-align: center;
       width: 100%;
       border-radius: 10px;
+      overflow: hidden;
+      aspect-ratio: 280/200;
       img {
         width: 100%;
-        aspect-ratio: 200/280;
+        height: 100%;
         object-fit: cover;
         border-radius: 12px 12px 0 0;
-        object-position: left top;
+        object-position: center top;
       }
     }
     .cardContentArea {
