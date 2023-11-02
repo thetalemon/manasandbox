@@ -21,9 +21,13 @@ type RssItem = {
 
 const { title, url, link } = Astro.props;
 
-const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${url}`);
+const res = await fetch(
+  `https://api.rss2json.com/v1/api.json?rss_url=${url}&api_key=${
+    import.meta.env.RSS_JSON_API_KEY
+  }`,
+);
 const data: RssResponse = await res.json();
-const recentData = data.items.splice(0, 5);
+const recentData = data.items ? data.items.splice(0, 5) : [];
 const formattedRecentData = recentData.map((item: RssItem) => ({
   ...item,
   pubDate: format(new Date(`${item.pubDate}.000+0000`), "yyyy-MM-dd HH:mm:dd", {
