@@ -1,17 +1,18 @@
 ---
-import Image from "./ImageWrap.astro";
+import { Image } from "astro:assets";
+import Rakkan from "./images/rakkan.svg";
 ---
 
 <div class="bottomWrapper">
-  <Image
-    imagePathWithOutExt="/bottom/aza166"
-    width={840}
-    height={420}
-    alt="その他趣味色々のアザラシの画像"
-  />
+  <Image class="image" src={Rakkan} alt="まなさすと書かれた落款風の画像" />
 </div>
 <style>
   .bottomWrapper {
-    margin-top: 24px;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    .image {
+      height: 120px;
+    }
   }
 </style>
