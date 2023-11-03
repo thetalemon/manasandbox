@@ -1,24 +1,32 @@
+---
+import { Image } from "astro:assets";
+import ImageTop from "./images/top.png";
+---
+
 <div class="topWrapper">
-  <img class="myIcon" src={"/myicon.jpg"} alt={"白くてまるいアザラシ"} />
-  <div class="textArea">
-    <p class="name">まなさす</p>
-    <p class="ruby">mansas</p>
-  </div>
+  <Image
+    class="topImage"
+    src={ImageTop}
+    width={2600}
+    height={1706}
+    alt={"まなさすの自己紹介画像。白くてまるいアザラシ。"}
+  />
 </div>
 
 <style lang="scss">
   .topWrapper {
-    padding: 32px;
     position: relative;
     line-height: 0;
     display: flex;
     gap: 40px;
     align-items: center;
     justify-content: center;
+    background: #44617b;
 
-    .myIcon {
-      width: 120px;
-      border-radius: 50%;
+    .topImage {
+      width: 100%;
+      max-width: 480px;
+      height: auto;
     }
     .textArea {
       line-height: 1;
