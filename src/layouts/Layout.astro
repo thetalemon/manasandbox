@@ -1,48 +1,13 @@
 ---
+import "@fontsource/zen-kaku-gothic-antique";
+import { ViewTransitions } from "astro:transitions";
+
 export interface Props {
   title: string;
 }
-import "@fontsource/zen-kaku-gothic-antique";
 
 const { title } = Astro.props;
 ---
-
-<!doctype html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
-    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/manifest.webmanifest" />
-    <meta name="generator" content={Astro.generator} />
-    <meta
-      name="description"
-      content="WEBエンジニア まなさすのポートフォリオ。"
-    />
-    <meta property="og:site_name" content="manasandbox" />
-    <meta property="og:title" content={title} />
-    <meta property="og:url" content="https://manasas.dev" />
-    <meta
-      property="og:description"
-      content="WEBエンジニア まなさすのポートフォリオ。"
-    />
-    <meta property="og:image" content="https://manasas.dev/ogp.png" />
-    <title>{title}</title>
-  </head>
-  <body>
-    <header>
-      <h1><a href="/">Mana's sandbox</a></h1>
-    </header>
-    <main>
-      <slot />
-    </main>
-    <footer>
-      <a href="https://manasas.dev/" rel="me">© 2022 manasas</a>
-    </footer>
-  </body>
-</html>
 
 <style lang="scss">
   body {
@@ -115,3 +80,40 @@ const { title } = Astro.props;
     opacity: 0.5;
   }
 </style>
+
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="WEBエンジニア まなさすのポートフォリオ。"
+    />
+    <meta property="og:site_name" content="manasandbox" />
+    <meta property="og:title" content={title} />
+    <meta property="og:url" content="https://manasas.dev" />
+    <meta
+      property="og:description"
+      content="WEBエンジニア まなさすのポートフォリオ。"
+    />
+    <meta property="og:image" content="https://manasas.dev/ogp.png" />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <header>
+      <h1><a href="/">Mana's sandbox</a></h1>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <a href="https://manasas.dev/" rel="me">© 2022 manasas</a>
+    </footer>
+  </body>
+</html>
