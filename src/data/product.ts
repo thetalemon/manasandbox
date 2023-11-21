@@ -4,6 +4,7 @@ import Diary from "./images/product/diary.png";
 import Eyecatch from "./images/product/eyecatch.webp";
 import MusicGenerator from "./images/product/musicGenerator.webp";
 import Portfolio from "./images/product/portfolio.png";
+import Novel from "./images/product/Novel.png";
 import TaskBot from "./images/product/taskBot.webp";
 
 export const PRODUCT_LIST = [
@@ -12,7 +13,14 @@ export const PRODUCT_LIST = [
     img: Portfolio,
     url: "https://manasas.dev",
     github: "https://github.com/thetalemon/manasandbox",
-    text: "このサイト。Astro製になりました(元はNuxt.js製)。",
+    text: "このサイト。Astro製になりました(Vue.js製)。",
+  },
+  {
+    name: "小説サイト",
+    img: Novel,
+    url: "https://novel.manasas.dev",
+    github: "https://github.com/thetalemon/novel",
+    text: "ゆるやかに運営してる小説サイト",
   },
   {
     name: "creative coding gallery",
