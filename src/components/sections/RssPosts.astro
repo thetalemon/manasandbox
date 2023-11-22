@@ -2,6 +2,7 @@
 import Section from "../Section.astro";
 import { format } from "date-fns";
 import ja from "date-fns/locale/ja/index.js";
+import { parse } from "rss-to-json";
 
 export interface Props {
   url: string;
@@ -9,28 +10,20 @@ export interface Props {
   link: string;
 }
 
-type RssResponse = {
-  items: RssItem[];
-};
-
 type RssItem = {
   title: string;
   link: string;
   pubDate: string;
+  published: string;
 };
 
 const { title, url, link } = Astro.props;
 
-const res = await fetch(
-  `https://api.rss2json.com/v1/api.json?rss_url=${url}&api_key=${
-    import.meta.env.RSS_JSON_API_KEY
-  }`,
-);
-const data: RssResponse = await res.json();
+const data = await parse(url);
 const recentData = data.items ? data.items.splice(0, 5) : [];
 const formattedRecentData = recentData.map((item: RssItem) => ({
   ...item,
-  pubDate: format(new Date(`${item.pubDate}.000+0000`), "yyyy-MM-dd HH:mm:dd", {
+  pubDate: format(new Date(item.published), "yyyy-MM-dd HH:mm:dd", {
     locale: ja,
   }),
 }));
