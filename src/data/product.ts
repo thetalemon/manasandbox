@@ -4,7 +4,7 @@ import Diary from "./images/product/diary.png";
 import Eyecatch from "./images/product/eyecatch.webp";
 import MusicGenerator from "./images/product/musicGenerator.webp";
 import Portfolio from "./images/product/portfolio.png";
-import Novel from "./images/product/Novel.png";
+import Novel from "./images/product/novel.png";
 import TaskBot from "./images/product/taskBot.webp";
 
 export const PRODUCT_LIST = [
