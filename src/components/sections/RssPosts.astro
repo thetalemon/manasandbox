@@ -2,7 +2,8 @@
 import Section from "../Section.astro";
 import { format } from "date-fns";
 import ja from "date-fns/locale/ja/index.js";
-import { parse } from "rss-to-json";
+import Parser from "rss-parser";
+const parser = new Parser();
 
 export interface Props {
   url: string;
@@ -14,16 +15,15 @@ type RssItem = {
   title: string;
   link: string;
   pubDate: string;
-  published: string;
 };
 
 const { title, url, link } = Astro.props;
 
-const data = await parse(url);
+const data = await parser.parseURL(url);
 const recentData = data.items ? data.items.splice(0, 5) : [];
-const formattedRecentData = recentData.map((item: RssItem) => ({
+const formattedRecentData = recentData.map((item: any) => ({
   ...item,
-  pubDate: format(new Date(item.published), "yyyy-MM-dd HH:mm:dd", {
+  pubDate: format(new Date(item.pubDate), "yyyy-MM-dd HH:mm:dd", {
     locale: ja,
   }),
 }));
