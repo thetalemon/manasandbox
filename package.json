@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@fontsource/zen-kaku-gothic-antique": "5.0.17",
-    "astro": "3.6.4",
+    "astro": "4.0.6",
     "date-fns": "2.30.0",
     "rss-parser": "3.13.0"
   },
