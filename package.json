@@ -12,19 +12,19 @@
     "format": "prettier -w ."
   },
   "dependencies": {
-    "@fontsource/zen-kaku-gothic-antique": "5.0.16",
-    "astro": "3.2.3",
+    "@fontsource/zen-kaku-gothic-antique": "5.0.17",
+    "astro": "3.6.4",
     "date-fns": "2.30.0",
     "rss-parser": "3.13.0"
   },
   "devDependencies": {
     "@types/node": "20.9.4",
-    "@typescript-eslint/parser": "6.12.0",
-    "eslint": "8.54.0",
-    "eslint-config-prettier": "9.0.0",
-    "eslint-plugin-astro": "0.29.1",
-    "prettier": "3.1.0",
+    "@typescript-eslint/parser": "6.14.0",
+    "eslint": "8.56.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-astro": "0.31.0",
+    "prettier": "3.1.1",
     "prettier-plugin-astro": "0.12.2",
-    "sass": "1.66.1"
+    "sass": "1.69.5"
   }
 }
