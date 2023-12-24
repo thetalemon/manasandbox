@@ -1,6 +1,7 @@
 ---
 import "@fontsource/zen-kaku-gothic-antique";
 import { ViewTransitions } from "astro:transitions";
+import "../styles/global.css";
 
 export interface Props {
   title: string;
@@ -8,78 +9,6 @@ export interface Props {
 
 const { title } = Astro.props;
 ---
-
-<style lang="scss">
-  body {
-    font-family: "Zen Kaku Gothic Antique", sans-serif;
-  }
-  header,
-  footer {
-    a,
-    a:visited,
-    a:hover a:focus {
-      color: #fff;
-      text-decoration: none;
-    }
-  }
-  header {
-    background: #44617b;
-    color: #fff;
-    vertical-align: baseline;
-    padding: 4px 8px;
-    & > h1 {
-      margin: 0;
-      font-size: 18px;
-      font-weight: 300;
-    }
-  }
-  footer {
-    background: #44617b;
-    color: #fff;
-    text-align: center;
-    padding: 4px 8px;
-  }
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: calc(100vh - 27px - 16px - 24px);
-    margin: 0 auto;
-  }
-  @media only screen and (max-width: 500px) {
-    header > h1 {
-      font-size: 18px;
-    }
-  }
-</style>
-<style is:global>
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-  li {
-    list-style: none;
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background-color: #fff;
-  }
-  body {
-    margin: 0;
-    line-height: 1.6;
-  }
-  a {
-    text-decoration: none;
-    color: #9857ca;
-  }
-  a:visited {
-    text-decoration: none;
-    color: #37ad3d;
-  }
-  a:hover {
-    opacity: 0.5;
-  }
-</style>
 
 <html lang="ja">
   <head>
