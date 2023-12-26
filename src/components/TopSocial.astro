@@ -1,6 +1,17 @@
+---
+import { Image } from "astro:assets";
+import MyIcon from "./images/myicon.jpg";
+---
+
 <div class="root">
   <div class="topWrapper">
-    <img class="myIcon" src={"/myicon.jpg"} alt={"あざらしアイコン"} />
+    <Image
+      class="myIcon"
+      src={MyIcon}
+      alt={"あざらしアイコン"}
+      width={120}
+      height={120}
+    />
     <div class="textArea">
       <p class="name">まなさす</p>
       <p class="ruby">@mansas</p>
@@ -30,6 +41,7 @@
 
     .myIcon {
       width: 120px;
+      height: 120px;
       border-radius: 50%;
     }
     .textArea {
