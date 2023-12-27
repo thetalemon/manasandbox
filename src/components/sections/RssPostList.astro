@@ -1,0 +1,183 @@
+---
+import Section from "../Section.astro";
+import { format } from "date-fns";
+import ja from "date-fns/locale/ja/index.js";
+import Parser from "rss-parser";
+import { RSS_LIST } from "../../data/rssList";
+const parser = new Parser();
+
+export interface Props {
+  title: string;
+}
+
+type RssItem = {
+  title: string;
+  link: string;
+  pubDate: string;
+  blogTitle: string;
+};
+
+const { title } = Astro.props;
+
+const allData = await Promise.all(
+  RSS_LIST.map(async (item) => {
+    const data = await parser.parseURL(item.url);
+    const recentData = data.items ? data.items.splice(0, 10) : [];
+    return recentData.map((article: any) => ({
+      blogTitle: item.title,
+      ...article,
+      pubDate: format(new Date(article.pubDate), "yyyy-MM-dd HH:mm", {
+        locale: ja,
+      }),
+    }));
+  }),
+);
+
+const flatData = allData
+  .flat()
+  .filter((item) => {
+    const now = new Date();
+    const pubDate = new Date(item.pubDate);
+    const diff = now.getTime() - pubDate.getTime();
+    const diffDays = diff / (1000 * 60 * 60 * 24);
+    return diffDays < 60;
+  })
+  .sort((a: RssItem, b: RssItem) => {
+    return new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime();
+  });
+---
+
+<script>
+  const readmoreButton = document.querySelector(".js-readmore");
+  if (readmoreButton) {
+    readmoreButton.addEventListener("click", () => {
+      console.log("click");
+      const ul = document.querySelector(".js-readmore-list");
+      if (ul === null) return;
+      ul.classList.toggle("is-show");
+      readmoreButton.classList.toggle("is-show");
+    });
+  }
+</script>
+
+<Section title={title}>
+  <ul>
+    {
+      flatData.slice(0, 12).map((item: RssItem) => (
+        <li>
+          <a
+            class="card"
+            href={item.link}
+            target="_blank"
+            rel="noreferrer noopener me"
+          >
+            <p class="blogTitle">{item.blogTitle}</p>
+            <div class="cardInner">
+              <p class="title">{item.title}</p>
+              <p class="time">
+                <time>{item.pubDate}</time>
+              </p>
+            </div>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <div class="js-readmore readmoreButton">もっとみる</div>
+  <ul class="js-readmore-list readmoreList">
+    {
+      flatData.slice(10).map((item: RssItem) => (
+        <li>
+          <a
+            class="card"
+            href={item.link}
+            target="_blank"
+            rel="noreferrer noopener me"
+          >
+            <p class="blogTitle">{item.blogTitle}</p>
+            <div class="cardInner">
+              <p class="title">{item.title}</p>
+              <p class="time">
+                <time>{item.pubDate}</time>
+              </p>
+            </div>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</Section>
+<style lang="scss">
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  li {
+    height: 100%;
+  }
+  .readmoreButton {
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #9857ca;
+    display: block;
+    text-align: right;
+    &.is-show {
+      display: none;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+  }
+  .readmoreList {
+    margin-top: 1rem;
+    display: none;
+    &.is-show {
+      display: grid;
+    }
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background: #44617b;
+    text-decoration: none;
+    color: #333;
+    height: 100%;
+    margin: 0;
+  }
+  .cardInner {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: calc(100% - 4rem);
+    height: 100%;
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1rem;
+  }
+  .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+  }
+  .time {
+    font-size: 1rem;
+    color: #666;
+    text-align: right;
+    margin: 0;
+  }
+  .blogTitle {
+    text-align: center;
+    color: white;
+    font-size: 1.1rem;
+    margin: 0.5rem 0 0rem 0;
+  }
+</style>

@@ -6,7 +6,7 @@ import BottomImage from "../components/BottomImage.astro";
 import Abstract from "../components/sections/Abstract.astro";
 import Other from "../components/sections/Other.astro";
 import Product from "../components/sections/Product.astro";
-import RssPosts from "../components/sections/RssPosts.astro";
+import RssPostList from "../components/sections/RssPostList.astro";
 import Separate from "../components/Separate.astro";
 ---
 
@@ -16,41 +16,7 @@ import Separate from "../components/Separate.astro";
     <Links />
     <Abstract />
     <Separate />
-    <RssPosts
-      title="開発日誌"
-      url="https://journal.manasas.dev/feed"
-      link="https://journal.manasas.dev"
-    />
-    <Separate />
-    <RssPosts
-      title="そらとぶアザラシ（雑記）"
-      url="https://blog.manasas.dev/feed"
-      link="https://blog.manasas.dev"
-    />
-    <Separate />
-    <RssPosts
-      title="note"
-      url="https://note.com/thetalemon/rss"
-      link="https://note.com/thetalemon"
-    />
-    <Separate />
-    <RssPosts
-      title="読書・映画感想ブログ"
-      url="https://read.manasas.dev/rss"
-      link="https://read.manasas.dev/"
-    />
-    <Separate />
-    <RssPosts
-      title="Zenn"
-      url="https://zenn.dev/thetalemon/feed"
-      link="https://zenn.dev/thetalemon"
-    />
-    <Separate />
-    <RssPosts
-      title="ただの日記"
-      url="https://diary.manasas.dev/feed"
-      link="https://diary.manasas.dev/"
-    />
+    <RssPostList title="最近の投稿" />
     <Separate />
     <Product />
     <Separate />
