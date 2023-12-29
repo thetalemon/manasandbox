@@ -60,4 +60,16 @@ export const SNS_LIST: SocialItem[] = [
     icon: "/social/bluesky.png",
     comment: "あまり見てない",
   },
+  {
+    title: "ほしいものリスト",
+    url: "https://www.amazon.jp/hz/wishlist/ls/O9U3OZI8D1VC?ref_=wl_sharen",
+    icon: "/social/want.svg",
+    comment: "ほしいものリストです",
+  },
+  {
+    title: "拍手（wavebox）",
+    url: "https://wavebox.me/wave/1zpw4z8irp585mvq/",
+    icon: "/social/clap.svg",
+    comment: "WEB拍手代わりにぜひ",
+  },
 ];

@@ -51,7 +51,6 @@ const flatData = allData
   const readmoreButton = document.querySelector(".js-readmore");
   if (readmoreButton) {
     readmoreButton.addEventListener("click", () => {
-      console.log("click");
       const ul = document.querySelector(".js-readmore-list");
       if (ul === null) return;
       ul.classList.toggle("is-show");
