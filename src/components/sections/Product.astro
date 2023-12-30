@@ -5,14 +5,12 @@ import Section from "../Section.astro";
 import { Image } from "astro:assets";
 
 const prodistList: ProductItem[] = await getProductItemList();
-console.log(prodistList);
 ---
 
 <Section title="制作物">
   <ul class="cardAreaWrapper">
     {
       prodistList.map((item) => {
-        console.log(item);
         const image: ImageMetadata = {
           src: item.image.src,
           width: item.image.width,
