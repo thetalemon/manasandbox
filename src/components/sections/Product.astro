@@ -1,39 +1,51 @@
 ---
-import { PRODUCT_LIST } from "../../data/product";
+import type { ProductItem } from "../../lib/newt/products";
+import { getProductItemList } from "../../lib/newt/products";
 import Section from "../Section.astro";
 import { Image } from "astro:assets";
+
+const prodistList: ProductItem[] = await getProductItemList();
 ---
 
 <Section title="制作物">
   <ul class="cardAreaWrapper">
     {
-      PRODUCT_LIST.map((item) => (
-        <li class="productCard">
-          <div class="imageWrapper">
-            <Image
-              src={item.img}
-              sizes="(max-width: 800px) 100vw, 800px"
-              alt={item.name}
-            />
-          </div>
-          <div class="cardContentArea">
-            <p class="title">{item.name}</p>
-            <p>{item.text}</p>
-            {item.url && (
+      prodistList.map((item) => {
+        const image: ImageMetadata = {
+          src: item.image.src,
+          width: item.image.width,
+          height: item.image.height,
+          format: item.image.fileType.includes("webp") ? "webp" : "png",
+        };
+
+        return (
+          <li class="productCard">
+            <div class="imageWrapper">
+              <Image
+                src={image}
+                sizes="(max-width: 800px) 100vw, 800px"
+                alt={item.title}
+              />
+            </div>
+            <div class="cardContentArea">
+              <p class="title">{item.title}</p>
+              <p>{item.comment}</p>
+              {item.url && (
+                <p class="link">
+                  <a href={item.url} rel="noreferrer" target="_blank">
+                    サイトを見る
+                  </a>
+                </p>
+              )}
               <p class="link">
-                <a href={item.url} rel="noreferrer" target="_blank">
-                  サイトを見る
+                <a href={item.github} rel="noreferrer" target="_blank">
+                  GitHub
                 </a>
               </p>
-            )}
-            <p class="link">
-              <a href={item.github} rel="noreferrer" target="_blank">
-                GitHub
-              </a>
-            </p>
-          </div>
-        </li>
-      ))
+            </div>
+          </li>
+        );
+      })
     }
   </ul>
 </Section>
