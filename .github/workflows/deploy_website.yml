@@ -18,12 +18,13 @@ jobs:
         run: npm install && npm run build
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@1
+        env:
+          NEWT_CDN_API_TOKEN: ${{ secrets.NEWT_CDN_API_TOKEN }}
+          NEWT_SPACE_UID: ${{ secrets.NEWT_SPACE_UID }}
+          TZ: "Asia/Tokyo"
         with:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           projectName: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
           directory: dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          newtCdnApiToken: ${{ secrets.NEWT_CDN_API_TOKEN }}
-          newtSpaceUid: ${{ secrets.NEWT_SPACE_UID }}
-          TZ: "Asia/Tokyo"
