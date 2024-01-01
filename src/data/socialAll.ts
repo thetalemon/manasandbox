@@ -37,10 +37,14 @@ export const SNS_LIST: SocialItem[] = [
     comment: "本の感想とか",
   },
   {
+    title: "らくがき置場",
+    url: "https://doodle.manasas.dev/",
+    icon: "/social/photo.svg",
+  },
+  {
     title: "日記",
     url: "https://day.manasas.dev",
     icon: "/social/book.svg",
-    comment: "日記",
   },
   {
     title: "しずかなインターネット",
