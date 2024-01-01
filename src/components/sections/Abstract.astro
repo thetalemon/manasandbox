@@ -2,15 +2,39 @@
 import Section from "../Section.astro";
 ---
 
-<Section title="Who am I">
-  <p>WEBデザインと食べるのが好き</p>
-  <p>Next.js、headless CMS、firebase、Docker、機械学習、Electronなどなど。</p>
-  <p>最近興味あるのはGSAP。</p>
-  <p><a href="/social">その他SNS生息情報</a></p>
+<Section>
+  <div class="inner">
+    <p>創作全般、作る書く描く読む見る全部大好き</p>
+    <p>サイト制作 / 読書 / 写真撮影 / 映画鑑賞 / 散歩 etc...</p>
+    <ul class="links">
+      <li>
+        <a href="/social">その他SNS生息情報 →</a>
+      </li>
+      <li>
+        <a href="/resume">開発関連の情報 →</a>
+      </li>
+    </ul>
+  </div>
 </Section>
-<style>
+<style lang="scss">
   p {
-    line-height: 1.5;
     margin: 0.25rem 0;
+    text-align: center;
+  }
+  .inner {
+    padding: 40px 0 0 0;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .links {
+    margin-top: 1rem;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    li {
+      width: fit-content;
+    }
   }
 </style>

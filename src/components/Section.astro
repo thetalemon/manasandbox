@@ -1,6 +1,6 @@
 ---
 export interface Props {
-  title: string;
+  title?: string;
   link?: string;
 }
 
@@ -8,20 +8,20 @@ const { title, link } = Astro.props;
 ---
 
 <section class="root">
-  <h2>
-    {
-      link ? (
-        <a href={link} target="_blank" rel="noreferrer noopener me">
-          {title}
-        </a>
-      ) : (
-        <span>{title}</span>
-      )
-    }
-  </h2>
-  <div class="sectionWrapper">
-    <slot />
-  </div>
+  {
+    title && (
+      <h2>
+        {link ? (
+          <a href={link} target="_blank" rel="noreferrer noopener me">
+            {title}
+          </a>
+        ) : (
+          <span>{title}</span>
+        )}
+      </h2>
+    )
+  }
+  <slot />
 </section>
 <style lang="scss">
   .root {
@@ -32,8 +32,5 @@ const { title, link } = Astro.props;
     a {
       color: inherit;
     }
-  }
-  .sectionWrapper {
-    padding: 0;
   }
 </style>

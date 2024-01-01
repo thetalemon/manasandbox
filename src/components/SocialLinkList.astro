@@ -10,7 +10,7 @@ import { SNS_LIST } from "../data/socialAll";
           <div class="imgWrapper">
             <img src={item.icon} />
           </div>
-          <div>
+          <div class="description">
             <p>{item.title}</p>
             <p>{item.comment}</p>
           </div>
@@ -20,29 +20,40 @@ import { SNS_LIST } from "../data/socialAll";
   }
 </ul>
 
-<style>
+<style lang="scss">
   .root {
-    margin: 16px auto;
-    max-width: 450px;
+    margin: 0 auto;
+    padding: 16px 8px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
   .item {
     display: flex;
-    border-radius: 8px;
-    margin: 8px;
-    padding: 8px;
+    border-radius: 16px;
+    padding: 8px 8px 8px 16px;
     border: 1px solid #ccc;
     align-items: center;
     color: #44617b !important;
+    .description {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      p {
+        margin: 0;
+      }
+    }
   }
   .imgWrapper {
-    border-right: 1px solid #ccc;
     width: fit-content;
     padding-right: 8px;
     margin-right: 12px;
     flex-shrink: 0;
   }
   img {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
+    display: block;
   }
 </style>
