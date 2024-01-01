@@ -24,3 +24,6 @@ jobs:
           projectName: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
           directory: dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          newtCdnApiToken: ${{ secrets.NEWT_CDN_API_TOKEN }}
+          newtSpaceUid: ${{ secrets.NEWT_SPACE_UID }}
+          TZ: "Asia/Tokyo"
