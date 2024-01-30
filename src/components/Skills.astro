@@ -1,7 +1,7 @@
 ---
-import { SKILL_LIST } from "../data/skill";
-import Section from "./Section.astro";
-import SkillSection from "./SkillSection.astro";
+import { SKILL_LIST } from "@/data/skill";
+import Section from "@/components/Section.astro";
+import SkillSection from "@/components/SkillSection.astro";
 const LEFT_UPPER_SKILL_LIST = SKILL_LIST.filter(
   (skill) => skill.isWork === true && skill.isAbleToTeach === false,
 );

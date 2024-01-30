@@ -1,9 +1,9 @@
 ---
-import Section from "../Section.astro";
+import Section from "@/components/Section.astro";
 import { format } from "date-fns";
 import ja from "date-fns/locale/ja/index.js";
 import Parser from "rss-parser";
-import { RSS_LIST } from "../../data/rssList";
+import { RSS_LIST } from "@/data/rssList";
 const parser = new Parser();
 
 export interface Props {

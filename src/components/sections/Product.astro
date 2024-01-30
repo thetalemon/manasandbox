@@ -1,7 +1,7 @@
 ---
-import type { ProductItem } from "../../lib/newt/products";
-import { getProductItemList } from "../../lib/newt/products";
-import Section from "../Section.astro";
+import type { ProductItem } from "@/lib/newt/products";
+import { getProductItemList } from "@/lib/newt/products";
+import Section from "@/components/Section.astro";
 import { Image } from "astro:assets";
 
 const prodistList: ProductItem[] = await getProductItemList();
