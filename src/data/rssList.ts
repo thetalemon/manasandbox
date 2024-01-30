@@ -1,10 +1,10 @@
-type RssItem = {
+export type RssTargetItem = {
   url: string;
   title: string;
   icon: string;
 };
 
-export const RSS_LIST: RssItem[] = [
+export const RSS_LIST: RssTargetItem[] = [
   {
     title: "開発日誌",
     url: "https://journal.manasas.dev/feed",
@@ -30,6 +30,9 @@ export const RSS_LIST: RssItem[] = [
     url: "https://zenn.dev/thetalemon/feed",
     icon: "/social/books.svg",
   },
+];
+
+export const DIARY_LIST: RssTargetItem[] = [
   {
     title: "まなさす 日記",
     url: "https://day.manasas.dev/feed",

@@ -3,11 +3,14 @@ import Section from "@/components/Section.astro";
 import { format } from "date-fns";
 import ja from "date-fns/locale/ja/index.js";
 import Parser from "rss-parser";
-import { RSS_LIST } from "@/data/rssList";
+import type { RssTargetItem } from "@/data/rssList";
 const parser = new Parser();
 
 export interface Props {
   title: string;
+  list: RssTargetItem[];
+  itemNum?: number;
+  slug: string;
 }
 
 type RssItem = {
@@ -17,12 +20,12 @@ type RssItem = {
   blogTitle: string;
 };
 
-const { title } = Astro.props;
+const { title, list, itemNum = 12, slug } = Astro.props;
 
 const allData = await Promise.all(
-  RSS_LIST.map(async (item) => {
+  list.map(async (item) => {
     const data = await parser.parseURL(item.url);
-    const recentData = data.items ? data.items.splice(0, 10) : [];
+    const recentData = data.items ? data.items.splice(0, 13) : [];
     return recentData.map((article: any) => ({
       blogTitle: item.title,
       ...article,
@@ -47,22 +50,10 @@ const flatData = allData
   });
 ---
 
-<script>
-  const readmoreButton = document.querySelector(".js-readmore");
-  if (readmoreButton) {
-    readmoreButton.addEventListener("click", () => {
-      const ul = document.querySelector(".js-readmore-list");
-      if (ul === null) return;
-      ul.classList.toggle("is-show");
-      readmoreButton.classList.toggle("is-show");
-    });
-  }
-</script>
-
 <Section title={title}>
-  <ul>
+  <ul data-slug={slug} class="js-rssPostList">
     {
-      flatData.slice(0, 12).map((item: RssItem) => (
+      flatData.slice(0, itemNum).map((item: RssItem) => (
         <li>
           <a
             class="card"
@@ -82,10 +73,15 @@ const flatData = allData
       ))
     }
   </ul>
-  <div class="js-readmore readmoreButton">もっとみる</div>
-  <ul class="js-readmore-list readmoreList">
+  <div
+    class={`js-readmore js-readmore-${slug} readmoreButton`}
+    data-slug={slug}
+  >
+    もっとみる
+  </div>
+  <ul class={`js-readmore-list-${slug} readmoreList`}>
     {
-      flatData.slice(10).map((item: RssItem) => (
+      flatData.slice(itemNum + 1).map((item: RssItem) => (
         <li>
           <a
             class="card"
