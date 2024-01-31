@@ -1,7 +1,7 @@
 ---
 import Section from "@/components/Section.astro";
 import { format } from "date-fns";
-import ja from "date-fns/locale/ja/index.js";
+import { ja } from "date-fns/locale";
 import Parser from "rss-parser";
 import type { RssTargetItem } from "@/data/rssList";
 const parser = new Parser();
