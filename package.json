@@ -14,15 +14,15 @@
   },
   "dependencies": {
     "@fontsource/zen-kaku-gothic-antique": "5.0.19",
-    "astro": "4.8.2",
+    "astro": "4.8.4",
     "date-fns": "3.6.0",
     "newt-client-js": "3.3.2",
     "rss-parser": "3.13.0",
-    "@astrojs/check": "0.6.0"
+    "@astrojs/check": "0.7.0"
   },
   "devDependencies": {
-    "@types/node": "20.12.11",
-    "@typescript-eslint/parser": "7.8.0",
+    "@types/node": "20.12.12",
+    "@typescript-eslint/parser": "7.9.0",
     "eslint": "8.57.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-astro": "1.1.2",
