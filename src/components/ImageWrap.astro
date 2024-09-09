@@ -1,19 +1,19 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets'
 
 export interface Props {
-  width: number;
-  height: number;
-  alt: string;
-  imagePathWithOutExt: string;
-  radius?: boolean;
+  width: number
+  height: number
+  alt: string
+  imagePathWithOutExt: string
+  radius?: boolean
 }
 
-const { width, height, alt, imagePathWithOutExt, radius } = Astro.props;
+const { width, height, alt, imagePathWithOutExt, radius } = Astro.props
 
 const webpFullPath = (imagePathWithOutExt: string) => {
-  return imagePathWithOutExt + ".webp";
-};
+  return imagePathWithOutExt + '.webp'
+}
 ---
 
 <Image
@@ -22,7 +22,7 @@ const webpFullPath = (imagePathWithOutExt: string) => {
   height={height}
   sizes="(max-width: 800px) 100vw, 800px"
   alt={alt}
-  class={`${radius && "radius"}`}
+  class={`${radius && 'radius'}`}
 />
 
 <style lang="scss">

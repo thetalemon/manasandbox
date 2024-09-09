@@ -1,10 +1,10 @@
 ---
-import type { ProductItem } from "@/lib/newt/products";
-import { getProductItemList } from "@/lib/newt/products";
-import Section from "@/components/Section.astro";
-import { Image } from "astro:assets";
+import type { ProductItem } from '@/lib/newt/products'
+import { getProductItemList } from '@/lib/newt/products'
+import Section from '@/components/Section.astro'
+import { Image } from 'astro:assets'
 
-const prodistList: ProductItem[] = await getProductItemList();
+const prodistList: ProductItem[] = await getProductItemList()
 ---
 
 <Section title="制作物">
@@ -15,8 +15,8 @@ const prodistList: ProductItem[] = await getProductItemList();
           src: item.image.src,
           width: item.image.width,
           height: item.image.height,
-          format: item.image.fileType.includes("webp") ? "webp" : "png",
-        };
+          format: item.image.fileType.includes('webp') ? 'webp' : 'png',
+        }
 
         return (
           <li class="productCard">
@@ -44,7 +44,7 @@ const prodistList: ProductItem[] = await getProductItemList();
               </p>
             </div>
           </li>
-        );
+        )
       })
     }
   </ul>
@@ -96,14 +96,14 @@ const prodistList: ProductItem[] = await getProductItemList();
       margin: 8px 30px 8px 0;
       a {
         &::after {
-          content: "→";
+          content: '→';
           position: absolute;
           top: 0;
           right: -24px;
         }
         &:hover {
           &::after {
-            content: "→";
+            content: '→';
             position: absolute;
             top: 2px;
             right: -28px;

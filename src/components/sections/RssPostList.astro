@@ -1,53 +1,53 @@
 ---
-import Section from "@/components/Section.astro";
-import { format } from "date-fns";
-import { ja } from "date-fns/locale";
-import Parser from "rss-parser";
-import type { RssTargetItem } from "@/data/rssList";
-const parser = new Parser();
+import Section from '@/components/Section.astro'
+import { format } from 'date-fns'
+import { ja } from 'date-fns/locale'
+import Parser from 'rss-parser'
+import type { RssTargetItem } from '@/data/rssList'
+const parser = new Parser()
 
 export interface Props {
-  title: string;
-  list: RssTargetItem[];
-  itemNum?: number;
-  slug: string;
+  title: string
+  list: RssTargetItem[]
+  itemNum?: number
+  slug: string
 }
 
 type RssItem = {
-  title: string;
-  link: string;
-  pubDate: string;
-  blogTitle: string;
-};
+  title: string
+  link: string
+  pubDate: string
+  blogTitle: string
+}
 
-const { title, list, itemNum = 12, slug } = Astro.props;
+const { title, list, itemNum = 12, slug } = Astro.props
 
 const allData = await Promise.all(
   list.map(async (item) => {
-    const data = await parser.parseURL(item.url);
-    const recentData = data.items ? data.items.splice(0, 13) : [];
+    const data = await parser.parseURL(item.url)
+    const recentData = data.items ? data.items.splice(0, 13) : []
     return recentData.map((article: any) => ({
       blogTitle: item.title,
       ...article,
-      pubDate: format(new Date(article.pubDate), "yyyy-MM-dd HH:mm", {
+      pubDate: format(new Date(article.pubDate), 'yyyy-MM-dd HH:mm', {
         locale: ja,
       }),
-    }));
+    }))
   }),
-);
+)
 
 const flatData = allData
   .flat()
   .filter((item) => {
-    const now = new Date();
-    const pubDate = new Date(item.pubDate);
-    const diff = now.getTime() - pubDate.getTime();
-    const diffDays = diff / (1000 * 60 * 60 * 24);
-    return diffDays < 60;
+    const now = new Date()
+    const pubDate = new Date(item.pubDate)
+    const diff = now.getTime() - pubDate.getTime()
+    const diffDays = diff / (1000 * 60 * 60 * 24)
+    return diffDays < 60
   })
   .sort((a: RssItem, b: RssItem) => {
-    return new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime();
-  });
+    return new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime()
+  })
 ---
 
 <Section title={title}>

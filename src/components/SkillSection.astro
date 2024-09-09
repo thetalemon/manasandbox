@@ -1,15 +1,15 @@
 ---
-import type { SkillItem } from "@/data/skill";
+import type { SkillItem } from '@/data/skill'
 
 export interface Props {
-  list: SkillItem[];
+  list: SkillItem[]
 }
 
-const { list } = Astro.props;
+const { list } = Astro.props
 const convert2Path = (filename: string) => {
-  const prefix = "/tech-logo/";
-  return prefix + filename;
-};
+  const prefix = '/tech-logo/'
+  return prefix + filename
+}
 ---
 
 <ul class="iconWithTextFlexList">

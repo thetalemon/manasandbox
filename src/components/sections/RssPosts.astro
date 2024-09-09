@@ -1,32 +1,32 @@
 ---
-import Section from "@/components/Section.astro";
-import { format } from "date-fns";
-import { ja } from "date-fns/locale";
-import Parser from "rss-parser";
-const parser = new Parser();
+import Section from '@/components/Section.astro'
+import { format } from 'date-fns'
+import { ja } from 'date-fns/locale'
+import Parser from 'rss-parser'
+const parser = new Parser()
 
 export interface Props {
-  url: string;
-  title: string;
-  link: string;
+  url: string
+  title: string
+  link: string
 }
 
 type RssItem = {
-  title: string;
-  link: string;
-  pubDate: string;
-};
+  title: string
+  link: string
+  pubDate: string
+}
 
-const { title, url, link } = Astro.props;
+const { title, url, link } = Astro.props
 
-const data = await parser.parseURL(url);
-const recentData = data.items ? data.items.splice(0, 5) : [];
+const data = await parser.parseURL(url)
+const recentData = data.items ? data.items.splice(0, 5) : []
 const formattedRecentData = recentData.map((item: any) => ({
   ...item,
-  pubDate: format(new Date(item.pubDate), "yyyy-MM-dd HH:mm:dd", {
+  pubDate: format(new Date(item.pubDate), 'yyyy-MM-dd HH:mm:dd', {
     locale: ja,
   }),
-}));
+}))
 ---
 
 <Section title={title} link={link}>
