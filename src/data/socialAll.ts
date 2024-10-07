@@ -7,34 +7,34 @@ type SocialItem = {
 
 export const SNS_LIST: SocialItem[] = [
   {
-    title: 'fedibird(Mastodon)',
-    url: 'https://fedibird.com/@thetalemon',
-    icon: '/social/mastodon.svg',
-    comment: 'だいたいここにいる。雑多アカウント。',
+    title: 'Bluesky',
+    url: 'https://bsky.app/profile/manasas.dev',
+    icon: '/social/bluesky.svg',
+    comment: '最近はここが本拠',
   },
   {
     title: 'Instagram',
     url: 'https://www.instagram.com/manasas.photo',
     icon: '/social/instagram.svg',
-    comment: 'そろそろ動かしたい',
-  },
-  {
-    title: 'Twitter',
-    url: 'https://twitter.com/thetalemon',
-    icon: '/social/twitter.svg',
-    comment: 'あまり見てない。エンジニアアカウント',
+    comment: '推し活したり制作したりしてるアカウント',
   },
   {
     title: 'Threads',
     url: 'https://www.threads.net/@manasas.photo',
     icon: '/social/threads.svg',
-    comment: 'ご飯と空ばかり上げてる写真アカウント',
+    comment: 'お絵描きアカウント',
   },
   {
     title: 'ブクログ',
     url: 'https://booklog.jp/users/manasas',
     icon: '/social/books.svg',
     comment: '本の感想とか',
+  },
+  {
+    title: 'fedibird(Mastodon)',
+    url: 'https://fedibird.com/@thetalemon',
+    icon: '/social/mastodon.svg',
+    comment: '雑多アカウント',
   },
   {
     title: 'らくがき置場',
@@ -57,12 +57,6 @@ export const SNS_LIST: SocialItem[] = [
     url: 'https://photo.manasas.dev',
     icon: '/social/photo.svg',
     comment: '過去の写真とか',
-  },
-  {
-    title: 'Bluesky',
-    url: 'https://bsky.app/profile/manasas.dev',
-    icon: '/social/bluesky.png',
-    comment: 'あまり見てない',
   },
   {
     title: 'ほしいものリスト',

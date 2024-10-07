@@ -7,10 +7,10 @@ type LinkItem = {
 
 export const LINK_LIST: LinkItem[] = [
   {
-    name: 'twitter',
-    img: 'twitter.svg',
-    url: 'https://twitter.com/thetalemon',
-    alt: 'twitter',
+    name: 'bluesky',
+    img: 'bluesky.svg',
+    url: 'https://bsky.app/profile/manasas.dev',
+    alt: 'bluesky',
   },
   {
     name: 'github',
@@ -19,21 +19,9 @@ export const LINK_LIST: LinkItem[] = [
     alt: 'github',
   },
   {
-    name: 'mastodon',
-    img: 'mastodon.svg',
-    url: 'https://fedibird.com/@thetalemon',
-    alt: 'mastodon',
-  },
-  {
     name: 'threads',
     img: 'threads.svg',
     url: 'https://www.threads.net/@manasas.photo',
     alt: 'threads',
   },
-  // {
-  //   name: "YouTube",
-  //   img: "youtube.svg",
-  //   url: "https://www.youtube.com/channel/UCPjQVzBicTV8TuTruWUBUvQ",
-  //   alt: "YouTube",
-  // },
 ]
