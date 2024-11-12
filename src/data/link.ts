@@ -24,4 +24,10 @@ export const LINK_LIST: LinkItem[] = [
     url: 'https://www.threads.net/@manasas.photo',
     alt: 'threads',
   },
+  {
+    name: 'threads',
+    img: 'instagram.svg',
+    url: 'https://www.instagram.com/manasas.photo',
+    alt: 'threads',
+  },
 ]
