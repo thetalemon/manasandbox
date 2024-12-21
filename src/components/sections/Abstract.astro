@@ -1,19 +1,41 @@
 ---
 import Section from '@/components/Section.astro'
+import { TOP_LIST } from '@/data/topList'
 ---
 
 <Section>
   <div class="inner">
-    <p>創作全般、作る書く描く読む見る全部大好き</p>
-    <p>サイト制作 / 読書 / 写真撮影 / 映画鑑賞 / 散歩 etc...</p>
-    <ul class="links">
-      <li>
-        <a href="/social">その他SNS生息情報 →</a>
-      </li>
-      <li>
-        <a href="/resume">開発関連の情報 →</a>
-      </li>
-    </ul>
+    <p>作る書く描く読む見る全部大好きアザラシ</p>
+    <p>一次創作 / サイト制作 / 読書 / 写真撮影 / 映画鑑賞 / 散歩 etc...</p>
+    <div>
+      {
+        TOP_LIST.map((category) => (
+          <div class="categoryText">{category.category}</div>
+          <ul class="pickupList">
+            {
+              category.itemList.map((item) => (
+                <li class="pickupListItem">
+                  <a
+                    class="item"
+                    href={item.url}
+                    target={item.url.startsWith('http') ? '_blank' : '_self'}
+                  >
+                    <div class="itemUpper">
+                      <div class="imgWrapper">
+                        <img src={item.icon} />
+                      </div>
+                    </div>
+                    <div class="description">
+                      <p>{item.text}</p>
+                    </div>
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        ))
+      }
+    </div>
   </div>
 </Section>
 <style lang="scss">
@@ -23,18 +45,64 @@ import Section from '@/components/Section.astro'
   }
   .inner {
     padding: 40px 0 0 0;
-    max-width: 400px;
+    max-width: 800px;
     margin: 0 auto;
   }
-  .links {
-    margin-top: 1rem;
-    margin-left: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 8px;
-    li {
-      width: fit-content;
+  .categoryText {
+    margin-top: 40px;
+    font-size: 1.2rem;
+    border-bottom: #44617b 1px solid;
+    margin-bottom: 8px;
+  }
+  .pickupList {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 180px);
+    column-gap: 8px;
+    row-gap: 16px;
+    justify-content: center;
+    .pickupListItem {
+      display: flex;
+      .item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #44617b;
+
+        .description {
+          background: rgb(68, 97, 123);
+          border-radius: 0 0 12px 12px;
+          padding: 0 8px 4px 8px;
+          width: calc(100% - 8px * 2);
+          p {
+            border-radius: 6px;
+            background: white;
+            padding: 8px;
+          }
+        }
+      }
+      .itemUpper {
+        background: #44617b;
+        padding: 8px 8px 8px 8px;
+        display: flex;
+        justify-content: center;
+        width: calc(100% - 8px * 2);
+        border-radius: 100px 100px 0 0;
+        display: flex;
+        .imgWrapper {
+          display: flex;
+          padding: 8px;
+          background: #fff;
+          border-radius: 12px;
+          img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+          }
+        }
+      }
     }
   }
 </style>
