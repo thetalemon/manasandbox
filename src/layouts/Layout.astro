@@ -1,6 +1,6 @@
 ---
 import '@fontsource/zen-kaku-gothic-antique'
-import { ViewTransitions } from 'astro:transitions'
+import { ClientRouter } from 'astro:transitions'
 import '@/styles/global.css'
 
 export interface Props {
@@ -32,7 +32,7 @@ const { title } = Astro.props
     />
     <meta property="og:image" content="https://manasas.dev/ogp.png" />
     <title>{title}</title>
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body>
     <header>
