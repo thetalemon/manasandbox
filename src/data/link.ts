@@ -26,7 +26,7 @@ export const LINK_LIST: LinkItem[] = [
   },
   {
     name: 'threads',
-    img: 'instagram.svg',
+    img: 'ig.svg',
     url: 'https://www.instagram.com/manasas.photo',
     alt: 'threads',
   },

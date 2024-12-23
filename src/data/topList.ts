@@ -35,7 +35,7 @@ export const TOP_LIST: LinkCategoryItem[] = [
       },
       {
         url: 'https://www.instagram.com/manasas.photo',
-        icon: '/social/instagram.svg',
+        icon: '/social/ig.svg',
         text: '散歩と制作',
       },
       {
@@ -68,6 +68,11 @@ export const TOP_LIST: LinkCategoryItem[] = [
         url: '/resume',
         icon: '/social/resume.svg',
         text: '経歴など',
+      },
+      {
+        url: 'https://twitter.com/thetalemon',
+        icon: '/social/github.svg',
+        text: 'Github',
       },
       {
         url: '/social',

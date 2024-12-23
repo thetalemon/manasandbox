@@ -15,7 +15,7 @@ export const SNS_LIST: SocialItem[] = [
   {
     title: 'Instagram',
     url: 'https://www.instagram.com/manasas.photo',
-    icon: '/social/instagram.svg',
+    icon: '/social/ig.svg',
     comment: '推し活したり制作したりしてるアカウント',
   },
   {
