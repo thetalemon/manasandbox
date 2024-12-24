@@ -70,7 +70,7 @@ export const TOP_LIST: LinkCategoryItem[] = [
         text: '経歴など',
       },
       {
-        url: 'https://twitter.com/thetalemon',
+        url: 'https://github.com/thetalemon/',
         icon: '/social/github.svg',
         text: 'Github',
       },

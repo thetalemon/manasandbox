@@ -2,7 +2,6 @@ type LinkItem = {
   name: string
   img: string
   url: string
-  alt: string
 }
 
 export const LINK_LIST: LinkItem[] = [
@@ -10,24 +9,20 @@ export const LINK_LIST: LinkItem[] = [
     name: 'bluesky',
     img: 'bluesky.svg',
     url: 'https://bsky.app/profile/manasas.dev',
-    alt: 'bluesky',
   },
   {
     name: 'github',
     img: 'github.svg',
-    url: 'https://twitter.com/thetalemon',
-    alt: 'github',
+    url: 'https://github.com/thetalemon/',
   },
   {
     name: 'threads',
     img: 'threads.svg',
     url: 'https://www.threads.net/@manasas.photo',
-    alt: 'threads',
   },
   {
-    name: 'threads',
+    name: 'Instagram',
     img: 'ig.svg',
     url: 'https://www.instagram.com/manasas.photo',
-    alt: 'threads',
   },
 ]
