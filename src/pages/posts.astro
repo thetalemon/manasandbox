@@ -1,0 +1,38 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import RssPostList from '@/components/sections/RssPostList.astro'
+import { RSS_LIST, DIARY_LIST } from '@/data/rssList'
+import Separate from '@/components/Separate.astro'
+---
+
+<script>
+  const readMoreButton =
+    document.querySelectorAll<HTMLDivElement>(`.js-readMore`)
+  if (readMoreButton.length > 0) {
+    readMoreButton.forEach((readMoreButton) => {
+      const slug = readMoreButton.dataset.slug
+      readMoreButton.addEventListener('click', () => {
+        const ul = document.querySelector(`.js-readMore-list-${slug}`)
+        if (ul === null) return
+        ul.classList.toggle('is-show')
+        const button = document.querySelector(`.js-readMore-${slug}`)
+        if (button === null) return
+        button.classList.toggle('is-show')
+      })
+    })
+  }
+</script>
+
+<Layout title="manasandbox">
+  <section class="mainSection">
+    <RssPostList title="最近の投稿" list={RSS_LIST} slug="recent" />
+    <Separate />
+    <RssPostList title="日記" list={DIARY_LIST} itemNum={4} slug="diary" />
+  </section>
+</Layout>
+
+<style>
+  .mainSection {
+    padding: 16px 8px 40px 8px;
+  }
+</style>

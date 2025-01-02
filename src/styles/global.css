@@ -24,35 +24,8 @@ a:visited {
 a:hover {
   opacity: 0.5;
 }
-
 body {
   font-family: "Zen Kaku Gothic Antique", sans-serif;
-}
-header,
-footer {
-  a,
-  a:visited,
-  a:hover a:focus {
-    color: #fff;
-    text-decoration: none;
-  }
-}
-header {
-  background: #44617b;
-  color: #fff;
-  vertical-align: baseline;
-  padding: 4px 8px;
-  & > h1 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 300;
-  }
-}
-footer {
-  background: #44617b;
-  color: #fff;
-  text-align: center;
-  padding: 4px 8px;
 }
 main {
   display: flex;

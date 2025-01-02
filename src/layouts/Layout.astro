@@ -37,6 +37,14 @@ const { title } = Astro.props
   <body>
     <header>
       <h1><a href="/">Mana's sandbox</a></h1>
+      <ul class="pageLinks">
+        <li>
+          <a href="/posts">posts</a>
+        </li>
+        <li>
+          <a href="/resume">resume</a>
+        </li>
+      </ul>
     </header>
     <main>
       <slot />
@@ -46,3 +54,38 @@ const { title } = Astro.props
     </footer>
   </body>
 </html>
+
+<style lang="scss">
+  header,
+  footer {
+    a,
+    a:visited,
+    a:hover a:focus {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    background: #44617b;
+    color: #fff;
+    vertical-align: baseline;
+    padding: 8px 16px;
+    & > h1 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 300;
+    }
+    .pageLinks {
+      display: flex;
+      gap: 16px;
+    }
+  }
+  footer {
+    background: #44617b;
+    color: #fff;
+    text-align: center;
+    padding: 4px 8px;
+  }
+</style>

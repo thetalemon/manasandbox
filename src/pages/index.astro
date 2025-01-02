@@ -4,44 +4,13 @@ import Links from '@/components/sections/Links.astro'
 import TopImage from '@/components/TopImage.astro'
 import BottomImage from '@/components/BottomImage.astro'
 import Abstract from '@/components/sections/Abstract.astro'
-import Other from '@/components/sections/Other.astro'
-import Product from '@/components/sections/Product.astro'
-import RssPostList from '@/components/sections/RssPostList.astro'
-import Separate from '@/components/Separate.astro'
-import { RSS_LIST, DIARY_LIST } from '@/data/rssList'
 ---
-
-<script>
-  const readmoreButton =
-    document.querySelectorAll<HTMLDivElement>(`.js-readmore`)
-  if (readmoreButton.length > 0) {
-    readmoreButton.forEach((readmoreButton) => {
-      const slug = readmoreButton.dataset.slug
-      readmoreButton.addEventListener('click', () => {
-        const ul = document.querySelector(`.js-readmore-list-${slug}`)
-        if (ul === null) return
-        ul.classList.toggle('is-show')
-        const button = document.querySelector(`.js-readmore-${slug}`)
-        if (button === null) return
-        button.classList.toggle('is-show')
-      })
-    })
-  }
-</script>
 
 <Layout title="manasandbox">
   <TopImage />
   <section class="mainSection">
     <Links />
     <Abstract />
-    <Separate />
-    <RssPostList title="最近の投稿" list={RSS_LIST} slug="recent" />
-    <Separate />
-    <RssPostList title="日記" list={DIARY_LIST} itemNum={4} slug="diary" />
-    <Separate />
-    <Product />
-    <Separate />
-    <Other />
     <Links />
   </section>
   <BottomImage />
