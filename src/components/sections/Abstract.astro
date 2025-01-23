@@ -10,10 +10,10 @@ import { TOP_LIST } from '@/data/topList'
     <div>
       {
         TOP_LIST.map((category) => (
-          <div class="categoryText">{category.category}</div>
-          <ul class="pickupList">
-            {
-              category.itemList.map((item) => (
+          <>
+            <div class="categoryText">{category.category}</div>
+            <ul class="pickupList">
+              {category.itemList.map((item) => (
                 <li class="pickupListItem">
                   <a
                     class="item"
@@ -30,9 +30,9 @@ import { TOP_LIST } from '@/data/topList'
                     </div>
                   </a>
                 </li>
-              ))
-            }
-          </ul>
+              ))}
+            </ul>
+          </>
         ))
       }
     </div>
