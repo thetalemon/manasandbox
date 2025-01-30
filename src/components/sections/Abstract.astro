@@ -1,117 +1,23 @@
 ---
 import Section from '@/components/Section.astro'
-import { TOP_LIST } from '@/data/topList'
 ---
 
 <Section>
-  <div class="inner">
+  <div class="root">
     <p>作る書く描く読む見る全部大好き</p>
     <p>一次創作 / サイト制作 / 読書 / 写真撮影 / 映画鑑賞 / 散歩 etc...</p>
-    <div>
-      {
-        TOP_LIST.map((category) => (
-          <>
-            <div class="categoryText">{category.category}</div>
-            <ul class="pickupList">
-              {category.itemList.map((item) => (
-                <li class="pickupListItem">
-                  <a
-                    class="item"
-                    href={item.url}
-                    target={item.url.startsWith('http') ? '_blank' : '_self'}
-                  >
-                    <div class="itemInner">
-                      <div class="imgWrapper">
-                        <img src={item.icon} />
-                      </div>
-                      <p class="description">{item.text}</p>
-                    </div>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </>
-        ))
-      }
-    </div>
   </div>
 </Section>
 
 <style lang="scss">
-  @use '../../styles/colors.scss';
-
-  p {
-    margin: 0.25rem 0;
-    text-align: center;
-  }
-  .inner {
+  .root {
     padding: 40px 0 0 0;
     max-width: 800px;
     margin: 0 auto;
-  }
-  .categoryText {
-    margin-top: 40px;
-    font-size: 1.2rem;
-    border-bottom: colors.$primary-color 1px solid;
-    border-color: #fff;
-    padding-bottom: 8px;
-    margin-bottom: 16px;
-  }
-  .pickupList {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 240px);
-    column-gap: 8px;
-    row-gap: 16px;
-    justify-content: center;
-    .pickupListItem {
-      display: flex;
-      .item {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: colors.$primary-color;
 
-        .itemInner {
-          background: colors.$primary-color;
-          padding: 4px 8px;
-          display: flex;
-          justify-content: center;
-          gap: 8px;
-          width: 240px;
-          border-radius: 4px;
-          display: flex;
-          align-items: center;
-          .imgWrapper {
-            display: flex;
-            padding: 8px;
-            background: #fff;
-            border-radius: 4px;
-            img {
-              width: 40px;
-              height: 40px;
-              object-fit: contain;
-            }
-          }
-        }
-
-        .description {
-          background: #fff;
-          height: 40px;
-          border-radius: 4px;
-          padding: 8px;
-          width: calc(100% - 8px * 2);
-          justify-content: center;
-          align-items: center;
-          display: flex;
-          p {
-            border-radius: 6px;
-            background: white;
-            padding: 8px;
-          }
-        }
-      }
+    p {
+      margin: 0.25rem 0;
+      text-align: center;
     }
   }
 </style>
