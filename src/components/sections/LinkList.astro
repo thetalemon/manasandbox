@@ -40,7 +40,7 @@ import { TOP_LIST } from '@/data/topList'
     margin: 40px 0;
   }
   .categoryText {
-    margin-top: 40px;
+    margin-top: 24px;
     font-size: 1.2rem;
     border-bottom: colors.$primary-color 1px solid;
     border-color: #fff;
@@ -51,7 +51,7 @@ import { TOP_LIST } from '@/data/topList'
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, 240px);
-    column-gap: 8px;
+    column-gap: 16px;
     row-gap: 16px;
     justify-content: center;
     .pickupListItem {
@@ -84,21 +84,17 @@ import { TOP_LIST } from '@/data/topList'
               object-fit: contain;
             }
           }
-        }
-
-        .description {
-          background: #fff;
-          height: 40px;
-          border-radius: 4px;
-          padding: 8px;
-          width: calc(100% - 8px * 2);
-          justify-content: center;
-          align-items: center;
-          display: flex;
-          p {
-            border-radius: 6px;
-            background: white;
+          .description {
+            background: #fff;
+            height: 40px;
+            border-radius: 4px;
             padding: 8px;
+            width: calc(100% - 8px * 2);
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin: 4px 0;
+            border-radius: 4px;
           }
         }
       }
