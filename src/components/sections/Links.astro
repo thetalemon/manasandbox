@@ -9,31 +9,40 @@ const convert2Path = (filename: string) => {
 const ICON_SIZE = 32
 ---
 
-<ul class="root">
-  {
-    LINK_LIST.map((item) => (
-      <li>
-        <a href={item.url} target="_blank" rel="noreferrer noopener me">
-          <img
-            class="ico"
-            src={convert2Path(item.img)}
-            height={ICON_SIZE}
-            width={ICON_SIZE}
-            alt={item.name}
-          />
-        </a>
-      </li>
-    ))
-  }
-</ul>
+<div class="root">
+  <ul class="inner">
+    {
+      LINK_LIST.map((item) => (
+        <li>
+          <a href={item.url} target="_blank" rel="noreferrer noopener me">
+            <img
+              class="ico"
+              src={convert2Path(item.img)}
+              height={ICON_SIZE}
+              width={ICON_SIZE}
+              alt={item.name}
+            />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
 
-<style>
+<style lang="scss">
   .root {
-    max-width: 400px;
+    background-color: #fff;
+    width: calc(100% - 24px * 2);
+    padding: 16px 24px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1em;
-    margin: 1rem auto;
+    justify-content: center;
+
+    .inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 400px;
+    }
   }
 </style>

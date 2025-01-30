@@ -1,3 +1,5 @@
+@use "./colors.scss";
+
 ul {
   margin: 0;
   padding: 0;
@@ -7,15 +9,18 @@ li {
 }
 html {
   font-family: system-ui, sans-serif;
-  background-color: #fff;
+  background-color: colors.$bg-color;
 }
 body {
   margin: 0;
   line-height: 1.6;
 }
+h2 {
+  font-weight: normal;
+}
 a {
   text-decoration: none;
-  color: #9857ca;
+  color: #713a97;
 }
 a:visited {
   text-decoration: none;

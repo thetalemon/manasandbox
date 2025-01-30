@@ -1,20 +1,20 @@
 ---
 import { Image } from 'astro:assets'
-import ImageTop from './images/top.png'
+import ImageTop from './images/top.svg'
 ---
 
 <div class="topWrapper">
   <Image
     class="topImage"
     src={ImageTop}
-    width={480}
-    height={314}
     alt={'まなさすの自己紹介画像。白くてまるいアザラシ。'}
     loading={'eager'}
   />
 </div>
 
 <style lang="scss">
+  @use '../styles/colors.scss';
+
   .topWrapper {
     position: relative;
     line-height: 0;
@@ -22,10 +22,11 @@ import ImageTop from './images/top.png'
     gap: 40px;
     align-items: center;
     justify-content: center;
-    background: #44617b;
+    background: colors.$primary-color;
+    padding: 40px 0;
     .topImage {
       width: 100%;
-      max-width: 480px;
+      max-width: 320px;
       height: auto;
     }
   }

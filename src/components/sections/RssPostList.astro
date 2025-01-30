@@ -33,7 +33,7 @@ const allData = await Promise.all(
         locale: ja,
       }),
     }))
-  }),
+  })
 )
 
 const flatData = allData
@@ -103,6 +103,8 @@ const flatData = allData
   </ul>
 </Section>
 <style lang="scss">
+  @use '../..//styles/colors.scss';
+
   ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -117,7 +119,6 @@ const flatData = allData
   .readmoreButton {
     margin-top: 1rem;
     text-decoration: none;
-    color: #9857ca;
     display: block;
     text-align: right;
     &.is-show {
@@ -140,7 +141,7 @@ const flatData = allData
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    background: #44617b;
+    background: colors.$primary-color;
     text-decoration: none;
     color: #333;
     height: 100%;

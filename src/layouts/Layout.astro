@@ -1,7 +1,7 @@
 ---
 import '@fontsource/zen-kaku-gothic-antique'
 import { ClientRouter } from 'astro:transitions'
-import '@/styles/global.css'
+import '@/styles/global.scss'
 
 export interface Props {
   title: string
@@ -19,17 +19,11 @@ const { title } = Astro.props
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <meta name="generator" content={Astro.generator} />
-    <meta
-      name="description"
-      content="WEBエンジニア まなさすのポートフォリオ。"
-    />
+    <meta name="description" content="まなさすのサイト" />
     <meta property="og:site_name" content="manasandbox" />
     <meta property="og:title" content={title} />
     <meta property="og:url" content="https://manasas.dev" />
-    <meta
-      property="og:description"
-      content="WEBエンジニア まなさすのポートフォリオ。"
-    />
+    <meta property="og:description" content="まなさすのサイト" />
     <meta property="og:image" content="https://manasas.dev/ogp.png" />
     <title>{title}</title>
     <ClientRouter />
@@ -50,12 +44,14 @@ const { title } = Astro.props
       <slot />
     </main>
     <footer>
-      <a href="https://manasas.dev/" rel="me">© 2022 manasas</a>
+      <a href="https://manasas.dev/" rel="me">© 2022-2025 manasas</a>
     </footer>
   </body>
 </html>
 
 <style lang="scss">
+  @use '../styles/colors.scss';
+
   header,
   footer {
     a,
@@ -68,7 +64,7 @@ const { title } = Astro.props
   header {
     display: flex;
     justify-content: space-between;
-    background: #44617b;
+    background: colors.$primary-color;
     color: #fff;
     vertical-align: baseline;
     padding: 8px 16px;
@@ -83,7 +79,7 @@ const { title } = Astro.props
     }
   }
   footer {
-    background: #44617b;
+    background: colors.$primary-color;
     color: #fff;
     text-align: center;
     padding: 4px 8px;

@@ -13,6 +13,11 @@ export const TOP_LIST: LinkCategoryItem[] = [
     category: '自サイト',
     itemList: [
       {
+        url: 'https://novel.manasas.dev/',
+        icon: '/social/novel.png',
+        text: '小説置場',
+      },
+      {
         url: 'https://doodle.manasas.dev/',
         icon: '/social/doodle.svg',
         text: 'らくがき置場',
@@ -31,12 +36,12 @@ export const TOP_LIST: LinkCategoryItem[] = [
       {
         url: 'https://bsky.app/profile/manasas.dev',
         icon: '/social/bluesky.svg',
-        text: '最近はここが本拠',
+        text: 'おは空',
       },
       {
         url: 'https://www.instagram.com/manasas.photo',
         icon: '/social/ig.svg',
-        text: '散歩と制作',
+        text: 'カフェと御朱印',
       },
       {
         url: 'https://www.threads.net/@manasas.photo',
@@ -44,9 +49,19 @@ export const TOP_LIST: LinkCategoryItem[] = [
         text: 'らくがき',
       },
       {
+        url: 'https://mixi.social/@manasas',
+        icon: '/social/mixi2.svg',
+        text: '推し活と散歩',
+      },
+      {
         url: 'https://fedibird.com/@thetalemon',
-        icon: '/social/mastodon.svg',
+        icon: '/social/fedibird.ico',
         text: '雑多アカウント',
+      },
+      {
+        url: 'https://bcc.cc/@manasas',
+        icon: '/social/bcc.png',
+        text: 'おはようからおやすみまで',
       },
     ],
   },

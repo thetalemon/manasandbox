@@ -21,6 +21,8 @@ import { SNS_LIST } from '@/data/socialAll'
 </ul>
 
 <style lang="scss">
+  @use '../styles/colors.scss';
+
   .root {
     margin: 0 auto;
     padding: 16px 8px;
@@ -35,7 +37,7 @@ import { SNS_LIST } from '@/data/socialAll'
     padding: 8px 8px 8px 16px;
     border: 1px solid #ccc;
     align-items: center;
-    color: #44617b !important;
+    color: colors.$primary-color !important;
     .description {
       display: flex;
       flex-direction: column;
