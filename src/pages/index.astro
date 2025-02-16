@@ -5,6 +5,8 @@ import TopImage from '@/components/TopImage.astro'
 import BottomImage from '@/components/BottomImage.astro'
 import Abstract from '@/components/sections/Abstract.astro'
 import LinkList from '@/components/sections/LinkList.astro'
+import DoumeiList from '@/components/sections/DoumeiList.astro'
+import Separate from '@/components/Separate.astro'
 ---
 
 <Layout title="manasandbox">
@@ -13,6 +15,10 @@ import LinkList from '@/components/sections/LinkList.astro'
   <section class="mainSection">
     <Abstract />
     <LinkList />
+    <Separate />
+  </section>
+  <section class="mainSection">
+    <DoumeiList />
   </section>
   <BottomImage />
   <Links />
@@ -22,6 +28,6 @@ import LinkList from '@/components/sections/LinkList.astro'
   .mainSection {
     width: 100%;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 40px auto 0 auto;
   }
 </style>
