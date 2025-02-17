@@ -146,17 +146,18 @@ const flatData = allData
     color: #333;
     height: 100%;
     margin: 0;
+    border-radius: 4px;
   }
   .cardInner {
     background: white;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: calc(100% - 4rem);
+    width: calc(100% - 8px * 2 - 16px * 2);
     height: 100%;
-    padding: 1rem;
+    padding: 8px 16px;
     border-radius: 6px;
-    margin: 1rem;
+    margin: 8px 8px 12px 8px;
   }
   .title {
     font-size: 1.2rem;
@@ -174,6 +175,7 @@ const flatData = allData
     text-align: center;
     color: white;
     font-size: 1.1rem;
+    line-height: 1.2;
     margin: 0.5rem 0 0rem 0;
   }
 </style>
