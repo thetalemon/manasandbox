@@ -20,6 +20,7 @@ import SousakuChara from '@/img/banners/sousakuChara.gif'
 import SousakuBiyori from '@/img/banners/sousakuBiyori.gif'
 import Onsousui from '@/img/banners/onsousui.gif'
 import Jimaku from '@/img/banners/jimaku.gif'
+import Usako from '@/img/banners/usako.gif'
 import type { LinkImage } from '@/types/link'
 
 export const DoumeiLinks: LinkImage[] = [
@@ -29,6 +30,13 @@ export const DoumeiLinks: LinkImage[] = [
     width: 120,
     height: 60,
     alt: '令和も個人サイト楽しみ隊！',
+  },
+  {
+    href: 'https://www.usacolle.com/index.html',
+    src: Usako,
+    width: 200,
+    height: 40,
+    alt: 'ウサコレフレンズ',
   },
   {
     href: 'https://unionmatome.web.fc2.com/jimoe/index.html',
