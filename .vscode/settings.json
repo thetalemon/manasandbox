@@ -2,5 +2,14 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "prettier.documentSelectors": ["**/*.astro"],
-  "cSpell.words": ["fontsource", "kaku", "manasandbox", "manasas"]
+  "cSpell.words": [
+    "fontsource",
+    "Heki",
+    "jimaku",
+    "kaku",
+    "manasandbox",
+    "manasas",
+    "Onigiri",
+    "Usako"
+  ]
 }
