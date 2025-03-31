@@ -34,7 +34,7 @@
     "typescript-eslint": "8.28.0"
   },
   "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "4.34.6",
-    "sass-embedded-linux-x64": "1.83.4"
+    "@rollup/rollup-linux-x64-gnu": "4.38.0",
+    "sass-embedded-linux-x64": "1.86.0"
   }
 }
