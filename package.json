@@ -15,7 +15,7 @@
   "dependencies": {
     "@astrojs/check": "0.9.4",
     "@fontsource/zen-kaku-gothic-antique": "5.2.5",
-    "astro": "5.7.5",
+    "astro": "5.7.7",
     "date-fns": "4.1.0",
     "newt-client-js": "3.3.8",
     "rss-parser": "3.13.0",
