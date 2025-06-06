@@ -10,8 +10,15 @@ export interface Props {
 }
 
 const { href, src, width, height, alt, target } = Astro.props
+const isExternal = typeof src === 'string' && (src as string).startsWith('http')
 ---
 
 <a href={href} target={target}>
-  <Image src={src} width={width} height={height} alt={alt} />
+  {
+    isExternal ? (
+      <img src={src} width={width} height={height} alt={alt} />
+    ) : (
+      <Image src={src} width={width} height={height} alt={alt} />
+    )
+  }
 </a>

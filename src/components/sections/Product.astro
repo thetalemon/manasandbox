@@ -21,11 +21,21 @@ const prodistList: ProductItem[] = await getProductItemList()
         return (
           <li class="productCard">
             <div class="imageWrapper">
-              <Image
-                src={image}
-                sizes="(max-width: 800px) 100vw, 800px"
-                alt={item.title}
-              />
+              {typeof item.image.src === 'string' &&
+              item.image.src.startsWith('http') ? (
+                <img
+                  src={item.image.src}
+                  width={item.image.width}
+                  height={item.image.height}
+                  alt={item.title}
+                />
+              ) : (
+                <Image
+                  src={image}
+                  sizes="(max-width: 800px) 100vw, 800px"
+                  alt={item.title}
+                />
+              )}
             </div>
             <div class="cardContentArea">
               <p class="title">{item.title}</p>

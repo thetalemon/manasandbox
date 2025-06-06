@@ -14,16 +14,31 @@ const { width, height, alt, imagePathWithOutExt, radius } = Astro.props
 const webpFullPath = (imagePathWithOutExt: string) => {
   return imagePathWithOutExt + '.webp'
 }
+
+const src = webpFullPath(imagePathWithOutExt)
+const isExternal = src.startsWith('http')
 ---
 
-<Image
-  src={webpFullPath(imagePathWithOutExt)}
-  width={width}
-  height={height}
-  sizes="(max-width: 800px) 100vw, 800px"
-  alt={alt}
-  class={`${radius && 'radius'}`}
-/>
+{
+  isExternal ? (
+    <img
+      src={src}
+      width={width}
+      height={height}
+      alt={alt}
+      class={radius ? 'radius' : ''}
+    />
+  ) : (
+    <Image
+      src={src}
+      width={width}
+      height={height}
+      sizes="(max-width: 800px) 100vw, 800px"
+      alt={alt}
+      class={radius ? 'radius' : ''}
+    />
+  )
+}
 
 <style lang="scss">
   img {

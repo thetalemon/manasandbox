@@ -2,7 +2,9 @@ import { defineConfig } from 'astro/config'
 
 export default defineConfig({
   image: {
-    domains: ['manas-portfolio.assets.newt.so'],
+    service: {
+      entrypoint: 'astro/assets/services/sharp',
+    },
   },
   site: 'https://manasas.dev',
   vite: {
