@@ -49,19 +49,9 @@ export const TOP_LIST: LinkCategoryItem[] = [
         text: 'らくがき',
       },
       {
-        url: 'https://mixi.social/@manasas',
-        icon: '/social/mixi2.svg',
-        text: '推し活と散歩',
-      },
-      {
         url: 'https://fedibird.com/@thetalemon',
         icon: '/social/fedibird.ico',
         text: '雑多アカウント',
-      },
-      {
-        url: 'https://bcc.cc/@manasas',
-        icon: '/social/bcc.png',
-        text: 'おはようからおやすみまで',
       },
     ],
   },
