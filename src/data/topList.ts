@@ -48,11 +48,6 @@ export const TOP_LIST: LinkCategoryItem[] = [
         icon: '/social/threads.svg',
         text: 'らくがき',
       },
-      {
-        url: 'https://fedibird.com/@thetalemon',
-        icon: '/social/fedibird.ico',
-        text: '雑多アカウント',
-      },
     ],
   },
 

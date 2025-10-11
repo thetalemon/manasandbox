@@ -31,12 +31,6 @@ export const SNS_LIST: SocialItem[] = [
     comment: '本の感想とか',
   },
   {
-    title: 'fedibird(Mastodon)',
-    url: 'https://fedibird.com/@thetalemon',
-    icon: '/social/mastodon.svg',
-    comment: '雑多アカウント',
-  },
-  {
     title: 'らくがき置場',
     url: 'https://doodle.manasas.dev/',
     icon: '/social/photo.svg',
