@@ -9,8 +9,6 @@ on:
   schedule:
     - cron: '0 0 * * *'
 env:
-  NEWT_CDN_API_TOKEN: ${{ secrets.NEWT_CDN_API_TOKEN }}
-  NEWT_SPACE_UID: ${{ secrets.NEWT_SPACE_UID }}
   TZ: 'Asia/Tokyo'
 jobs:
   deploy:

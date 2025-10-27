@@ -1,41 +1,23 @@
 ---
-import type { ProductItem } from '@/lib/newt/products'
-import { getProductItemList } from '@/lib/newt/products'
 import Section from '@/components/Section.astro'
 import { Image } from 'astro:assets'
-
-const prodistList: ProductItem[] = await getProductItemList()
+import { PRODUCT_LIST } from '@/data/products'
+const productList = PRODUCT_LIST
 ---
 
 <Section title="制作物">
   <ul class="cardAreaWrapper">
     {
-      prodistList.map((item) => {
-        const image: ImageMetadata = {
-          src: item.image.src,
-          width: item.image.width,
-          height: item.image.height,
-          format: item.image.fileType.includes('webp') ? 'webp' : 'png',
-        }
-
+      productList.map((item) => {
         return (
           <li class="productCard">
             <div class="imageWrapper">
-              {typeof item.image.src === 'string' &&
-              item.image.src.startsWith('http') ? (
-                <img
-                  src={item.image.src}
-                  width={item.image.width}
-                  height={item.image.height}
-                  alt={item.title}
-                />
-              ) : (
-                <Image
-                  src={image}
-                  sizes="(max-width: 800px) 100vw, 800px"
-                  alt={item.title}
-                />
-              )}
+              <Image
+                src={item.image.src}
+                width={item.image.width}
+                height={item.image.height}
+                alt={item.title}
+              />
             </div>
             <div class="cardContentArea">
               <p class="title">{item.title}</p>
