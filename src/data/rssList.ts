@@ -38,9 +38,4 @@ export const DIARY_LIST: RssTargetItem[] = [
     url: 'https://day.manasas.dev/feed',
     icon: '/social/books.svg',
   },
-  {
-    title: '節目に書く日記',
-    url: 'https://diary.manasas.dev/feed',
-    icon: '/social/books.svg',
-  },
 ]
