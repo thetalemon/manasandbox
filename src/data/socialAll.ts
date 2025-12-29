@@ -19,7 +19,7 @@ export const SNS_LIST: SocialItem[] = [
     comment: '推し活したり制作したりしてるアカウント',
   },
   {
-    title: 'Threads',
+    title: 'Threads（更新終了）',
     url: 'https://www.threads.net/@manasas.photo',
     icon: '/social/threads.svg',
     comment: 'お絵描きアカウント',
@@ -51,16 +51,5 @@ export const SNS_LIST: SocialItem[] = [
     url: 'https://photo.manasas.dev',
     icon: '/social/photo.svg',
     comment: '過去の写真とか',
-  },
-  {
-    title: 'ほしいものリスト',
-    url: 'https://www.amazon.jp/hz/wishlist/ls/O9U3OZI8D1VC?ref_=wl_sharen',
-    icon: '/social/want.svg',
-  },
-  {
-    title: '拍手（wavebox）',
-    url: 'https://wavebox.me/wave/1zpw4z8irp585mvq/',
-    icon: '/social/clap.svg',
-    comment: 'WEB拍手代わりです',
   },
 ]
