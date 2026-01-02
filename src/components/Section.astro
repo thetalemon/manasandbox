@@ -13,7 +13,7 @@ const { title, link } = Astro.props
       <h2 class="title">
         {link ? (
           <a href={link} target="_blank" rel="noreferrer noopener me">
-            {title}aaaa
+            {title}
           </a>
         ) : (
           <span>{title}</span>
@@ -27,7 +27,7 @@ const { title, link } = Astro.props
 </section>
 <style lang="scss">
   .root {
-    margin: 0 1rem;
+    margin: 0 8px;
   }
   h2 {
     margin: 0 0 0.5rem 0;
@@ -39,6 +39,6 @@ const { title, link } = Astro.props
     margin-top: 40px;
   }
   .content {
-    margin: 0 16px;
+    margin: 0 8px;
   }
 </style>

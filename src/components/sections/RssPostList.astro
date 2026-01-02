@@ -8,9 +8,8 @@ const parser = new Parser()
 
 export interface Props {
   title: string
-  list: RssTargetItem[]
+  target: RssTargetItem
   itemNum?: number
-  slug: string
 }
 
 type RssItem = {
@@ -20,25 +19,21 @@ type RssItem = {
   blogTitle: string
 }
 
-const { title, list, itemNum = 12, slug } = Astro.props
+const { title, target, itemNum = 5 } = Astro.props
 
-const allData = await Promise.all(
-  list.map(async (item) => {
-    const data = await parser.parseURL(item.url)
-    const recentData = data.items ? data.items.splice(0, 13) : []
-    return recentData.map((article: any) => ({
-      blogTitle: item.title,
-      ...article,
-      pubDate: format(new Date(article.pubDate), 'yyyy-MM-dd HH:mm', {
-        locale: ja,
-      }),
-    }))
-  })
-)
+const data = await parser.parseURL(target.url)
+const recentData = data.items ? data.items.splice(0, 13) : []
+const formattedRecentData = recentData.map((article: any) => ({
+  blogTitle: target.title,
+  ...article,
+  pubDate: format(new Date(article.pubDate), 'yyyy-MM-dd HH:mm:dd', {
+    locale: ja,
+  }),
+}))
 
-const flatData = allData
+const flatData = formattedRecentData
   .flat()
-  .filter((item) => {
+  .filter((item: RssItem) => {
     const now = new Date()
     const pubDate = new Date(item.pubDate)
     const diff = now.getTime() - pubDate.getTime()
@@ -50,7 +45,7 @@ const flatData = allData
   })
 ---
 
-<Section title={title}>
+<Section title={title} link={target.link}>
   <ul>
     {
       flatData.slice(0, itemNum).map((item: RssItem) => (
@@ -73,9 +68,19 @@ const flatData = allData
       ))
     }
   </ul>
+  <p class="moreLink">
+    <a href={target.link} target="_blank" rel="noreferrer noopener me">
+      サイトへ移動
+    </a>
+  </p>
 </Section>
 <style lang="scss">
   @use '../..//styles/colors.scss';
+
+  .moreLink {
+    text-align: right;
+    margin-top: 16px;
+  }
 
   ul {
     display: grid;
