@@ -1,14 +1,14 @@
 ---
 import Layout from '@/layouts/Layout.astro'
 import RssPostList from '@/components/sections/RssPostList.astro'
-import { RSS_LIST, DIARY_LIST } from '@/data/rssList'
-import Separate from '@/components/Separate.astro'
+import { NOTE, BLOG, DIARY_LIST } from '@/data/rssList'
 ---
 
 <Layout title="manasandbox">
   <section class="mainSection">
-    <RssPostList title="最近の投稿" list={RSS_LIST} slug="recent" />
-    <RssPostList title="日記" list={DIARY_LIST} itemNum={4} slug="diary" />
+    <RssPostList title="ブログ" target={BLOG} />
+    <RssPostList title="note" target={NOTE} />
+    <RssPostList title="日記" target={DIARY_LIST} />
   </section>
 </Layout>
 
