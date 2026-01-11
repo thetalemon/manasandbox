@@ -16,13 +16,13 @@ export const LINK_LIST: LinkItem[] = [
     url: 'https://github.com/thetalemon/',
   },
   {
-    name: 'threads',
-    img: 'threads.svg',
-    url: 'https://www.threads.net/@manasas.photo',
+    name: 'Instagram',
+    img: 'ig.svg',
+    url: 'https://www.instagram.com/manasas.photo',
   },
   {
     name: 'mixi2',
     img: 'mixi2.png',
-    url: 'https://www.threads.net/@manasas.photo',
+    url: 'https://mixi.social/@manasas',
   },
 ]
