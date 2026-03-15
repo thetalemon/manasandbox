@@ -13,9 +13,9 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
-    "@astrojs/check": "0.9.6",
+    "@astrojs/check": "0.9.7",
     "@fontsource/zen-kaku-gothic-antique": "5.2.8",
-    "astro": "5.16.6",
+    "astro": "6.0.4",
     "date-fns": "4.1.0",
     "rss-parser": "3.13.0",
     "sharp": "0.34.4"
