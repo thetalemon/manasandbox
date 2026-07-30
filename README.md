@@ -2,4 +2,4 @@
 
 まなさすのポートフォリオ。
 
-デプロイ先 → https://manasas.dev/
+デプロイ先 → <https://manasas.dev/>
