@@ -4,6 +4,7 @@
   "prettier.documentSelectors": ["**/*.astro"],
   "cSpell.words": [
     "bento",
+    "blaugust",
     "fontsource",
     "Heki",
     "jimaku",

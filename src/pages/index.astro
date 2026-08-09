@@ -7,12 +7,18 @@ import Abstract from '@/components/sections/Abstract.astro'
 import LinkList from '@/components/sections/LinkList.astro'
 import Posts from '@/components/sections/Posts.astro'
 import Separate from '@/components/Separate.astro'
+import Section from '@/components/Section.astro'
 ---
 
 <Layout title="manasandbox">
   <TopImage />
   <Links />
   <section class="mainSection">
+    <Section>
+      <p class="blaugust">
+        <a href="/blaugust">ブローガスト 2026に参加しています</a>
+      </p>
+    </Section>
     <Abstract />
     <LinkList />
     <Separate />
@@ -23,10 +29,15 @@ import Separate from '@/components/Separate.astro'
   <Links />
 </Layout>
 
-<style>
+<style lang="scss">
   .mainSection {
     width: 100%;
     max-width: 800px;
     margin: 40px auto 0 auto;
+    .blaugust {
+      text-align: center;
+      font-size: 22px;
+      margin-bottom: 64px;
+    }
   }
 </style>
