@@ -9,6 +9,8 @@ export interface Props {
 }
 
 const { title } = Astro.props
+
+const addedTitle = title !== 'manasandbox' ? `${title} | manasandbox` : title
 ---
 
 <html lang="ja">
@@ -22,11 +24,11 @@ const { title } = Astro.props
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content="まなさすのサイト" />
     <meta property="og:site_name" content="manasandbox" />
-    <meta property="og:title" content={title} />
+    <meta property="og:title" content={addedTitle} />
     <meta property="og:url" content="https://manasas.dev" />
     <meta property="og:description" content="まなさすのサイト" />
     <meta property="og:image" content="https://manasas.dev/ogp.png" />
-    <title>{title}</title>
+    <title>{addedTitle}</title>
     <ClientRouter />
   </head>
   <body>
@@ -46,7 +48,7 @@ const { title } = Astro.props
       <slot />
     </main>
     <footer>
-      <a href="https://manasas.dev/" rel="me">© 2022-2025 manasas</a>
+      <a href="https://manasas.dev/" rel="me">© 2022-2026 manasas</a>
     </footer>
   </body>
 </html>
