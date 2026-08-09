@@ -3,6 +3,7 @@
   "editor.formatOnSave": true,
   "prettier.documentSelectors": ["**/*.astro"],
   "cSpell.words": [
+    "bento",
     "fontsource",
     "Heki",
     "jimaku",
@@ -11,6 +12,7 @@
     "manasandbox",
     "manasas",
     "Onigiri",
+    "rakkan",
     "reiwakojinsite",
     "Sayukotei",
     "sousekai",

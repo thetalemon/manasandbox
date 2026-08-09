@@ -2,6 +2,7 @@
 import '@fontsource/zen-kaku-gothic-antique'
 import { ClientRouter } from 'astro:transitions'
 import '@/styles/global.scss'
+import Hamburger from '../components/Hamburger.astro'
 
 export interface Props {
   title: string
@@ -39,6 +40,7 @@ const { title } = Astro.props
           <a href="/resume">resume</a>
         </li>
       </ul>
+      <Hamburger />
     </header>
     <main>
       <slot />
@@ -64,10 +66,11 @@ const { title } = Astro.props
   header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background: colors.$primary-color;
     color: #fff;
     vertical-align: baseline;
-    padding: 8px 16px;
+    padding: 16px 16px;
     & > h1 {
       margin: 0;
       font-size: 18px;
@@ -76,6 +79,11 @@ const { title } = Astro.props
     .pageLinks {
       display: flex;
       gap: 16px;
+    }
+  }
+  @media (max-width: 640px) {
+    header .pageLinks {
+      display: none;
     }
   }
   footer {

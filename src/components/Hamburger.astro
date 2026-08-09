@@ -1,0 +1,296 @@
+---
+import { Image } from 'astro:assets'
+import Resume from './images/resume1.svg'
+import Posts from './images/post.svg'
+
+const uid = `menu-toggle-${Math.random().toString(36).slice(2, 9)}`
+---
+
+<div class="hamburger-wrapper">
+  <input id={uid} class="menu-toggle" type="checkbox" aria-hidden="true" />
+  <label for={uid} class="bento" aria-label="メニューを開く">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </label>
+
+  <nav
+    class="mobile-menu"
+    aria-label="モバイルナビゲーション"
+    aria-hidden="true"
+  >
+    <div class="menu-inner">
+      <div class="link-list">
+        <div class="link">
+          <Image src={Posts} alt="posts" /><a href="/posts">posts</a>
+        </div>
+        <div class="link">
+          <Image src={Resume} alt="resume" /><a href="/resume">resume</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<style lang="scss">
+  .hamburger-wrapper {
+    display: flex;
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 999;
+    background: #44617b;
+    padding: 4px;
+    border-radius: 4px;
+  }
+
+  .menu-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .bento {
+    display: inline-block;
+    position: relative;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  .bento .dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: currentColor;
+    border-radius: 2px;
+    transition:
+      transform 160ms ease,
+      opacity 160ms ease;
+  }
+  /* 3x3 positions */
+  .bento .dot:nth-of-type(1) {
+    left: 0%;
+    top: 0%;
+    transform: translate(0%, 0%);
+  }
+  .bento .dot:nth-of-type(2) {
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, 0%);
+  }
+  .bento .dot:nth-of-type(3) {
+    left: 100%;
+    top: 0%;
+    transform: translate(-100%, 0%);
+  }
+  .bento .dot:nth-of-type(4) {
+    left: 0%;
+    top: 50%;
+    transform: translate(0%, -50%);
+  }
+  .bento .dot:nth-of-type(5) {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .bento .dot:nth-of-type(6) {
+    left: 100%;
+    top: 50%;
+    transform: translate(-100%, -50%);
+  }
+  .bento .dot:nth-of-type(7) {
+    left: 0%;
+    top: 100%;
+    transform: translate(0%, -100%);
+  }
+  .bento .dot:nth-of-type(8) {
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -100%);
+  }
+  .bento .dot:nth-of-type(9) {
+    left: 100%;
+    top: 100%;
+    transform: translate(-100%, -100%);
+  }
+
+  /* Mobile menu panel (hidden by default) - now fullscreen overlay */
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(67, 96, 122, 1);
+    color: #fff;
+    padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(8px);
+    transition:
+      opacity 200ms ease,
+      transform 200ms ease;
+    z-index: 998;
+  }
+
+  .mobile-menu .menu-inner {
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    .link-list {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      grid-row-gap: 16px;
+      grid-column-gap: 16px;
+      .link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 6px;
+        border: 2px solid #fff;
+        padding: 16px 8px;
+        img {
+          width: 48px;
+          height: 48px;
+          fill: white;
+        }
+      }
+    }
+  }
+
+  /* When open: hide dots and show centered × using pseudo elements on the label */
+  .hamburger-wrapper.open .bento .dot {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  .bento::before,
+  .bento::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 18px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+    transform-origin: center;
+    opacity: 0;
+    transition:
+      transform 180ms ease,
+      opacity 160ms ease;
+  }
+  .hamburger-wrapper.open .bento::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .hamburger-wrapper.open .bento::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .hamburger-wrapper.open .mobile-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .mobile-menu a {
+    color: inherit;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: 500;
+    display: block;
+    text-align: center;
+  }
+  .mobile-menu a:hover,
+  .mobile-menu a:focus {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  /* Hide hamburger on larger screens */
+  @media (min-width: 641px) {
+    .hamburger-wrapper {
+      display: none;
+    }
+  }
+  /* small-screen overrides not needed for fullscreen overlay */
+</style>
+
+<script>
+  ;(function () {
+    document.querySelectorAll('.hamburger-wrapper').forEach((wrapper) => {
+      const input = wrapper.querySelector('.menu-toggle')
+      const label = wrapper.querySelector('.bento')
+      const menu = wrapper.querySelector('.mobile-menu')
+      if (!label || !menu) return
+
+      function close() {
+        wrapper.classList.remove('open')
+        if (input instanceof HTMLInputElement) input.checked = false
+        if (menu) menu.setAttribute('aria-hidden', 'true')
+        if (label) label.setAttribute('aria-pressed', 'false')
+        wrapper.setAttribute('aria-expanded', 'false')
+      }
+      function open() {
+        wrapper.classList.add('open')
+        if (input instanceof HTMLInputElement) input.checked = true
+        if (menu) menu.setAttribute('aria-hidden', 'false')
+        if (label) label.setAttribute('aria-pressed', 'true')
+        wrapper.setAttribute('aria-expanded', 'true')
+      }
+
+      label.addEventListener('click', (e) => {
+        e.preventDefault()
+        e.stopPropagation()
+        if (wrapper.classList.contains('open')) close()
+        else open()
+      })
+
+      const inner = wrapper.querySelector('.menu-inner')
+      // Click on overlay (menu) closes
+      menu.addEventListener('click', (e) => {
+        const t = e.target
+        // if clicked directly on overlay (not inner), close
+        if (t instanceof Node && t === menu) close()
+      })
+      // Prevent clicks inside inner content from closing
+      if (inner) inner.addEventListener('click', (e) => e.stopPropagation())
+
+      // Click outside (anywhere else in document) closes
+      document.addEventListener('click', (e) => {
+        const t = e.target
+        if (!wrapper.classList.contains('open')) return
+        if (t instanceof Node && !wrapper.contains(t)) close()
+      })
+
+      // Escape closes
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && wrapper.classList.contains('open')) close()
+      })
+    })
+  })()
+</script>
